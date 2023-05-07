@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 14:35:52 by luguimar          #+#    #+#             */
-/*   Updated: 2023/05/07 18:26:36 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/05/07 20:59:07 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,18 +72,19 @@ static void	strfiller(char *s, char **str, char c)
 	}
 }
 
-static void	strmalloc(int *j, char **str, int *k)
+static void	strmalloc(int *j, char ***str, int *k)
 {
-	str[*k] = malloc((*j + 1) * sizeof(char));
-	if (!str[*k])
+	(*str)[*k] = malloc((*j + 1) * sizeof(char));
+	if (!(*str)[*k])
 	{
 		while (*k > 0)
 		{
 			*k = (*k) - 1;
-			free((void *)str[*k]);
+			free((void *)(*str)[*k]);
+			(*str)[*k] = NULL;
 		}
-		free(str);
-		str = NULL;
+		free(*str);
+		*str = NULL;
 	}
 	*k = (*k) + 1;
 	*j = 0;
@@ -107,7 +108,7 @@ char	**ft_split(char const *s, char c)
 	{
 		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 		{
-			strmalloc(&j, str, &k);
+			strmalloc(&j, &str, &k);
 			if (!str)
 				return (NULL);
 		}
@@ -128,18 +129,23 @@ int	main(int argc, char *argv[])
 	if (argc == 3)
 	{
 		char **result = ft_split(argv[1], argv[2][0]);
-		while (result[i] != NULL)
+		if (result)
 		{
-			printf("%s$\n", result[i]);
-			i++;
+			while (result[i] != NULL)
+			{
+				printf("%s$\n", result[i]);
+				i++;
+			}
+			i = 0;
+			while (result[i] != NULL)
+			{
+				free(result[i]);
+				i++;
+			}
+			free(result);
 		}
-		i = 0;
-		while (result[i] != NULL)
-		{
-			free(result[i]);
-			i++;
-		}
-		free(result);
+		else
+			printf("a alocaçao de memoria falhou");
 	}
 	else
 		printf("numero invalido de argumentos");
