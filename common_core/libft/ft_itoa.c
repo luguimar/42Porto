@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 13:25:12 by luguimar          #+#    #+#             */
-/*   Updated: 2023/05/05 15:42:12 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/05/08 16:12:44 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ long int	module(int n)
 
 	if (n < 0)
 		i = - (long int) n;
+	else
+		i = (long int) n;
 	return (i);
 }
 
