@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 15:26:57 by luguimar          #+#    #+#             */
-/*   Updated: 2023/05/11 16:38:34 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/05/12 17:13:29 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_lst);
 }
-
+/*
 #include <stdio.h>
 
 void	*ft_lsttoupper(void *content)
@@ -59,36 +59,70 @@ void	*ft_lsttoupper(void *content)
 void	delcontent(void *content)
 {
 	free(content);
+	content = NULL;
 }
 
 int	main(void)
 {
-	t_list	**headerlista;
-	t_list	**headerlistanova;
 	t_list	*lista;
 	t_list	*lista1;
 	t_list	*lista2;
 	t_list	*lista3;
 	t_list	*templist;
+	t_list	*listanova;
+	char	*str;
+	char	*str1;
+	char	*str2;
+	char	*str3;
+	int	i;
 
-	headerlista = (t_list **)malloc(sizeof(t_list *));
-	headerlistanova = (t_list **)malloc(sizeof(t_list *));
-	lista = ft_lstnew("abcdefg");
-	lista1 = ft_lstnew("hijkl");
-	lista2 = ft_lstnew("mnopq");
-	lista3 = ft_lstnew("rstuvwxyz");
-	*headerlista = lista;
-	ft_lstadd_back(headerlista, lista1);
-	ft_lstadd_back(headerlista, lista2);
-	ft_lstadd_back(headerlista, lista3);
-	*headerlistanova = ft_lstmap(lista, ft_lsttoupper, delcontent);
-	templist = *headerlistanova;
-	while (templist->next)
+	str = malloc(sizeof(char) * 9);
+	str1 = malloc(sizeof(char) * 7);
+	str2 = malloc(sizeof(char) * 7);
+	str3 = malloc(sizeof(char) * 7);
+	i = 0;
+	while (i < 8)
+	{
+		str[i] = 'a' + (char) i;
+		i++;
+	}
+	str[i] = '\0';
+	i = 0;
+	while (i < 6)
+	{
+		str1[i] = 'i' + (char) i;
+		i++;
+	}
+	str1[i] = '\0';
+	i = 0;
+	while (i < 6)
+	{
+		str2[i] = 'o' + (char) i;
+		i++;
+	}
+	str2[i] = '\0';
+	i = 0;
+	while (i < 6)
+	{
+		str3[i] = 'u' + (char) i;
+		i++;
+	}
+	str3[i] = '\0';
+	lista = ft_lstnew(str);
+	lista1 = ft_lstnew(str1);
+	lista2 = ft_lstnew(str2);
+	lista3 = ft_lstnew(str3);
+	ft_lstadd_back(&lista, lista1);
+	ft_lstadd_back(&lista, lista2);
+	ft_lstadd_back(&lista, lista3);
+	listanova = ft_lstmap(lista, ft_lsttoupper, delcontent);
+	templist = listanova;
+	while (templist)
 	{
 		printf("%s\n", (char *)templist->content);
 		templist = templist->next;
 	}
-	ft_lstclear(headerlistanova, delcontent);
-	ft_lstclear(headerlista, delcontent);
+	ft_lstclear(&listanova, delcontent);
+	ft_lstclear(&lista, delcontent);
 	return (0);
-}
+}*/
