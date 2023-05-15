@@ -6,7 +6,7 @@
 #    By: luguimar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 15:40:48 by luguimar          #+#    #+#              #
-#    Updated: 2023/05/11 13:07:26 by luguimar         ###   ########.fr        #
+#    Updated: 2023/05/11 21:17:25 by luguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ SRC = ${PART1} ${PART2}
 OBJS = ${SRC:.c=.o}
 BONUS_OBJS = ${BONUS:.c=.o}
 
-CC = gcc
+CC = cc -g
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 INCLUDE = -I .
