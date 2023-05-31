@@ -6,14 +6,13 @@
 #    By: luguimar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/15 02:05:49 by luguimar          #+#    #+#              #
-#    Updated: 2023/05/15 02:07:10 by luguimar         ###   ########.fr        #
+#    Updated: 2023/05/31 20:11:59 by luguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
-SRC = ft_printf.c ft_print_std.c ft_print_hex.c ft_print_unsigned.c \
-		ft_print_address.c ft_check_flags.c ft_flags_utils.c ft_precision_print.c
+SRC = ft_printf.c
 
 OBJS = ${SRC:.c=.o}
 
@@ -25,7 +24,7 @@ MAKE = make -C
 LIBFT_PATH = libft
 LIBFT = ${LIBFT_PATH}/libft.a
 
-.o:.c
+.c.o:
 		${CC} ${CFLAGS} ${INCLUDE} -c $< -o ${<:.c=.o}
 
 $(NAME): ${OBJS}
@@ -43,8 +42,6 @@ fclean: clean
 		${MAKE} ${LIBFT_PATH} fclean
 		${RM} ${NAME}
 
-bonus: all
-
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
