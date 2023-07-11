@@ -6,11 +6,60 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 22:05:13 by luguimar          #+#    #+#             */
-/*   Updated: 2023/07/09 23:45:21 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/07/12 00:07:02 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+char	*ft_substr(char *s, int start, size_t len)
+{
+	size_t	i;
+	size_t	strlength;
+	char	*str;
+
+	i = start;
+	strlength = 0;
+	if (start >= ft_strchrnum(s, '\0'))
+	{
+		str = malloc(sizeof(char) * 1);
+		if (!str)
+			return (NULL);
+		*str = '\0';
+		free(s);
+		return (str);
+	}
+	while (s[i] != '\0' && strlength < len)
+	{
+		i++;
+		strlength++;
+	}
+	str = malloc(sizeof(char) * strlength + 1);
+	if (!str)
+		return (NULL);
+	ft_strlcpy(str, s + start, strlength + 1);
+	return (str);
+}
+
+size_t	ft_strlcpy(char *dst, char *src, size_t dstsize)
+{
+	size_t	i;
+	size_t	lenghts;
+
+	i = 0;
+	lenghts = ft_strchrnum(src, '\0');
+	if (dstsize)
+	{
+		while (src[i] != '\0' && i < (dstsize - 1))
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+		free(src);
+	}
+	return (lenghts);
+}
 
 int	ft_strchrnum(const char *s, int c)
 {

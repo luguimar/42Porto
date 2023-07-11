@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 20:42:49 by luguimar          #+#    #+#             */
-/*   Updated: 2023/07/09 23:44:25 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/07/12 00:08:43 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@
 char	*get_next_line(int fd);
 int	ft_strchrnum(const char *str, int c);
 char	*ft_strjoin(char const *s1, char const *s2);
+size_t	ft_strlcpy(char *dst, char *src, size_t dstsize);
+char	*ft_substr(char *s, int start, size_t len);
 
 #endif
