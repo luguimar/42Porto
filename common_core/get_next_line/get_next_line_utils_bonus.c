@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/09 22:05:13 by luguimar          #+#    #+#             */
-/*   Updated: 2023/07/17 03:13:12 by luguimar         ###   ########.fr       */
+/*   Created: 2023/07/17 03:40:49 by luguimar          #+#    #+#             */
+/*   Updated: 2023/07/17 03:41:22 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 int	ft_strchrnum(const char *s, int c)
 {

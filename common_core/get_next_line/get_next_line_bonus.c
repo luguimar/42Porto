@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/09 20:38:47 by luguimar          #+#    #+#             */
-/*   Updated: 2023/07/17 03:09:17 by luguimar         ###   ########.fr       */
+/*   Created: 2023/07/17 03:35:51 by luguimar          #+#    #+#             */
+/*   Updated: 2023/07/17 03:39:45 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 static char	*clean_stash(char *stash)
 {
@@ -90,22 +90,22 @@ static char	*get_stash(int fd, char *stash)
 
 char	*get_next_line(int fd)
 {
-	static char	*stash;
+	static char	*stash[FOPEN_MAX];
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd > FOPEN_MAX)
 		return (NULL);
-	if (stash == NULL)
+	if (stash[fd] == NULL)
 	{
-		stash = malloc(sizeof(char) * 1);
-		if (stash == NULL)
+		stash[fd] = malloc(sizeof(char) * 1);
+		if (stash[fd] == NULL)
 			return (NULL);
-		stash[0] = '\0';
+		stash[fd][0] = '\0';
 	}
-	stash = get_stash(fd, stash);
-	if (stash == NULL)
+	stash[fd] = get_stash(fd, stash[fd]);
+	if (stash[fd] == NULL)
 		return (NULL);
-	line = get_line(stash);
-	stash = clean_stash(stash);
+	line = get_line(stash[fd]);
+	stash[fd] = clean_stash(stash[fd]);
 	return (line);
 }
