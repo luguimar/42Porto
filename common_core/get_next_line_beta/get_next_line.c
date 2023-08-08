@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/17 03:35:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/08/08 23:11:15 by luguimar         ###   ########.fr       */
+/*   Created: 2023/07/09 20:38:47 by luguimar          #+#    #+#             */
+/*   Updated: 2023/07/17 03:09:17 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 static char	*clean_stash(char *stash)
 {
@@ -45,7 +45,7 @@ static char	*get_line(char *stash)
 		end = ft_strchrnum(stash, '\0');
 	else
 		end = ft_strchrnum(stash, '\n') + 1;
-	line = malloc(sizeof(char) * (end + 1));
+	line = malloc(sizeof(char) * end + 1);
 	if (line == NULL)
 		return (NULL);
 	i = 0;
@@ -72,7 +72,7 @@ static char	*get_stash(int fd, char *stash)
 	temp = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (temp == NULL)
 		return (NULL);
-	while (bytes > 0 && ft_strchrnum(stash, '\n') == -1 && stash != NULL)
+	while (bytes > 0 && ft_strchrnum(stash, '\n') == -1)
 	{
 		bytes = read(fd, temp, BUFFER_SIZE);
 		if (bytes == -1)
@@ -90,22 +90,22 @@ static char	*get_stash(int fd, char *stash)
 
 char	*get_next_line(int fd)
 {
-	static char	*stash[FOPEN_MAX];
+	static char	*stash;
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd > FOPEN_MAX)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	if (stash[fd] == NULL)
+	if (stash == NULL)
 	{
-		stash[fd] = malloc(sizeof(char) * 1);
-		if (stash[fd] == NULL)
+		stash = malloc(sizeof(char) * 1);
+		if (stash == NULL)
 			return (NULL);
-		stash[fd][0] = '\0';
+		stash[0] = '\0';
 	}
-	stash[fd] = get_stash(fd, stash[fd]);
-	if (stash[fd] == NULL)
+	stash = get_stash(fd, stash);
+	if (stash == NULL)
 		return (NULL);
-	line = get_line(stash[fd]);
-	stash[fd] = clean_stash(stash[fd]);
+	line = get_line(stash);
+	stash = clean_stash(stash);
 	return (line);
 }

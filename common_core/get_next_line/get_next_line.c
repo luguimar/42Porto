@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 20:38:47 by luguimar          #+#    #+#             */
-/*   Updated: 2023/07/17 03:09:17 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/08/08 23:10:54 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static char	*get_line(char *stash)
 		end = ft_strchrnum(stash, '\0');
 	else
 		end = ft_strchrnum(stash, '\n') + 1;
-	line = malloc(sizeof(char) * end + 1);
+	line = malloc(sizeof(char) * (end + 1));
 	if (line == NULL)
 		return (NULL);
 	i = 0;
@@ -72,7 +72,7 @@ static char	*get_stash(int fd, char *stash)
 	temp = malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (temp == NULL)
 		return (NULL);
-	while (bytes > 0 && ft_strchrnum(stash, '\n') == -1)
+	while (bytes > 0 && ft_strchrnum(stash, '\n') == -1 && stash != NULL)
 	{
 		bytes = read(fd, temp, BUFFER_SIZE);
 		if (bytes == -1)

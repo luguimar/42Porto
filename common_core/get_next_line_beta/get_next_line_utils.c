@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 22:05:13 by luguimar          #+#    #+#             */
-/*   Updated: 2023/08/08 22:50:17 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/07/17 03:13:12 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,13 +44,13 @@ char	*ft_strjoin(char *s1, char *s2)
 	str = malloc((ft_strchrnum(s1, '\0') + ft_strchrnum(s2, '\0') + 1)
 			* sizeof(char));
 	if (!str)
-	{
-		free(s1);
 		return (NULL);
-	}
-	i = -1;
-	while (s1[++i] != '\0')
+	i = 0;
+	while (s1[i] != '\0')
+	{
 		str[i] = s1[i];
+		i++;
+	}
 	j = 0;
 	while (s2[j] != '\0')
 	{
