@@ -58,7 +58,7 @@ static void	strfiller(char *s, char **str, char c)
 		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 		{
 			j = i + 1;
-			while (j-- >= nextc)
+			while (--j >= nextc)
 			{
 				if (((j == 0 && s[j] != c) || s[j - 1] == c))
 				{
