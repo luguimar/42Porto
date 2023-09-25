@@ -6,40 +6,87 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:07:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/09/21 20:43:55 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/09/25 22:46:57 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pipex.h"
+#include "libft/libft.h"
+#include <fcntl.h>
+#include <sys/wait.h>
+
+static void	null_path_check(char *path, char **envp, char **args)
+{
+	if (!path || !envp)
+	{
+		dup2(STDERR_FILENO, STDOUT_FILENO);
+		ft_printf("pipex: %s: command not found\n", args[0]);
+		if (path)
+			free(path);
+		if (args)
+			free_array_of_strings(args);
+		exit(127);
+	}
+}
+
+void	check_error(int status, char *message)
+{
+	if (status == -1)
+	{
+		ft_putstr_fd("pipex: ", STDERR_FILENO);
+		perror(message);
+		exit(1);
+	}
+	return ;
+}
 
 static char	*get_right_path(char *cmd, char **envp)
 {
-	int	i;
+	int		i;
 	char	**path;
 	char	*right_path;
+	char	*add_slash;
 
-	i = 0
+	i = 0;
 	while (envp[i] && !ft_strnstr(envp[i], "PATH=", 5))
 		i++;
 	path = ft_split(envp[i], ':');
-	while ()
+	i = 0;
+	while (path[i])
+	{
+		add_slash = ft_strjoin(path[i], "/");
+		right_path = ft_strjoin(add_slash, cmd);
+		free(add_slash);
+		if (access(right_path, F_OK) == 0)
+		{
+			free_array_of_strings(path);
+			return (right_path);
+		}
+		free(right_path);
+		i++;
+	}
+	free_array_of_strings(path);
+	return (NULL);
 }
 
-static void	redirect_files(char *in_file, cahr *cmd, char ** envp)
+static void	redirect_files(char *in_file, char *cmd, char **envp)
 {
-	int	cid;
-	int	pipefd[2];
+	int		cid;
+	int		pipefd[2];
 	char	*path;
+	char	**args;
 
-	path = get_right_path(cmd, envp);
+	args = ft_split(cmd, ' ');
+	path = get_right_path(args[0], envp);
 	check_error(pipe(pipefd), "pipe");
-	cih = fork();
+	cid = fork();
 	if (cid == 0)
 	{
 		check_error(access(in_file, R_OK), in_file);
 		close(pipefd[0]);
 		dup2(pipefd[1], STDOUT_FILENO);
-		execve()
+		null_path_check(path, envp, args);
+		execve(path, args, envp);
+		null_path_check(path, NULL, args);
 	}
 	else if (cid == -1)
 		check_error(-1, "child process");
@@ -52,22 +99,25 @@ static void	redirect_files(char *in_file, cahr *cmd, char ** envp)
 
 int	main(int argc, char **argv, char **envp)
 {
-	int	fd_in;
-	int	fd_out;
+	int		fd_in;
+	int		fd_out;
+	char	*path;
+	char	**args;
 
 	if (argc == 5)
 	{
-		fd_in = open(argv[1], 0_RDONLY);
-		fd_out = open(argv[argc - 1], 0_WRONLY | 0_CREAT | 0_TRUNC, 0777);
-		check_file(access(argv[argc - 1], W_ok), argv[argc - 1]);
+		fd_in = open(argv[1], O_RDONLY);
+		fd_out = open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+		check_error(access(argv[argc - 1], W_OK), argv[argc - 1]);
 		dup2(fd_in, STDIN_FILENO);
 		dup2(fd_out, STDOUT_FILENO);
 		redirect_files(argv[1], argv[2], envp);
+		args = ft_split(argv[3], ' ');
+		path = get_right_path(args[0], envp);
+		null_path_check(path, envp, args);
+		execve(path, args, envp);
+		null_path_check(path, NULL, args);
 	}
 	else
-	{
-		ft_printf("Wrong number of arguments!!!\n");
-		ft_printf("The correct usage is:\n");
-		ft_printf("   ./pipex infile cmd1 cmd2 outfile");
-	}
+		ft_printf("Wrong number of arguments!\n");
 }
