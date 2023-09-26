@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:07:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/09/25 22:46:57 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/09/26 01:13:30 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,28 @@
 #include <fcntl.h>
 #include <sys/wait.h>
 
-static void	null_path_check(char *path, char **envp, char **args)
+static void	null_path_check(char **path, char ***envp, char ***args)
 {
-	if (!path || !envp)
+	if (!(*path) || !(*envp))
 	{
 		dup2(STDERR_FILENO, STDOUT_FILENO);
-		ft_printf("pipex: %s: command not found\n", args[0]);
-		if (path)
-			free(path);
-		if (args)
-			free_array_of_strings(args);
+		ft_printf("pipex: %s: command not found\n", *args[0]);
+		if (*path)
+			free(*path);
+		if (*args)
+			free_array_of_strings(*args);
 		exit(127);
 	}
 }
 
-void	check_error(int status, char *message)
+static void	check_error(int status, char *message, char ***args, char **path)
 {
 	if (status == -1)
 	{
+		if (*args)
+			free_array_of_strings(*args);
+		if (*path)
+			free(*path);
 		ft_putstr_fd("pipex: ", STDERR_FILENO);
 		perror(message);
 		exit(1);
@@ -75,21 +79,21 @@ static void	redirect_files(char *in_file, char *cmd, char **envp)
 	char	*path;
 	char	**args;
 
-	args = ft_split(cmd, ' ');
-	path = get_right_path(args[0], envp);
-	check_error(pipe(pipefd), "pipe");
+	check_error(pipe(pipefd), "pipe", NULL, NULL);
 	cid = fork();
 	if (cid == 0)
 	{
-		check_error(access(in_file, R_OK), in_file);
+		args = ft_split(cmd, ' ');
+		path = get_right_path(args[0], envp);
+		check_error(access(in_file, R_OK), in_file, &args, &path);
 		close(pipefd[0]);
 		dup2(pipefd[1], STDOUT_FILENO);
-		null_path_check(path, envp, args);
+		null_path_check(&path, &envp, &args);
 		execve(path, args, envp);
-		null_path_check(path, NULL, args);
+		null_path_check(&path, NULL, &args);
 	}
 	else if (cid == -1)
-		check_error(-1, "child process");
+		check_error(-1, "child process", NULL, NULL);
 	else
 	{
 		close(pipefd[1]);
@@ -108,15 +112,15 @@ int	main(int argc, char **argv, char **envp)
 	{
 		fd_in = open(argv[1], O_RDONLY);
 		fd_out = open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
-		check_error(access(argv[argc - 1], W_OK), argv[argc - 1]);
+		check_error(access(argv[argc - 1], W_OK), argv[argc - 1], &args, &path);
 		dup2(fd_in, STDIN_FILENO);
 		dup2(fd_out, STDOUT_FILENO);
 		redirect_files(argv[1], argv[2], envp);
 		args = ft_split(argv[3], ' ');
 		path = get_right_path(args[0], envp);
-		null_path_check(path, envp, args);
+		null_path_check(&path, &envp, &args);
 		execve(path, args, envp);
-		null_path_check(path, NULL, args);
+		null_path_check(&path, NULL, &args);
 	}
 	else
 		ft_printf("Wrong number of arguments!\n");
