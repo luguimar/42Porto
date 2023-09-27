@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:07:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/09/27 21:24:20 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/09/27 21:38:39 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ static void	redirect_files(char *in_file, char *cmd, char **envp)
 		exec_command(&path, &envp, &args);
 	}
 	else if (cid == -1)
-		check_error(-1, "child process", NULL, NULL);
+		check_error(-1, "fork", NULL, NULL);
 	else
 	{
 		close(pipefd[1]);
@@ -123,7 +123,7 @@ int	main(int argc, char **argv, char **envp)
 		path = NULL;
 		args = NULL;
 		fd_in = open(argv[1], O_RDONLY);
-		fd_out = open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0777);
+		fd_out = open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 		check_error(access(argv[argc - 1], W_OK), argv[argc - 1], &args, &path);
 		dup2(fd_in, STDIN_FILENO);
 		dup2(fd_out, STDOUT_FILENO);
