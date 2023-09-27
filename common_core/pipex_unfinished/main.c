@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:07:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/09/27 04:18:37 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/09/27 21:24:20 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static char	*get_right_path(char *cmd, char **envp)
 	i = 0;
 	while (envp[i] && !ft_strnstr(envp[i], "PATH=", 5))
 		i++;
-	path = ft_split(envp[i], ':');
+	path = ft_split(envp[i] + 5, ':');
 	i = 0;
 	while (path[i])
 	{
@@ -120,6 +120,8 @@ int	main(int argc, char **argv, char **envp)
 
 	if (argc == 5)
 	{
+		path = NULL;
+		args = NULL;
 		fd_in = open(argv[1], O_RDONLY);
 		fd_out = open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0777);
 		check_error(access(argv[argc - 1], W_OK), argv[argc - 1], &args, &path);
