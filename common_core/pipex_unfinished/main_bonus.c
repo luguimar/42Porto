@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:07:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/09/27 04:18:37 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/09/27 03:35:51 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,10 @@ static void	exec_command(char **path, char ***envp, char ***args)
 	execve(*path, *args, *envp);
 	dup2(STDERR_FILENO, STDOUT_FILENO);
 	ft_printf("pipex: %s: command not found\n", *args[0]);
-	free(*path);
-	free_array_of_strings(*args);
+	if (*path)
+		free(*path);
+	if (*args)
+		free_array_of_strings(*args);
 	exit(127);
 }
 
@@ -121,7 +123,7 @@ int	main(int argc, char **argv, char **envp)
 	if (argc == 5)
 	{
 		fd_in = open(argv[1], O_RDONLY);
-		fd_out = open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0777);
+		fd_out = open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
 		check_error(access(argv[argc - 1], W_OK), argv[argc - 1], &args, &path);
 		dup2(fd_in, STDIN_FILENO);
 		dup2(fd_out, STDOUT_FILENO);
