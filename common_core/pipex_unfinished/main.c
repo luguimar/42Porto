@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:07:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/09/28 01:21:51 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/10/02 00:18:46 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static char	*get_right_path(char *cmd, char **envp)
 		i++;
 	path = ft_split(envp[i] + 5, ':');
 	i = -1;
-	while (path[++i])
+	while (path[++i] && cmd[0] != '/')
 	{
 		right_path = ft_strjoin(path[i], "/");
 		right_path = ft_strjoinfree(right_path, cmd);
@@ -77,6 +77,8 @@ static char	*get_right_path(char *cmd, char **envp)
 		free(right_path);
 	}
 	free_array_of_strings(path);
+	if (cmd[0] == '/' && access(cmd, F_OK) == 0)
+		return (cmd);
 	return (NULL);
 }
 
@@ -120,7 +122,7 @@ int	main(int argc, char **argv, char **envp)
 		path = NULL;
 		args = NULL;
 		fd_in = open(argv[1], O_RDONLY);
-		fd_out = open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+		fd_out = open(argv[argc - 1], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 		check_error(access(argv[argc - 1], W_OK), argv[argc - 1], args, path);
 		dup2(fd_in, STDIN_FILENO);
 		dup2(fd_out, STDOUT_FILENO);
