@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:07:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/10/02 22:59:42 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/10/04 19:24:21 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 #include <fcntl.h>
 #include <sys/wait.h>
 
-static void	exec_command(char *path, char **envp, char **args)
+static void	exec_command(char *path, char **envp, char **args, int isparent)
 {
 	if (!path || !envp)
 	{
+		if (isparent)
+			wait(NULL);
 		if (args[0])
 		{
 			dup2(STDERR_FILENO, STDOUT_FILENO);
@@ -98,7 +100,7 @@ static void	redirect_files(char *in_file, char *cmd, char **envp, char **args)
 		check_error(access(in_file, R_OK), in_file, args, path);
 		close(pipefd[0]);
 		dup2(pipefd[1], STDOUT_FILENO);
-		exec_command(path, envp, args);
+		exec_command(path, envp, args, 0);
 	}
 	else if (cid == -1)
 		check_error(-1, "fork", args, path);
@@ -129,7 +131,7 @@ int	main(int argc, char **argv, char **envp)
 		redirect_files(argv[1], argv[2], envp, args);
 		args = ft_splitquote(argv[3], ' ');
 		path = get_right_path(args[0], envp);
-		exec_command(path, envp, args);
+		exec_command(path, envp, args, 1);
 	}
 	else
 		ft_printf("Wrong number of arguments!\n");
