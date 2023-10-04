@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_splitquote.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/03 14:35:52 by luguimar          #+#    #+#             */
-/*   Updated: 2023/05/07 20:59:07 by luguimar         ###   ########.fr       */
+/*   Created: 2023/09/21 20:46:24 by luguimar          #+#    #+#             */
+/*   Updated: 2023/10/04 15:46:13 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	wordcounter(char const *s, char c)
+static int	wordcounter(char *s, char c)
 {
 	int	wordcount;
 	int	i;
@@ -23,7 +23,7 @@ static int	wordcounter(char const *s, char c)
 	wordcount = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+		if (is_end_wordquote(s, i, c))
 			wordcount++;
 		i++;
 	}
@@ -35,7 +35,7 @@ static void	wordfiller(char *j, char *str, char c)
 	int	i;
 
 	i = 0;
-	while (j[i] != '\0' && j[i] != c)
+	while (inquote(j, i) || (!quote(j, i) && j[i] != c && j[i] != '\0'))
 	{
 		str[i] = j[i];
 		i++;
@@ -55,12 +55,12 @@ static void	strfiller(char *s, char **str, char c)
 	nextc = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+		if (is_end_wordquote(s, i, c))
 		{
 			j = i + 1;
-			while (--j >= nextc)
+			while (j-- >= nextc)
 			{
-				if (((j == 0 && s[j] != c) || s[j - 1] == c))
+				if (is_beginning_wordquote(s, j, c))
 				{
 					nextc = j + 1;
 					wordfiller(s + j, str[k], c);
@@ -90,7 +90,7 @@ static void	strmalloc(int *j, char ***str, int *k)
 	*j = 0;
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_splitquote(char *s, char c)
 {
 	int		i;
 	int		j;
@@ -106,13 +106,13 @@ char	**ft_split(char const *s, char c)
 	str[wordcounter(s, c)] = NULL;
 	while (s[++i] != '\0')
 	{
-		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
+		if (is_end_wordquote(s, i, c))
 		{
 			strmalloc(&j, &str, &k);
 			if (!str)
 				return (NULL);
 		}
-		if (s[i] != c)
+		if (inquote(s, i) || (!quote(s, i) && s[i] != c))
 			j++;
 	}
 	strfiller((char *)s, str, c);

@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:07:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/10/02 00:18:46 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/10/02 22:59:42 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ static void	redirect_files(char *in_file, char *cmd, char **envp, char **args)
 	cid = fork();
 	if (cid == 0)
 	{
-		args = ft_split(cmd, ' ');
+		args = ft_splitquote(cmd, ' ');
 		path = get_right_path(args[0], envp);
 		check_error(access(in_file, R_OK), in_file, args, path);
 		close(pipefd[0]);
@@ -127,7 +127,7 @@ int	main(int argc, char **argv, char **envp)
 		dup2(fd_in, STDIN_FILENO);
 		dup2(fd_out, STDOUT_FILENO);
 		redirect_files(argv[1], argv[2], envp, args);
-		args = ft_split(argv[3], ' ');
+		args = ft_splitquote(argv[3], ' ');
 		path = get_right_path(args[0], envp);
 		exec_command(path, envp, args);
 	}

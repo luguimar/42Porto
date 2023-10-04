@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 19:42:11 by luguimar          #+#    #+#             */
-/*   Updated: 2023/09/21 19:46:12 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/09/28 01:43:09 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,14 @@ void	free_array_of_strings(char **str)
 {
 	int	i;
 
-	i = 0;
-	while (str[i])
+	if (str)
 	{
-		free(str[i]);
-		i++;
+		i = 0;
+		while (str[i])
+		{
+			free(str[i]);
+			i++;
+		}
+		free(str);
 	}
-	free(str);
 }

@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 15:40:24 by luguimar          #+#    #+#             */
-/*   Updated: 2023/09/21 19:47:02 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/10/04 15:48:18 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,13 @@ char				*get_next_line(int fd);
 int					ft_strchrnum(const char *str, int c);
 char				*ft_strjoinfree(char *s1, char *s2);
 void				free_array_of_strings(char **str);
+char				**ft_splitquote(char *s, char c);
+char				inquote(char *s, int index);
+char				isquote(char *s, int index);
+char				quote(char *s, int index);
+int					is_end_quote(char *s, int index);
+int					is_beginning_quote(char *s, int index);
+int					is_end_wordquote(char *s, int index, char c);
+int					is_beginning_wordquote(char *s, int index, char c);
 
 #endif

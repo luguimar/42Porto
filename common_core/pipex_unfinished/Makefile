@@ -6,7 +6,7 @@
 #    By: luguimar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 15:59:38 by luguimar          #+#    #+#              #
-#    Updated: 2023/09/21 16:48:07 by luguimar         ###   ########.fr        #
+#    Updated: 2023/10/02 23:40:57 by luguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRC = main.c
 
 OBJS = ${SRC:.c=.o}
 
-CC = cc
+CC = cc -g
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 INCLUDE = -I .
