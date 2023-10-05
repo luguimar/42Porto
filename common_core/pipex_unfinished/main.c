@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:07:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/10/04 19:24:21 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/10/05 19:44:02 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,13 +56,14 @@ static void	check_error(int status, char *message, char **args, char *path)
 	return ;
 }
 
-static char	*get_right_path(char *cmd, char **envp)
+static char	*get_right_path(char *cmd, char **envp, char *right_path)
 {
 	int		i;
 	char	**path;
-	char	*right_path;
 
 	i = 0;
+	if (!envp)
+		return (NULL);
 	while (envp[i] && !ft_strnstr(envp[i], "PATH=", 5))
 		i++;
 	path = ft_split(envp[i] + 5, ':');
@@ -96,7 +97,7 @@ static void	redirect_files(char *in_file, char *cmd, char **envp, char **args)
 	if (cid == 0)
 	{
 		args = ft_splitquote(cmd, ' ');
-		path = get_right_path(args[0], envp);
+		path = get_right_path(args[0], envp, path);
 		check_error(access(in_file, R_OK), in_file, args, path);
 		close(pipefd[0]);
 		dup2(pipefd[1], STDOUT_FILENO);
@@ -130,7 +131,7 @@ int	main(int argc, char **argv, char **envp)
 		dup2(fd_out, STDOUT_FILENO);
 		redirect_files(argv[1], argv[2], envp, args);
 		args = ft_splitquote(argv[3], ' ');
-		path = get_right_path(args[0], envp);
+		path = get_right_path(args[0], envp, path);
 		exec_command(path, envp, args, 1);
 	}
 	else
