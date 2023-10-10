@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:07:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/10/09 02:06:32 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/10/10 17:22:06 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	exec_command(char *path, char **envp, char **args, int isparent)
 			wait(NULL);
 		dup2(STDERR_FILENO, STDOUT_FILENO);
 		if (args)
-			ft_printf("pipex: %s: command not found\n", args[0]);
+			ft_printf("%s: command not found\n", args[0]);
 		else
 			ft_printf("pipex: '' : command not found\n");
 		if (path)
@@ -32,10 +32,10 @@ static void	exec_command(char *path, char **envp, char **args, int isparent)
 	}
 	execve(path, args, envp);
 	dup2(STDERR_FILENO, STDOUT_FILENO);
-	ft_printf("pipex: %s: command not found\n", args[0]);
+	perror("pipex");
 	free(path);
 	free_array_of_strings(args);
-	exit(127);
+	exit(1);
 }
 
 static void	check_error(int status, char *message, char **args, char *path)
@@ -78,7 +78,7 @@ static char	*get_right_path(char **cmd, char **envp, char *right_path)
 	}
 	free_array_of_strings(path);
 	if (cmd && *cmd[0] == '/' && access(*cmd, F_OK) == 0)
-		return (*cmd);
+		return (ft_strdup(*cmd));
 	return (NULL);
 }
 
