@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:07:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/10/10 17:22:06 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/10/11 16:04:16 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ static void	exec_command(char *path, char **envp, char **args, int isparent)
 		exit(127);
 	}
 	execve(path, args, envp);
+	if (isparent)
+		wait(NULL);
 	dup2(STDERR_FILENO, STDOUT_FILENO);
 	perror("pipex");
 	free(path);
