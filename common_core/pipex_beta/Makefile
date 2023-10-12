@@ -6,7 +6,7 @@
 #    By: luguimar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 15:59:38 by luguimar          #+#    #+#              #
-#    Updated: 2023/10/12 20:33:18 by luguimar         ###   ########.fr        #
+#    Updated: 2023/10/12 21:37:40 by luguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ NAME = pipex
 
 SRC = main.c
 
-BONUS_SRC = main_bonus.c
+BONUS_SRC = main_bonus.c utils_bonus.c
 
 OBJS = ${SRC:.c=.o}
 
@@ -38,14 +38,11 @@ MAKE = make -C
 LIBFT_PATH = libft
 LIBFT = ${LIBFT_PATH}/libft.a
 
+.c.o:
+		${CC} ${CFLAGS} ${INCLUDE} -c $< -o ${<:.c=.o}
+
 $(NAME): ${OBJS} ${LIBFT}
 		${CC} ${OBJS} ${LIBFT} -o ${NAME}
-
-$(OBJS):
-		${CC} ${CFLAGS} ${INCLUDE} ${SRC} -c -o ${OBJS}
-
-$(BONUS_OBJS):
-		${CC} ${CFLAGS} ${INCLUDE} ${BONUS_SRC} -c -o ${BONUS_OBJS}
 
 $(LIBFT):
 		${MAKE} ${LIBFT_PATH}

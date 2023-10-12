@@ -6,13 +6,11 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:07:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/10/12 20:44:42 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/10/12 21:43:00 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
-#include <fcntl.h>
-#include <sys/wait.h>
+#include "pipex_bonus.h"
 
 static void	exec_command(char *path, char **envp, char **args, int isparent)
 {
@@ -96,9 +94,9 @@ static void	redirect_files(int i, char *argv[], char **envp, char **args)
 	{
 		args = ft_splitquote_nulls(argv[i], ' ');
 		path = get_right_path(args, envp, path);
-		check_error(access(argv[1], R_OK), argv[1], args, path);
-		close(pipefd[0]);
-		dup2(pipefd[1], STDOUT_FILENO);
+		if (i == 2)
+			check_error(access(argv[1], R_OK), argv[1], args, path);
+		dup2stdout(pipefd);
 		exec_command(path, envp, args, 0);
 	}
 	else if (cid == -1)
@@ -107,8 +105,7 @@ static void	redirect_files(int i, char *argv[], char **envp, char **args)
 	{
 		check_error(access(argv[ft_matrixlen((void **)argv) - 1], W_OK),
 			argv[ft_matrixlen((void **)argv) - 1], args, path);
-		close(pipefd[1]);
-		dup2(pipefd[0], STDIN_FILENO);
+		dup2stdin(pipefd);
 	}
 }
 
