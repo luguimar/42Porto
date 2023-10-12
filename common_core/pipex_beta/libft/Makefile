@@ -6,7 +6,7 @@
 #    By: luguimar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/12 15:40:48 by luguimar          #+#    #+#              #
-#    Updated: 2023/10/04 15:42:53 by luguimar         ###   ########.fr        #
+#    Updated: 2023/10/12 19:51:28 by luguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ PART2 = ft_itoa.c ft_strjoin.c ft_split.c ft_striteri.c ft_strmapi.c ft_substr.c
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_lstsize.c ft_lstlast.c
 
-EXTRA = ft_putnbr_base_fd.c ft_printf.c get_next_line.c get_next_line_utils.c free_array_of_strings.c ft_splitquote.c quotes.c quotes_utils.c
+EXTRA = ft_putnbr_base_fd.c ft_printf.c get_next_line.c get_next_line_utils.c free_array_of_strings.c ft_splitquote.c quotes.c quotes_utils.c ft_matrixlen.c
 
 SRC = ${PART1} ${PART2} ${BONUS} ${EXTRA}
 

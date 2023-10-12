@@ -6,7 +6,7 @@
 #    By: luguimar <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/21 15:59:38 by luguimar          #+#    #+#              #
-#    Updated: 2023/10/11 17:06:33 by luguimar         ###   ########.fr        #
+#    Updated: 2023/10/12 20:33:18 by luguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,11 @@ NAME = pipex
 
 SRC = main.c
 
+BONUS_SRC = main_bonus.c
+
 OBJS = ${SRC:.c=.o}
+
+BONUS_OBJS = ${BONUS_SRC:.c=.o}
 
 CC = cc -g
 RM = rm -f
@@ -40,14 +44,20 @@ $(NAME): ${OBJS} ${LIBFT}
 $(OBJS):
 		${CC} ${CFLAGS} ${INCLUDE} ${SRC} -c -o ${OBJS}
 
+$(BONUS_OBJS):
+		${CC} ${CFLAGS} ${INCLUDE} ${BONUS_SRC} -c -o ${BONUS_OBJS}
+
 $(LIBFT):
 		${MAKE} ${LIBFT_PATH}
 
 all: ${NAME}
 
+bonus: ${BONUS_OBJS} ${LIBFT}
+		${CC} ${BONUS_OBJS} ${LIBFT} -o ${NAME}
+
 clean:
 		${MAKE} ${LIBFT_PATH} clean
-		${RM} ${OBJS}
+		${RM} ${OBJS} ${BONUS_OBJS}
 
 fclean: clean
 		${MAKE} ${LIBFT_PATH} fclean
