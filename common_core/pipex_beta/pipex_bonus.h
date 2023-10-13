@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 21:22:52 by luguimar          #+#    #+#             */
-/*   Updated: 2023/10/12 21:32:18 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/10/13 01:17:44 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 void	dup2stdout(int *pipefd);
 void	dup2stdin(int *pipefd);
+void	dup2redirect(int *fd, char **argv, char **envp);
+void	redirect_files(int i, char *argv[], char **envp);
 
 #endif
-
