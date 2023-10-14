@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 15:40:24 by luguimar          #+#    #+#             */
-/*   Updated: 2023/10/12 19:51:01 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/10/14 15:56:06 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,6 @@ int					is_end_wordquote(char *s, int index, char c);
 int					is_beginning_wordquote(char *s, int index, char c);
 char				**ft_splitquote_nulls(char *s, char c);
 int					ft_matrixlen(void **matrix);
+int					ft_abs_value(int n);
 
 #endif

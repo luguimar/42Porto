@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 17:07:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/10/13 01:53:41 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/10/14 17:24:45 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	exec_command(char *path, char **envp, char **args, int isparent)
 	exit(1);
 }
 
-static void	check_error(int status, char *message, char **args, char *path)
+void	check_error(int status, char *message, char **args, char *path)
 {
 	if (status == -1)
 	{
@@ -53,7 +53,7 @@ static void	check_error(int status, char *message, char **args, char *path)
 	return ;
 }
 
-static char	*get_right_path(char **cmd, char **envp, char *right_path)
+char	*get_right_path(char **cmd, char **envp, char *right_path)
 {
 	int		i;
 	char	**path;
@@ -95,9 +95,9 @@ void	redirect_files(int i, char *argv[], char **envp)
 	cid = fork();
 	if (cid == 0)
 	{
-		args = ft_splitquote_nulls(argv[i], ' ');
+		args = ft_splitquote_nulls(argv[ft_abs_value(i)], ' ');
 		path = get_right_path(args, envp, path);
-		if (i == 2)
+		if (i == 2 || i == -3)
 			check_error(access(argv[1], R_OK), argv[1], args, path);
 		dup2stdout(pipefd);
 		exec_command(path, envp, args, 1);
@@ -120,14 +120,16 @@ int	main(int argc, char **argv, char **envp)
 
 	if (argc >= 5)
 	{
-		path = NULL;
-		dup2redirect(fd, argv, envp);
 		i = 2;
+		if (argc > 5 && !ft_strncmp(argv[1], "here_doc\0", 9))
+			i = 3;
+		if (i == 3)
+			heredoc(argv[2]);
+		path = NULL;
+		dup2redirect(fd, argv, envp, i);
 		while (++i <= argc - 3)
 			redirect_files(i, argv, envp);
-		args = ft_splitquote_nulls(argv[3], ' ');
-		path = get_right_path(args, envp, path);
-		check_error(access(argv[argc - 1], W_OK), argv[argc - 1], args, path);
+		args = last_one(argv, &path, envp, i);
 		exec_command(path, envp, args, argc - 3);
 	}
 	else
