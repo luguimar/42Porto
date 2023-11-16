@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 15:40:24 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/14 21:08:05 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/16 05:04:31 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ char				**ft_splitquote_nulls(char *s, char c);
 int					ft_matrixlen(void **matrix);
 int					ft_abs_value(int n);
 long long			ft_atol(const char *nptr);
+int					ft_strcmp(const char *str1, const char *str2);
 
 #endif

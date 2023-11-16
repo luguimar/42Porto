@@ -6,11 +6,12 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:22:56 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/15 19:37:45 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/16 03:56:14 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 /*
 void	print_stack(t_list *node)
 {
@@ -31,7 +32,8 @@ int	is_sorted(t_list *node)
 	while (node)
 	{
 		temp_node = (t_node *)node->content;
-		if (node->next && !(temp_node->value < ((t_node *)node->next->content)->value))
+		if (node->next
+			&& !(temp_node->value < ((t_node *)node->next->content)->value))
 			return (0);
 		node = node->next;
 		i++;
@@ -39,16 +41,16 @@ int	is_sorted(t_list *node)
 	return (1);
 }
 
-t_list	*fill_stack(t_list **node, char **args, int i)
+t_list	*fill_stack(t_list **stack_a, char **args, int i)
 {
 	t_list	*temp_node;
 
 	if (args)
 	{
-		*node = ft_lstnew(ft_calloc(1, sizeof(t_node)));
-		if (!*node)
+		*stack_a = ft_lstnew(ft_calloc(1, sizeof(t_node)));
+		if (!*stack_a)
 			return (NULL);
-		temp_node = *node;
+		temp_node = *stack_a;
 	}
 	while (args[++i])
 	{
@@ -59,12 +61,12 @@ t_list	*fill_stack(t_list **node, char **args, int i)
 			temp_node->next = ft_lstnew((t_node *)ft_calloc(1, sizeof(t_node)));
 		if (!temp_node->next && args[i + 1])
 		{
-			ft_lstclear(node, free);
+			ft_lstclear(stack_a, free);
 			return (NULL);
 		}
 		temp_node = temp_node->next;
 	}
-	return (*node);
+	return (*stack_a);
 }
 
 void	wrong_args(void)
@@ -103,17 +105,17 @@ int	arg_checker(int argc, char **args)
 
 int	main(int argc, char *argv[])
 {
-	t_list	*stack_a;
-	t_list	*stack_b;
+	t_list	*a;
+	t_list	*b;
 
-	stack_a = NULL;
-	stack_b = NULL;
+	a = NULL;
+	b = NULL;
 	if (!arg_checker(argc, argv))
 		wrong_args();
-	stack_a = fill_stack(&stack_a, argv + 1, -1);
-	if (!stack_a)
+	a = fill_stack(&a, argv + 1, -1);
+	if (!a)
 		wrong_args();
-	if (!is_sorted(stack_a))
-		push_swap(&stack_a, &stack_b);
+	if (!is_sorted(a))
+		push_swap(&a, &b);
 	return (0);
 }
