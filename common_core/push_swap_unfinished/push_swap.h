@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:56:06 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/09 15:02:04 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/15 19:48:25 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ typedef struct s_node
 	int		index;
 	int		final_a_index;
 }	t_node;
+
+void	push_swap(t_list **stack_a, t_list ** stack_b);
 
 #endif

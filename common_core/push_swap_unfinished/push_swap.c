@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/08 18:05:47 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/14 21:09:10 by luguimar         ###   ########.fr       */
+/*   Created: 2023/11/15 19:37:13 by luguimar          #+#    #+#             */
+/*   Updated: 2023/11/15 21:46:44 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *novel)
+void	push_swap(t_list **stack_a, t_list ** stack_b)
 {
-	if (!*lst)
-		*lst = novel;
-	else
-	{
-		novel->prev = ft_lstlast(*lst);
-		ft_lstlast(*lst)->next = novel;
-	}
+	
 }
