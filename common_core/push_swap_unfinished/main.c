@@ -6,13 +6,13 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:22:56 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/16 03:56:14 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/17 02:38:50 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/libft.h"
 #include "push_swap.h"
 
-/*
 void	print_stack(t_list *node)
 {
 	while (node)
@@ -22,7 +22,7 @@ void	print_stack(t_list *node)
 		node = node->next;
 	}
 }
-*/
+
 int	is_sorted(t_list *node)
 {
 	int		i;
@@ -58,14 +58,16 @@ t_list	*fill_stack(t_list **stack_a, char **args, int i)
 		((t_node *)temp_node->content)->index = i;
 		((t_node *)temp_node->content)->final_a_index = -1;
 		if (args[i + 1])
-			temp_node->next = ft_lstnew((t_node *)ft_calloc(1, sizeof(t_node)));
+			ft_lstadd_back(stack_a, ft_lstnew((t_node *)ft_calloc(1, sizeof(t_node))));
 		if (!temp_node->next && args[i + 1])
 		{
 			ft_lstclear(stack_a, free);
 			return (NULL);
 		}
-		temp_node = temp_node->next;
+		if (args[i + 1])
+			temp_node = temp_node->next;
 	}
+	temp_node->next = NULL;
 	return (*stack_a);
 }
 
@@ -105,17 +107,20 @@ int	arg_checker(int argc, char **args)
 
 int	main(int argc, char *argv[])
 {
-	t_list	*a;
-	t_list	*b;
+	t_list	**a;
+	t_list	**b;
 
-	a = NULL;
-	b = NULL;
+	a = (t_list **)ft_calloc(1, sizeof(t_list *));
+	b = (t_list **)ft_calloc(1, sizeof(t_list *));
 	if (!arg_checker(argc, argv))
 		wrong_args();
-	a = fill_stack(&a, argv + 1, -1);
+	*a = fill_stack(a, argv + 1, -1);
 	if (!a)
 		wrong_args();
-	if (!is_sorted(a))
-		push_swap(&a, &b);
+/*	if (!is_sorted(*a))
+		sort(a, b);*/
+	print_stack(*a);
+	exec_operation(a, b, "sa");
+	print_stack(*a);
 	return (0);
 }

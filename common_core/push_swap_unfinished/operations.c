@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 02:59:06 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/16 05:28:12 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/17 02:10:03 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	swap(t_list **stack)
 {
+	t_list	*tmp;
+
 	if (ft_lstsize(*stack) > 1)
 	{
-		(*stack)->next = (*stack)->next->next;
-		(*stack)->next->prev->next = (*stack);
-		(*stack)->prev = (*stack)->next->prev;
-		(*stack)->next->prev = (*stack);
-		(*stack) = (*stack)->prev;
-		(*stack)->prev = NULL;
+		tmp = lstdup((*stack)->next);
+		ft_lstdelone(stack, (*stack)->next, free);
+		ft_lstadd_front(stack, tmp);
 	}
 }
 
@@ -31,17 +30,9 @@ void	push(t_list **stack_orig, t_list **stack_dest)
 
 	if (ft_lstsize(*stack_orig) > 0)
 	{
-		tmp = *stack_orig;
-		*stack_orig = (*stack_orig)->next;
-		(*stack_orig)->prev = NULL;
-		if (ft_lstsize(*stack_dest) > 0)
-			ft_lstadd_front(stack_dest, tmp);
-		else
-		{
-			*stack_dest = tmp;
-			(*stack_dest)->next = NULL;
-			(*stack_dest)->prev = NULL;
-		}
+		tmp = lstdup(*stack_orig);
+		ft_lstdelone(stack_orig, (*stack_orig), free);
+		ft_lstadd_front(stack_dest, tmp);
 	}
 }
 
@@ -51,11 +42,9 @@ void	rotate(t_list **stack)
 
 	if (ft_lstsize(*stack) > 1)
 	{
-		tmp = *stack;
+		tmp = lstdup(*stack);
 		*stack = (*stack)->next;
-		(*stack)->prev = NULL;
-		tmp->next = NULL;
-		tmp->prev = NULL;
+		ft_lstdelone(stack, (*stack)->prev, free);
 		ft_lstadd_back(stack, tmp);
 	}
 }
@@ -66,9 +55,8 @@ void	reverse_rotate(t_list **stack)
 
 	if (ft_lstsize(*stack) > 1)
 	{
-		tmp = ft_lstlast(*stack);
-		tmp->prev->next = NULL;
-		tmp->prev = NULL;
+		tmp = lstdup(ft_lstlast(*stack));
+		ft_lstdelone(stack, ft_lstlast(*stack), free);
 		ft_lstadd_front(stack, tmp);
 	}
 }

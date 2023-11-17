@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:56:06 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/16 05:34:15 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/16 23:40:29 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ void	rotate(t_list **stack);
 void	reverse_rotate(t_list **stack);
 void	operations_aux(t_list **stack_a, t_list **stack_b, char *line);
 void	exec_operation(t_list **stack_a, t_list **stack_b, char *line);
-void	push_swap(t_list **stack_a, t_list **stack_b);
+void	sort(t_list **stack_a, t_list **stack_b);
+void	set_index(t_list **stack_a, t_list **stack_b);
+void	set_final_a_index(t_list **stack_a);
+int		*list_to_array(t_list *stack);
+int		find_min(int *array, int size);
+t_list	*lstdup(t_list *lst);
 
 #endif
