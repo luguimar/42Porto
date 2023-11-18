@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:22:56 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/17 02:38:50 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/18 18:43:55 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,20 +107,20 @@ int	arg_checker(int argc, char **args)
 
 int	main(int argc, char *argv[])
 {
-	t_list	**a;
-	t_list	**b;
+	t_list	*a;
+	t_list	*b;
 
-	a = (t_list **)ft_calloc(1, sizeof(t_list *));
-	b = (t_list **)ft_calloc(1, sizeof(t_list *));
+	a = NULL;
+	b = NULL;
 	if (!arg_checker(argc, argv))
 		wrong_args();
-	*a = fill_stack(a, argv + 1, -1);
+	a = fill_stack(&a, argv + 1, -1);
 	if (!a)
 		wrong_args();
 /*	if (!is_sorted(*a))
 		sort(a, b);*/
-	print_stack(*a);
-	exec_operation(a, b, "sa");
-	print_stack(*a);
+	print_stack(a);
+	exec_operation(&a, &b, "sa");
+	print_stack(a);
 	return (0);
 }

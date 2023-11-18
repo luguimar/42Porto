@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 05:28:25 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/16 17:23:03 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/18 03:34:04 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void	operations_aux(t_list **stack_a, t_list **stack_b, char *line)
 	}
 	else
 		wrong_args();
-	ft_printf("%s\n", line);
 }
 
 void	exec_operation(t_list **stack_a, t_list **stack_b, char *line)

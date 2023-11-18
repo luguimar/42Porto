@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 13:18:00 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/17 01:44:43 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/18 03:40:24 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,19 @@ void	ft_lstdelone(t_list **head, t_list *lst, void (*del)(void *))
 		if (*head == lst)
 			*head = lst->next;
 		if (lst->next)
-			lst->next->prev = lst->prev;
+		{
+			if (lst->prev)
+				lst->next->prev = lst->prev;
+			else
+				lst->next->prev = NULL;
+		}
 		if (lst->prev)
-			lst->prev->next = lst->next;
+		{
+			if (lst->next)
+				lst->prev->next = lst->next;
+			else
+				lst->prev->next = NULL;
+		}
 		free(lst);
 	}
 }
