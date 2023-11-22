@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 18:05:47 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/18 18:42:48 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/18 19:53:00 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_lstadd_back(t_list **lst, t_list *novel)
 		{
 			novel->prev = NULL;
 			*lst = novel;
-			return;
+			return ;
 		}
 		novel->prev = ft_lstlast(*lst);
 		ft_lstlast(*lst)->next = novel;

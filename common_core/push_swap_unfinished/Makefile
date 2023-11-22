@@ -6,13 +6,13 @@
 #    By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/07 16:42:05 by luguimar          #+#    #+#              #
-#    Updated: 2023/11/16 23:41:18 by luguimar         ###   ########.fr        #
+#    Updated: 2023/11/18 19:49:12 by luguimar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRC = main.c operations.c exec_operations.c sort.c struct_fields.c array_utils.c lst_operations.c
+SRC = main.c operations.c exec_operations.c sort.c struct_fields.c lst_utils.c
 
 #BONUS_SRC = main_bonus.c utils_bonus.c
 
