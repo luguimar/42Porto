@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 23:27:08 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/22 05:12:14 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/24 01:42:27 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,29 +29,55 @@ int	smaller(int a, int b)
 int	target_half(t_list *stack_a, int src_final_index)
 {
 	int		target_half;
-	int		target_index;
+	int		targt_index;
 
-	target_index = set_target_index(stack_a, src_final_index);
-	if (target_index < ft_lstsize(stack_a) / 2)
+	targt_index = target_index(stack_a, src_final_index);
+	if (targt_index < ft_lstsize(stack_a) / 2)
 		target_half = 0;
 	else
 		target_half = 1;
 	return (target_half);
 }
 
-int	set_target_index(t_list *stack_a, int src_final_index)
+int	target_inverse_index(t_list *stack_a, int src_final_index)
+{
+	int		target_inverse_index;
+	int		targt_index;
+	int		i;
+	t_list	*tmp;
+
+	i = 0;
+	tmp = stack_a;
+	targt_index = target_index(stack_a, src_final_index);
+	while (i < targt_index)
+	{
+		tmp = tmp->next;
+		i++;
+	}
+	target_inverse_index = ((t_node *)tmp->content)->inverted_index;
+	return (target_inverse_index);
+}
+
+int	target_index(t_list *stack_a, int src_final_index)
 {
 	t_list	*tmp;
 	int		smallest_bigger_index;
+	int		smallest_bigger_final_index;
 
 	tmp = stack_a;
 	smallest_bigger_index = -1;
+	smallest_bigger_final_index = -1;
 	while (tmp)
 	{
 		if ((((t_node *)tmp->content)->final_a_index > src_final_index) && \
-				(((t_node *)tmp->content)->final_a_index < smallest_bigger_index
+				(((t_node *)tmp->content)->final_a_index \
+				< smallest_bigger_final_index
 				|| smallest_bigger_index == -1))
+		{
+			smallest_bigger_final_index = ((t_node *) \
+					tmp->content)->final_a_index;
 			smallest_bigger_index = ((t_node *)tmp->content)->index;
+		}
 		tmp = tmp->next;
 	}
 	return (smallest_bigger_index);

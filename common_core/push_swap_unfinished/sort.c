@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 19:37:13 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/22 03:39:46 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/24 00:18:59 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,26 +36,70 @@ void	sort_four(t_list **stack_a, t_list **stack_b)
 	else if (ft_lstsize(*stack_a) == 4)
 	{
 		exec_operation(stack_a, stack_b, "pb");
+		set_index(stack_a, stack_b);
+		set_inverse_index(stack_a, stack_b);
+		set_half(stack_a, stack_b);
 		set_price(stack_a, stack_b);
+		print_stack(*stack_a);
+		ft_putchar_fd('\n', 1);
+		print_stack(*stack_b);
+		ft_putchar_fd('\n', 1);
+		print_prices(*stack_b);
 	}
 }
 
 void	sort_five(t_list **stack_a, t_list **stack_b)
 {
-	(void )stack_a;
-	(void )stack_b;
+	if (ft_lstsize(*stack_a) == 3)
+		sort_three(stack_a);
+	else if (ft_lstsize(*stack_a) > 3)
+	{
+		exec_operation(stack_a, stack_b, "pb");
+		set_index(stack_a, stack_b);
+		set_inverse_index(stack_a, stack_b);
+		set_half(stack_a, stack_b);
+		set_price(stack_a, stack_b);
+		print_stack(*stack_a);
+		ft_putchar_fd('\n', 1);
+		print_stack(*stack_b);
+		ft_putchar_fd('\n', 1);
+		print_prices(*stack_b);
+	}
 }
 
 void	sort_many(t_list **stack_a, t_list **stack_b)
 {
-	(void )stack_a;
-	(void )stack_b;
+	int		i;
+	int		stack_a_size;
+
+	i = 0;
+	stack_a_size = ft_lstsize(*stack_a);
+	if (ft_lstsize(*stack_a) == 3)
+		sort_three(stack_a);
+	else if (ft_lstsize(*stack_a) > 3)
+	{
+		while (i < stack_a_size / 2)
+		{
+			exec_operation(stack_a, stack_b, "pb");
+			i++;
+		}
+		set_index(stack_a, stack_b);
+		set_inverse_index(stack_a, stack_b);
+		set_half(stack_a, stack_b);
+		set_price(stack_a, stack_b);
+		ft_putchar_fd('\n', 1);
+		print_stack(*stack_a);
+		ft_putchar_fd('\n', 1);
+		print_stack(*stack_b);
+		ft_putchar_fd('\n', 1);
+		print_prices(*stack_b);
+	}
 }
 
 void	sort(t_list **stack_a, t_list **stack_b)
 {
-	while (!is_sorted(*stack_a))
-	{
+//	while (!is_sorted(*stack_a))
+//	{
 		if (ft_lstsize(*stack_a) == 2)
 			exec_operation(stack_a, stack_b, "sa");
 		else if (ft_lstsize(*stack_a) == 3)
@@ -66,5 +110,5 @@ void	sort(t_list **stack_a, t_list **stack_b)
 			sort_five(stack_a, stack_b);
 		else
 			sort_many(stack_a, stack_b);
-	}
+//	}
 }

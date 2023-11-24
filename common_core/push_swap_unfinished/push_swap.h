@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:56:06 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/22 05:12:22 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/24 00:18:12 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ typedef struct s_node
 {
 	int	value;
 	int	index;
+	int	inverted_index;
 	int	final_a_index;
 	int	price;
 	int	half;
@@ -39,10 +40,19 @@ void	set_final_a_index(t_list **stack_a);
 t_list	*lstdup(t_list *lst);
 void	set_init_node_values(t_node *node, char **args, int i);
 void	set_price(t_list **stack_a, t_list **stack_b);
-int		set_target_index(t_list *stack_a, int src_final_index);
+int		target_index(t_list *stack_a, int src_final_index);
 int		bigger(int a, int b);
 int		smaller(int a, int b);
 void	set_half(t_list **stack_a, t_list **stack_b);
 int		target_half(t_list *stack_a, int src_final_index);
+void	set_inverse_index(t_list **stack_a, t_list **stack_b);
+int		target_inverse_index(t_list *stack_a, int src_final_index);
+
+void	print_stack(t_list *node);
+void	print_half(t_list *node);
+void	print_inverse_index(t_list *node);
+void	print_final_a_index(t_list *node);
+void	print_prices(t_list *node);
+void	print_index(t_list *node);
 
 #endif
