@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:56:06 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/24 00:18:12 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/24 22:49:42 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,16 @@ void	set_half(t_list **stack_a, t_list **stack_b);
 int		target_half(t_list *stack_a, int src_final_index);
 void	set_inverse_index(t_list **stack_a, t_list **stack_b);
 int		target_inverse_index(t_list *stack_a, int src_final_index);
+int		set_median(t_list *stack_a);
+void	set_values(t_list **stack_a, t_list **stack_b);
+int		lowest_price_index(t_list *stack_b);
+void	exec_cheapest(t_list **stack_a, t_list **stack_b);
+int	is_organized(t_list *node, int bigger_final_index,
+int		bigger_final_index_index);
+void	sort_organized(t_list **stack_a);
+t_list	*smallest(t_list *stack);
+t_list	*biggest(t_list *stack);
+int		sort_organized_price(t_list *stack);
 
 void	print_stack(t_list *node);
 void	print_half(t_list *node);

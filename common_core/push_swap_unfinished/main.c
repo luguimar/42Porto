@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:22:56 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/24 00:16:34 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/25 01:28:38 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -189,29 +189,9 @@ int	main(int argc, char *argv[])
 	if (!a && argc > 1)
 		wrong_args();
 	set_final_a_index(&a);
-	ft_printf("final_a_index:\n");
-	print_final_a_index(a);
-	ft_putchar_fd('\n', 1);
-	set_index(&a, &b);
-	ft_printf("index:\n");
-	print_index(a);
-	ft_putchar_fd('\n', 1);
-	set_inverse_index(&a, &b);
-	ft_printf("inverse_index:\n");
-	print_inverse_index(a);
-	ft_putchar_fd('\n', 1);
-	set_price(&a, &b);
-	ft_printf("price:\n");
-	print_prices(a);
-	ft_putchar_fd('\n', 1);
-	set_half(&a, &b);
-	ft_printf("half:\n");
-	print_half(a);
-	ft_putchar_fd('\n', 1);
-//	print_stack(a);
+	set_values(&a, &b);
 	if (!is_sorted(a))
 		sort(&a, &b);
-//	print_stack(a);
 	ft_lstclear(&a, free);
 	ft_lstclear(&b, free);
 	return (0);

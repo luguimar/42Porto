@@ -6,12 +6,20 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 15:06:34 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/24 00:37:36 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/24 23:15:25 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 #include "push_swap.h"
+
+void	set_values(t_list **stack_a, t_list **stack_b)
+{
+	set_index(stack_a, stack_b);
+	set_inverse_index(stack_a, stack_b);
+	set_half(stack_a, stack_b);
+	set_price(stack_a, stack_b);
+}
 
 void	set_inverse_index(t_list **stack_a, t_list **stack_b)
 {
@@ -78,7 +86,21 @@ void	set_price(t_list **stack_a, t_list **stack_b)
 	while (tmp)
 	{
 		node = (t_node *)tmp->content;
-		if (node->half == 0 && target_half(*stack_a, node->final_a_index) == 0)
+		if (((t_node *)biggest(*stack_a)->content)->value < node->value && ((t_node *)biggest(*stack_a)->content)->half == node->half)
+		{
+			if (node->half == 0)
+				node->price = bigger(sort_organized_price(*stack_a), node->index) + 1;
+			else
+				node->price = bigger(sort_organized_price(*stack_a), node->inverted_index) + 1;
+		}
+		else if (((t_node *)biggest(*stack_a)->content)->value < node->value && ((t_node *)biggest(*stack_a)->content)->half != node->half)
+		{
+			if (node->half == 0)
+				node->price = node->index + sort_organized_price(*stack_a) + 1;
+			else
+				node->price = node->inverted_index + sort_organized_price(*stack_a) + 2;
+		}
+		else if (node->half == 0 && target_half(*stack_a, node->final_a_index) == 0)
 			node->price = bigger(node->index, target_index(*stack_a, node->final_a_index)) + 1;
 		else if (node->half == 1 && target_half(*stack_a, node->final_a_index) == 1)
 			node->price = bigger(node->inverted_index, target_index(*stack_a, node->final_a_index)) + 2;

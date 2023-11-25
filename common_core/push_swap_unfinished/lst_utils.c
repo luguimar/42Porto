@@ -6,11 +6,128 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 23:27:08 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/24 01:42:27 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/25 00:36:48 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+t_list	*biggest(t_list *stack)
+{
+	t_list	*tmp;
+	t_list	*biggest;
+	t_node	*node;
+
+	tmp = stack;
+	biggest = tmp;
+	node = (t_node *)tmp->content;
+	while (tmp)
+	{
+		if (node->value > ((t_node *)biggest->content)->value)
+			biggest = tmp;
+		tmp = tmp->next;
+		if (tmp)
+			node = (t_node *)tmp->content;
+	}
+	return (biggest);
+}
+
+t_list	*smallest(t_list *stack)
+{
+	t_list	*tmp;
+	t_list	*smlst;
+	t_node	*node;
+
+	tmp = stack;
+	smlst = tmp;
+	node = (t_node *)tmp->content;
+	while (tmp)
+	{
+		if (node->value < ((t_node *)smlst->content)->value)
+			smlst = tmp;
+		tmp = tmp->next;
+		if (tmp)
+			node = (t_node *)tmp->content;
+	}
+	return (smlst);
+}
+
+int	sort_organized_price(t_list *stack)
+{
+	int		price;
+
+	if (((t_node *)smallest(stack)->content)->half == 0)
+		price = ((t_node *)smallest(stack)->content)->index;
+	else
+		price = ((t_node *)smallest(stack)->content)->inverted_index;
+	return (price);
+}
+
+void	sort_organized(t_list **stack_a)
+{
+	int 	smlst_half;
+	t_list	*smlst;
+	t_list	*tmp;
+
+	tmp = *stack_a;
+	smlst = smallest(*stack_a);
+	if (is_organized(tmp, ((t_node *)smlst->content)->final_a_index, ((t_node *)smlst->content)->index))
+	{
+		smlst_half = ((t_node *)smlst->content)->half;
+		if (smlst_half == 0)
+		{
+			while (((t_node *)smlst->content)->index != 0)
+				exec_operation(stack_a, NULL, "ra");
+		}
+		else
+		{
+			while (((t_node *)smlst->content)->index != 0)
+				exec_operation(stack_a, NULL, "rra");
+		}
+	}
+}
+
+int	lowest_price_index(t_list *stack_b)
+{
+	t_list	*tmp;
+	int		lowest_price;
+	int		lowest_price_index;
+	int		lowest_price_final_index;
+
+	tmp = stack_b;
+	lowest_price = -1;
+	lowest_price_index = ((t_node *)tmp->content)->index;
+	lowest_price_final_index = ((t_node *)tmp->content)->final_a_index;
+	while (tmp)
+	{
+		if (((t_node *)tmp->content)->price < lowest_price || lowest_price == -1 || (((t_node *)tmp->content)->price == lowest_price && ((t_node *)tmp->content)->final_a_index < lowest_price_final_index))
+		{
+			lowest_price = ((t_node *)tmp->content)->price;
+			lowest_price_index = ((t_node *)tmp->content)->index;
+			lowest_price_final_index = ((t_node *)tmp->content)->final_a_index;
+		}
+		tmp = tmp->next;
+	}
+	return (lowest_price_index);
+}
+
+int	set_median(t_list *stack_a)
+{
+	t_list	*tmp;
+	t_node	*node;
+
+	tmp = stack_a;
+	node = (t_node *)tmp->content;
+	while (tmp)
+	{
+		if (node->final_a_index == ft_lstsize(stack_a) / 2)
+			return (node->value);
+		if (tmp->next)
+			tmp = tmp->next;
+		node = (t_node *)tmp->content;
+	}
+	return (node->value);
+}
 
 int	bigger(int a, int b)
 {
