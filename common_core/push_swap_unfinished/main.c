@@ -6,12 +6,12 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/09 10:22:56 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/25 01:28:38 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/27 21:13:52 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+/*
 void	print_half(t_list *stack_a)
 {
 	while (stack_a)
@@ -71,7 +71,7 @@ void	print_stack(t_list *node)
 		node = node->next;
 	}
 }
-
+*/
 int	is_organized(t_list *node, int bigger_final_index,
 		int bigger_final_index_index)
 {
