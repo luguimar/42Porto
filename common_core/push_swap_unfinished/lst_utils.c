@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 23:27:08 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/25 00:36:48 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/12/01 03:50:07 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,24 +54,25 @@ t_list	*smallest(t_list *stack)
 
 int	sort_organized_price(t_list *stack)
 {
-	int		price;
+	int	price;
 
 	if (((t_node *)smallest(stack)->content)->half == 0)
 		price = ((t_node *)smallest(stack)->content)->index;
 	else
-		price = ((t_node *)smallest(stack)->content)->inverted_index;
+		price = ((t_node *)smallest(stack)->content)->inverted_index + 1;
 	return (price);
 }
 
 void	sort_organized(t_list **stack_a)
 {
-	int 	smlst_half;
+	int		smlst_half;
 	t_list	*smlst;
 	t_list	*tmp;
 
 	tmp = *stack_a;
 	smlst = smallest(*stack_a);
-	if (is_organized(tmp, ((t_node *)smlst->content)->final_a_index, ((t_node *)smlst->content)->index))
+	if (is_organized(tmp, ((t_node *)smlst->content)->final_a_index,
+			((t_node *)smlst->content)->index))
 	{
 		smlst_half = ((t_node *)smlst->content)->half;
 		if (smlst_half == 0)
@@ -100,7 +101,10 @@ int	lowest_price_index(t_list *stack_b)
 	lowest_price_final_index = ((t_node *)tmp->content)->final_a_index;
 	while (tmp)
 	{
-		if (((t_node *)tmp->content)->price < lowest_price || lowest_price == -1 || (((t_node *)tmp->content)->price == lowest_price && ((t_node *)tmp->content)->final_a_index < lowest_price_final_index))
+		if (((t_node *)tmp->content)->price < lowest_price || lowest_price == -1
+			|| (((t_node *)tmp->content)->price == lowest_price
+				&& ((t_node *)tmp->content)->final_a_index
+				< lowest_price_final_index))
 		{
 			lowest_price = ((t_node *)tmp->content)->price;
 			lowest_price_index = ((t_node *)tmp->content)->index;
@@ -145,8 +149,8 @@ int	smaller(int a, int b)
 
 int	target_half(t_list *stack_a, int src_final_index)
 {
-	int		target_half;
-	int		targt_index;
+	int	target_half;
+	int	targt_index;
 
 	targt_index = target_index(stack_a, src_final_index);
 	if (targt_index < ft_lstsize(stack_a) / 2)
@@ -187,11 +191,11 @@ int	target_index(t_list *stack_a, int src_final_index)
 	while (tmp)
 	{
 		if ((((t_node *)tmp->content)->final_a_index > src_final_index) && \
-				(((t_node *)tmp->content)->final_a_index \
-				< smallest_bigger_final_index
+			(((t_node *)tmp->content)->final_a_index < \
+			smallest_bigger_final_index
 				|| smallest_bigger_index == -1))
 		{
-			smallest_bigger_final_index = ((t_node *) \
+			smallest_bigger_final_index = ((t_node *)
 					tmp->content)->final_a_index;
 			smallest_bigger_index = ((t_node *)tmp->content)->index;
 		}
@@ -204,7 +208,7 @@ static t_node	*lstdup_node(t_node *content)
 {
 	t_node	*node;
 
-	node = (t_node *) malloc(sizeof(t_node));
+	node = (t_node *)malloc(sizeof(t_node));
 	if (!node)
 		return (NULL);
 	node->value = content->value;

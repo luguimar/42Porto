@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 01:39:59 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/25 01:40:21 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/11/29 19:27:32 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define MIN 1
-#define MAX 1000000
-#define QTDE 500 //needs to be smaller than MAX
+#define MIN -250
+#define MAX 250
+#define QTDE 100 //needs to be smaller than MAX
 
 void shuffle(int *array) {
    for (int i = MAX - MIN - 1; i > 0; i--) {
