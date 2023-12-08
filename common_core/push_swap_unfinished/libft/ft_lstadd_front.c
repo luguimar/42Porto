@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 15:04:00 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/18 01:59:54 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/12/07 19:00:16 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,21 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *novel)
 {
-	if (lst != NULL && novel != NULL)
+	if (novel != NULL)
 	{
-		novel->next = (*lst);
-		novel->prev = NULL;
-		if ((*lst) != NULL)
-			(*lst)->prev = novel;
-		(*lst) = novel;
+		if ((*lst) == NULL)
+		{
+			novel->prev = NULL;
+			novel->next = NULL;
+			(*lst) = novel;
+		}
+		else
+		{
+			novel->next = (*lst);
+			novel->prev = NULL;
+			if ((*lst) != NULL)
+				(*lst)->prev = novel;
+			(*lst) = novel;
+		}
 	}
 }
