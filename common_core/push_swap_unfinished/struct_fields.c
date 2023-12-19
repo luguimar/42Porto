@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 15:06:34 by luguimar          #+#    #+#             */
-/*   Updated: 2023/12/01 03:17:57 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/12/19 18:06:27 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,8 @@
 
 void	set_half(t_list **stack_a, t_list **stack_b)
 {
-	t_list	*tmp;
-
-	tmp = *stack_a;
-	while (tmp)
-	{
-		if ((((t_node *)tmp->content)->index < ft_lstsize(*stack_a) / 2
-				&& ft_lstsize(*stack_a) % 2 == 0)
-			|| (((t_node *)tmp->content)->index <= ft_lstsize(*stack_a) / 2
-				&& ft_lstsize(*stack_a) % 2 != 0))
-			((t_node *)tmp->content)->half = 0;
-		else
-			((t_node *)tmp->content)->half = 1;
-		tmp = tmp->next;
-	}
-	tmp = *stack_b;
-	while (tmp)
-	{
-		if ((((t_node *)tmp->content)->index < ft_lstsize(*stack_b) / 2
-				&& ft_lstsize(*stack_b) % 2 == 0)
-			|| (((t_node *)tmp->content)->index <= ft_lstsize(*stack_b) / 2
-				&& ft_lstsize(*stack_b) % 2 != 0))
-			((t_node *)tmp->content)->half = 0;
-		else
-			((t_node *)tmp->content)->half = 1;
-		tmp = tmp->next;
-	}
+	set_half_for_stack(stack_a);
+	set_half_for_stack(stack_b);
 }
 
 void	set_price(t_list **stack_a, t_list **stack_b)
@@ -47,13 +23,7 @@ void	set_price(t_list **stack_a, t_list **stack_b)
 	t_list	*tmp;
 	t_node	*node;
 
-	tmp = *stack_a;
-	while (tmp)
-	{
-		node = (t_node *)tmp->content;
-		node->price = -1;
-		tmp = tmp->next;
-	}
+	set_price_stack_a(stack_a);
 	tmp = *stack_b;
 	while (tmp)
 	{
@@ -68,31 +38,8 @@ void	set_price(t_list **stack_a, t_list **stack_b)
 				node->price = bigger(sort_organized_price(*stack_a),
 						node->inverted_index) + 1;
 		}
-		else if (((t_node *)biggest(*stack_a)->content)->value < node->value
-			&& ((t_node *)biggest(*stack_a)->content)->half != node->half)
-		{
-			if (node->half == 0)
-				node->price = node->index + sort_organized_price(*stack_a) + 1;
-			else
-				node->price = node->inverted_index
-					+ sort_organized_price(*stack_a) + 2;
-		}
-		else if (node->half == 0 && target_half(*stack_a,
-				node->final_a_index) == 0)
-			node->price = bigger(node->index, target_index(*stack_a,
-						node->final_a_index)) + 1;
-		else if (node->half == 1 && target_half(*stack_a,
-				node->final_a_index) == 1)
-			node->price = bigger(node->inverted_index, target_index(*stack_a,
-						node->final_a_index)) + 2;
-		else if (node->half == 0 && target_half(*stack_a,
-				node->final_a_index) == 1)
-			node->price = node->index + target_inverse_index(*stack_a,
-					node->final_a_index) + 2;
-		else if (node->half == 1 && target_half(*stack_a,
-				node->final_a_index) == 0)
-			node->price = node->inverted_index + target_index(*stack_a,
-					node->final_a_index) + 2;
+		else
+			set_price_extra(stack_a, node);
 		tmp = tmp->next;
 	}
 }

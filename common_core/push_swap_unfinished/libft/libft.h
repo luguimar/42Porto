@@ -6,7 +6,7 @@
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 15:40:24 by luguimar          #+#    #+#             */
-/*   Updated: 2023/11/18 19:55:35 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/12/19 16:54:39 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,5 +95,7 @@ int					ft_matrixlen(void **matrix);
 int					ft_abs_value(int n);
 long long			ft_atol(const char *nptr);
 int					ft_strcmp(const char *str1, const char *str2);
+int					bigger(int a, int b);
+int					smaller(int a, int b);
 
 #endif
