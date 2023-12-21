@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:56:06 by luguimar          #+#    #+#             */
-/*   Updated: 2023/12/19 18:06:47 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/12/21 11:30:56 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,20 @@ void	sort_organized(t_list **stack_a);
 t_list	*smallest(t_list *stack);
 t_list	*biggest(t_list *stack);
 int		sort_organized_price(t_list *stack);
+void	set_half_for_stack(t_list **stack);
+void	sort_four_and_five_extra(t_list **stack_a, t_list **stack_b);
+void	sort_many_extra(t_list **stack_a, t_list **stack_b);
+void	set_price_extra(t_list **stack_a, t_node *node);
+void	set_price_stack_a(t_list **stack_a);
+void	is_rrr(t_list **stack_a, t_list **stack_b, t_node *node);
+void	is_rr(t_list **stack_a, t_list **stack_b, t_node *node);
+void	is_rra(t_list **stack_a, t_list **stack_b, t_node *node);
+void	is_rrb(t_list **stack_a, t_list **stack_b, t_node *node);
+void	is_ra_rrb(t_list **stack_a, t_list **stack_b, t_node *node);
+void	is_rb(t_list **stack_a, t_list **stack_b, t_node *node);
+void	is_ra(t_list **stack_a, t_list **stack_b, t_node *node);
+void	is_rb_rra(t_list **stack_a, t_list **stack_b, t_node *node);
+void	is_pa(t_list **stack_a, t_list **stack_b, t_node *node);
 
 void	print_stack(t_list *node);
 void	print_half(t_list *node);
@@ -64,10 +78,5 @@ void	print_inverse_index(t_list *node);
 void	print_final_a_index(t_list *node);
 void	print_prices(t_list *node);
 void	print_index(t_list *node);
-void	set_half_for_stack(t_list **stack);
-void	sort_four_and_five_extra(t_list **stack_a, t_list **stack_b);
-void	sort_many_extra(t_list **stack_a, t_list **stack_b);
-void	set_price_extra(t_list **stack_a, t_node *node);
-void	set_price_stack_a(t_list **stack_a);
 
 #endif
