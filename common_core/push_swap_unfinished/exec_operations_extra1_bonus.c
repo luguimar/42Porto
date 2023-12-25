@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exec_operations_extra1.c                           :+:      :+:    :+:   */
+/*   exec_operations_extra1_bonus.c                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 11:35:39 by luguimar          #+#    #+#             */
-/*   Updated: 2023/12/21 21:07:57 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/12/21 18:57:53 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-int	is_rb(t_list **stack_a, t_list **stack_b, t_node *node)
+void	is_rb(t_list **stack_a, t_list **stack_b, t_node *node)
 {
 	if ((node->value > ((t_node *)biggest(*stack_a)->content)->value && \
 				node->half != ((t_node *)smallest(*stack_a) \
@@ -20,14 +20,10 @@ int	is_rb(t_list **stack_a, t_list **stack_b, t_node *node)
 				((t_node *)smallest(*stack_a)->content)->index == 0) \
 			|| (node->half == 0 && node->index != 0 && target_index \
 				(*stack_a, node->final_a_index) == 0))
-	{
 		exec_operation(stack_a, stack_b, "rb");
-		return (1);
-	}
-	return (0);
 }
 
-int	is_ra(t_list **stack_a, t_list **stack_b, t_node *node)
+void	is_ra(t_list **stack_a, t_list **stack_b, t_node *node)
 {
 	if ((node->value > ((t_node *)biggest(*stack_a)->content)->value && \
 				node->half == ((t_node *)smallest(*stack_a)-> \
@@ -37,14 +33,10 @@ int	is_ra(t_list **stack_a, t_list **stack_b, t_node *node)
 					(*stack_a, node->final_a_index) == 0 && \
 					node->index == 0 && target_index(*stack_a, \
 						node->final_a_index) != 0))
-	{
 		exec_operation(stack_a, stack_b, "ra");
-		return (1);
-	}
-	return (0);
 }
 
-int	is_rb_rra(t_list **stack_a, t_list **stack_b, t_node *node)
+void	is_rb_rra(t_list **stack_a, t_list **stack_b, t_node *node)
 {
 	if ((node->value > ((t_node *)biggest(*stack_a)->content)->value && \
 				node->half != ((t_node *)smallest(*stack_a)->content) \
@@ -54,12 +46,10 @@ int	is_rb_rra(t_list **stack_a, t_list **stack_b, t_node *node)
 	{
 		exec_operation(stack_a, stack_b, "rb");
 		exec_operation(stack_a, stack_b, "rra");
-		return (1);
 	}
-	return (0);
 }
 
-int	is_pa(t_list **stack_a, t_list **stack_b, t_node *node)
+void	is_pa(t_list **stack_a, t_list **stack_b, t_node *node)
 {
 	if ((node->value > ((t_node *)biggest(*stack_a)->content)->value && \
 				node->half == ((t_node *)smallest(*stack_a)->content) \
@@ -67,9 +57,5 @@ int	is_pa(t_list **stack_a, t_list **stack_b, t_node *node)
 					(*stack_a)->content)->index == 0) || \
 			(node->index == 0 && target_index(*stack_a, node-> \
 							final_a_index) == 0))
-	{
 		exec_operation(stack_a, stack_b, "pa");
-		return (1);
-	}
-	return (0);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luguimar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 03:35:51 by luguimar          #+#    #+#             */
-/*   Updated: 2023/08/08 23:11:15 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/12/21 18:39:53 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static char	*clean_stash(char *stash)
 	int	i;
 
 	end = ft_strchrnum(stash, '\n');
-	if (end == -1)
+	if (end == -1 || !stash[end + 1])
 	{
 		free(stash);
 		return (NULL);

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exec_operations.c                                  :+:      :+:    :+:   */
+/*   exec_operations_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 05:28:25 by luguimar          #+#    #+#             */
-/*   Updated: 2023/12/21 21:17:18 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/12/21 18:56:49 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 void	exec_cheapest(t_list **stack_a, t_list **stack_b)
 {
@@ -25,24 +25,16 @@ void	exec_cheapest(t_list **stack_a, t_list **stack_b)
 		node = (t_node *)tmp->content;
 		if (node->index == lwest_price_index)
 		{
-			if (is_rrr(stack_a, stack_b, node))
-				break ;
-			else if (is_rr(stack_a, stack_b, node))
-				break ;
-			else if (is_rra(stack_a, stack_b, node))
-				break ;
-			else if (is_rrb(stack_a, stack_b, node))
-				break ;
-			else if (is_ra_rrb(stack_a, stack_b, node))
-				break ;
-			else if (is_rb(stack_a, stack_b, node))
-				break ;
-			else if (is_ra(stack_a, stack_b, node))
-				break ;
-			else if (is_rb_rra(stack_a, stack_b, node))
-				break ;
-			else if (is_pa(stack_a, stack_b, node))
-				break ;
+			is_rrr(stack_a, stack_b, node);
+			is_rr(stack_a, stack_b, node);
+			is_rra(stack_a, stack_b, node);
+			is_rrb(stack_a, stack_b, node);
+			is_ra_rrb(stack_a, stack_b, node);
+			is_rb(stack_a, stack_b, node);
+			is_ra(stack_a, stack_b, node);
+			is_rb_rra(stack_a, stack_b, node);
+			is_pa(stack_a, stack_b, node);
+			break ;
 		}
 		tmp = tmp->next;
 	}
@@ -50,44 +42,43 @@ void	exec_cheapest(t_list **stack_a, t_list **stack_b)
 
 void	operations_aux(t_list **stack_a, t_list **stack_b, char *line)
 {
-	if (!ft_strcmp(line, "ra"))
+	if (!ft_strcmp(line, "ra\n"))
 		rotate(stack_a);
-	else if (!ft_strcmp(line, "rb"))
+	else if (!ft_strcmp(line, "rb\n"))
 		rotate(stack_b);
-	else if (!ft_strcmp(line, "rr"))
+	else if (!ft_strcmp(line, "rr\n"))
 	{
 		rotate(stack_a);
 		rotate(stack_b);
 	}
-	else if (!ft_strcmp(line, "rra"))
+	else if (!ft_strcmp(line, "rra\n"))
 		reverse_rotate(stack_a);
-	else if (!ft_strcmp(line, "rrb"))
+	else if (!ft_strcmp(line, "rrb\n"))
 		reverse_rotate(stack_b);
-	else if (!ft_strcmp(line, "rrr"))
+	else if (!ft_strcmp(line, "rrr\n"))
 	{
 		reverse_rotate(stack_a);
 		reverse_rotate(stack_b);
 	}
 	else
-		wrong_args();
+		wrong_args(*stack_a, *stack_b, line);
 }
 
 void	exec_operation(t_list **stack_a, t_list **stack_b, char *line)
 {
-	if (!ft_strcmp(line, "sa"))
+	if (!ft_strcmp(line, "sa\n"))
 		swap(stack_a);
-	else if (!ft_strcmp(line, "sb"))
+	else if (!ft_strcmp(line, "sb\n"))
 		swap(stack_b);
-	else if (!ft_strcmp(line, "ss"))
+	else if (!ft_strcmp(line, "ss\n"))
 	{
 		swap(stack_a);
 		swap(stack_b);
 	}
-	else if (!ft_strcmp(line, "pa"))
+	else if (!ft_strcmp(line, "pa\n"))
 		push(stack_b, stack_a);
-	else if (!ft_strcmp(line, "pb"))
+	else if (!ft_strcmp(line, "pb\n"))
 		push(stack_a, stack_b);
 	else
 		operations_aux(stack_a, stack_b, line);
-	ft_printf("%s\n", line);
 }

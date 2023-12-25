@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exec_operations_extra.c                            :+:      :+:    :+:   */
+/*   exec_operations_extra_bonus.c                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 18:11:55 by luguimar          #+#    #+#             */
-/*   Updated: 2023/12/21 21:06:18 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/12/21 18:58:02 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-int	is_rrr(t_list **stack_a, t_list **stack_b, t_node *node)
+void	is_rrr(t_list **stack_a, t_list **stack_b, t_node *node)
 {
 	if ((node->value > ((t_node *)biggest(*stack_a)->content)->value \
 				&& node->half == ((t_node *)smallest(*stack_a) \
 					->content)->half && node->half == 1) \
 			|| (node->half != 0 && target_half(*stack_a, \
 					node->final_a_index) != 0))
-	{
 		exec_operation(stack_a, stack_b, "rrr");
-		return (1);
-	}
-	return (0);
 }
 
-int	is_rr(t_list **stack_a, t_list **stack_b, t_node *node)
+void	is_rr(t_list **stack_a, t_list **stack_b, t_node *node)
 {
 	if ((node->value > ((t_node *)biggest(*stack_a)->content)->value && \
 				node->half == ((t_node *)smallest(*stack_a) \
@@ -36,28 +32,20 @@ int	is_rr(t_list **stack_a, t_list **stack_b, t_node *node)
 					&& target_half(*stack_a, node->final_a_index) \
 					== 0 && node->index != 0 && target_index \
 					(*stack_a, node->final_a_index) != 0))
-	{
 		exec_operation(stack_a, stack_b, "rr");
-		return (1);
-	}
-	return (0);
 }
 
-int	is_rra(t_list **stack_a, t_list **stack_b, t_node *node)
+void	is_rra(t_list **stack_a, t_list **stack_b, t_node *node)
 {
 	if ((node->value > ((t_node *)biggest(*stack_a)->content)->value \
 				&& node->half != ((t_node *)smallest(*stack_a) \
 					->content)->half && node->half == 0 && \
 				node->index == 0) || (node->half == 0 && target_half \
 					(*stack_a, node->final_a_index) != 0 && node->index == 0))
-	{
 		exec_operation(stack_a, stack_b, "rra");
-		return (1);
-	}
-	return (0);
 }
 
-int	is_rrb(t_list **stack_a, t_list **stack_b, t_node *node)
+void	is_rrb(t_list **stack_a, t_list **stack_b, t_node *node)
 {
 	if ((node->value > ((t_node *)biggest(*stack_a)->content)->value && \
 				node->half != ((t_node *)smallest(*stack_a)-> \
@@ -67,14 +55,10 @@ int	is_rrb(t_list **stack_a, t_list **stack_b, t_node *node)
 					== 0 && target_index(*stack_a, node->final_a_index) == 0) \
 				|| (node->half != 0 && target_index(*stack_a, \
 						node->final_a_index) == 0)))
-	{
 		exec_operation(stack_a, stack_b, "rrb");
-		return (1);
-	}
-	return (0);
 }
 
-int	is_ra_rrb(t_list **stack_a, t_list **stack_b, t_node *node)
+void	is_ra_rrb(t_list **stack_a, t_list **stack_b, t_node *node)
 {
 	if ((node->value > ((t_node *)biggest(*stack_a)->content)->value && \
 				node->half != ((t_node *)smallest(*stack_a) \
@@ -90,7 +74,5 @@ int	is_ra_rrb(t_list **stack_a, t_list **stack_b, t_node *node)
 	{
 		exec_operation(stack_a, stack_b, "ra");
 		exec_operation(stack_a, stack_b, "rrb");
-		return (1);
 	}
-	return (0);
 }
