@@ -6,12 +6,12 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:56:06 by luguimar          #+#    #+#             */
-/*   Updated: 2023/12/21 19:14:42 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/12/26 21:30:18 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef PUSH_SWAP_BONUS_H
+# define PUSH_SWAP_BONUS_H
 
 # include "libft/libft.h"
 # include <limits.h>
@@ -27,7 +27,7 @@ typedef struct s_node
 }		t_node;
 
 int		is_sorted(t_list *node);
-void	wrong_args(t_list *a, t_list *b, char *line);
+void	wrong_args(t_list *stack_a, t_list *stack_b, char *line);
 void	swap(t_list **stack);
 void	push(t_list **stack_orig, t_list **stack_dest);
 void	rotate(t_list **stack);
@@ -62,17 +62,15 @@ void	sort_four_and_five_extra(t_list **stack_a, t_list **stack_b);
 void	sort_many_extra(t_list **stack_a, t_list **stack_b);
 void	set_price_extra(t_list **stack_a, t_node *node);
 void	set_price_stack_a(t_list **stack_a);
-void	is_rrr(t_list **stack_a, t_list **stack_b, t_node *node);
-void	is_rr(t_list **stack_a, t_list **stack_b, t_node *node);
-void	is_rra(t_list **stack_a, t_list **stack_b, t_node *node);
-void	is_rrb(t_list **stack_a, t_list **stack_b, t_node *node);
-void	is_ra_rrb(t_list **stack_a, t_list **stack_b, t_node *node);
-void	is_rb(t_list **stack_a, t_list **stack_b, t_node *node);
-void	is_ra(t_list **stack_a, t_list **stack_b, t_node *node);
-void	is_rb_rra(t_list **stack_a, t_list **stack_b, t_node *node);
-void	is_pa(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux1(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux2(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux3(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux4(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux5(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux6(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux7(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_extra(t_list **stack_a, t_list **stack_b, t_node *node);
 void	read_line(t_list **a, t_list **b, char *line);
-
 
 void	print_stack(t_list *node);
 void	print_half(t_list *node);

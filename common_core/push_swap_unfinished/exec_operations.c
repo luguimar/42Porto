@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 05:28:25 by luguimar          #+#    #+#             */
-/*   Updated: 2023/12/21 21:17:18 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/12/26 21:18:43 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,27 +25,30 @@ void	exec_cheapest(t_list **stack_a, t_list **stack_b)
 		node = (t_node *)tmp->content;
 		if (node->index == lwest_price_index)
 		{
-			if (is_rrr(stack_a, stack_b, node))
+			if (exec_cheapest_aux1(stack_a, stack_b, node))
 				break ;
-			else if (is_rr(stack_a, stack_b, node))
+			else if (exec_cheapest_aux2(stack_a, stack_b, node))
 				break ;
-			else if (is_rra(stack_a, stack_b, node))
+			else if (exec_cheapest_aux3(stack_a, stack_b, node))
 				break ;
-			else if (is_rrb(stack_a, stack_b, node))
+			else if (exec_cheapest_aux4(stack_a, stack_b, node))
 				break ;
-			else if (is_ra_rrb(stack_a, stack_b, node))
-				break ;
-			else if (is_rb(stack_a, stack_b, node))
-				break ;
-			else if (is_ra(stack_a, stack_b, node))
-				break ;
-			else if (is_rb_rra(stack_a, stack_b, node))
-				break ;
-			else if (is_pa(stack_a, stack_b, node))
+			else if (exec_cheapest_extra(stack_a, stack_b, node))
 				break ;
 		}
 		tmp = tmp->next;
 	}
+}
+
+int	exec_cheapest_extra(t_list **stack_a, t_list **stack_b, t_node *node)
+{
+	if (exec_cheapest_aux5(stack_a, stack_b, node))
+		return (1);
+	else if (exec_cheapest_aux6(stack_a, stack_b, node))
+		return (1);
+	else if (exec_cheapest_aux7(stack_a, stack_b, node))
+		return (1);
+	return (0);
 }
 
 void	operations_aux(t_list **stack_a, t_list **stack_b, char *line)

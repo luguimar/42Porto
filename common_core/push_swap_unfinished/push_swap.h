@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 16:56:06 by luguimar          #+#    #+#             */
-/*   Updated: 2023/12/21 21:03:04 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/12/26 21:20:19 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,15 +62,14 @@ void	sort_four_and_five_extra(t_list **stack_a, t_list **stack_b);
 void	sort_many_extra(t_list **stack_a, t_list **stack_b);
 void	set_price_extra(t_list **stack_a, t_node *node);
 void	set_price_stack_a(t_list **stack_a);
-int		is_rrr(t_list **stack_a, t_list **stack_b, t_node *node);
-int		is_rr(t_list **stack_a, t_list **stack_b, t_node *node);
-int		is_rra(t_list **stack_a, t_list **stack_b, t_node *node);
-int		is_rrb(t_list **stack_a, t_list **stack_b, t_node *node);
-int		is_ra_rrb(t_list **stack_a, t_list **stack_b, t_node *node);
-int		is_rb(t_list **stack_a, t_list **stack_b, t_node *node);
-int		is_ra(t_list **stack_a, t_list **stack_b, t_node *node);
-int		is_rb_rra(t_list **stack_a, t_list **stack_b, t_node *node);
-int		is_pa(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux1(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux2(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux3(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux4(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux5(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux6(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_aux7(t_list **stack_a, t_list **stack_b, t_node *node);
+int		exec_cheapest_extra(t_list **stack_a, t_list **stack_b, t_node *node);
 
 void	print_stack(t_list *node);
 void	print_half(t_list *node);
