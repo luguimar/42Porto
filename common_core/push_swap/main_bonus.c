@@ -6,7 +6,7 @@
 /*   By: luguimar <luguimar@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 12:24:41 by luguimar          #+#    #+#             */
-/*   Updated: 2023/12/21 19:18:05 by luguimar         ###   ########.fr       */
+/*   Updated: 2023/12/26 22:18:43 by luguimar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	is_sorted(t_list *node)
 	return (1);
 }
 
-t_list	*fill_stack(t_list **stack_a, char **args, int i)
+static t_list	*fill_stack(t_list **stack_a, char **args, int i)
 {
 	t_list	*temp_node;
 
@@ -88,7 +88,7 @@ t_list	*fill_stack(t_list **stack_a, char **args, int i)
 	return (*stack_a);
 }
 
-int	arg_checker(int argc, char **args)
+static int	arg_checker(int argc, char **args)
 {
 	int	i;
 	int	j;
