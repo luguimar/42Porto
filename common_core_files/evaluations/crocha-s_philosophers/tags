@@ -1,0 +1,73 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+$(NAME)	philo/src/Makefile	/^$(NAME): ${OBJS}$/;"	t
+.c.o	philo/src/Makefile	/^.c.o:$/;"	t
+CC	philo/src/Makefile	/^CC = cc$/;"	m
+CFLAGS	philo/src/Makefile	/^CFLAGS = -Wall -Wextra -Werror -g# -fsanitize=thread$/;"	m
+DIE	philo/include/philo.h	/^# define DIE /;"	d
+EAT	philo/include/philo.h	/^# define EAT /;"	d
+FINISH	philo/include/philo.h	/^# define FINISH /;"	d
+FINISH_MSG	philo/include/philo.h	/^# define FINISH_MSG /;"	d
+INCLUDE	philo/src/Makefile	/^INCLUDE = -I include$/;"	m
+NAME	philo/src/Makefile	/^NAME = philo$/;"	m
+NO	philo/include/philo.h	/^# define NO /;"	d
+OBJS	philo/src/Makefile	/^OBJS = ${SRC:.c=.o}$/;"	m
+PHILO_H	philo/include/philo.h	/^# define PHILO_H$/;"	d
+RM	philo/src/Makefile	/^RM = rm -f$/;"	m
+SLEEP	philo/include/philo.h	/^# define SLEEP /;"	d
+SRC	philo/src/Makefile	/^SRC = main.c utils.c clean_exit.c actions.c$/;"	m
+TAKE	philo/include/philo.h	/^# define TAKE /;"	d
+THINK	philo/include/philo.h	/^# define THINK /;"	d
+YES	philo/include/philo.h	/^# define YES /;"	d
+all	philo/src/Makefile	/^all:	${NAME}$/;"	t
+ate_enough	philo/include/philo.h	/^	int				ate_enough;$/;"	m	struct:s_table	typeref:typename:int
+call_philosophers	philo/src/main.c	/^void	call_philosophers(t_table *table)$/;"	f	typeref:typename:void
+clean	philo/src/Makefile	/^clean:$/;"	t
+clean_table	philo/src/clean_exit.c	/^void	clean_table(t_table *table)$/;"	f	typeref:typename:void
+dead_or_full	philo/src/actions.c	/^int	dead_or_full(t_philo *philo)$/;"	f	typeref:typename:int
+destroy_mutexes	philo/src/clean_exit.c	/^void	destroy_mutexes(t_table *table)$/;"	f	typeref:typename:void
+dinner_for_one	philo/src/actions.c	/^int	dinner_for_one(t_table *table)$/;"	f	typeref:typename:int
+eat_count	philo/include/philo.h	/^	int				eat_count;$/;"	m	struct:s_philo	typeref:typename:int
+eat_mutex	philo/include/philo.h	/^	pthread_mutex_t	eat_mutex;$/;"	m	struct:s_table	typeref:typename:pthread_mutex_t
+emulate_action	philo/src/utils.c	/^void	emulate_action(t_philo *philo, long long stop)$/;"	f	typeref:typename:void
+exit_error	philo/src/utils.c	/^void	exit_error(char *msg, t_table *table, int n)$/;"	f	typeref:typename:void
+fclean	philo/src/Makefile	/^fclean: clean$/;"	t
+finish_dinner	philo/src/clean_exit.c	/^void	finish_dinner(t_table *table)$/;"	f	typeref:typename:void
+finish_flag	philo/include/philo.h	/^	int				finish_flag;$/;"	m	struct:s_table	typeref:typename:int
+finish_mutex	philo/include/philo.h	/^	pthread_mutex_t	finish_mutex;$/;"	m	struct:s_table	typeref:typename:pthread_mutex_t
+fork_mutex	philo/include/philo.h	/^	pthread_mutex_t	*fork_mutex;$/;"	m	struct:s_table	typeref:typename:pthread_mutex_t *
+ft_atoi	philo/src/utils.c	/^int	ft_atoi(const char *s)$/;"	f	typeref:typename:int
+id	philo/include/philo.h	/^	int				id;$/;"	m	struct:s_philo	typeref:typename:int
+l_fork	philo/include/philo.h	/^	int				l_fork;$/;"	m	struct:s_philo	typeref:typename:int
+last_eat	philo/include/philo.h	/^	long long		last_eat;$/;"	m	struct:s_philo	typeref:typename:long long
+main	philo/src/main.c	/^int	main(int ac, char **av)$/;"	f	typeref:typename:int
+must_eat_times	philo/include/philo.h	/^	int				must_eat_times;$/;"	m	struct:s_table	typeref:typename:int
+n_philos	philo/include/philo.h	/^	int				n_philos;$/;"	m	struct:s_table	typeref:typename:int
+now	philo/src/utils.c	/^long long	now(void)$/;"	f	typeref:typename:long long
+philo	philo/include/philo.h	/^	t_philo			*philo;$/;"	m	struct:s_table	typeref:typename:t_philo *
+philos_into_threads	philo/src/main.c	/^int	philos_into_threads(t_table *table)$/;"	f	typeref:typename:int
+print_action	philo/src/utils.c	/^void	print_action(t_philo *philo, const char *status)$/;"	f	typeref:typename:void
+print_mutex	philo/include/philo.h	/^	pthread_mutex_t	print_mutex;$/;"	m	struct:s_table	typeref:typename:pthread_mutex_t
+r_fork	philo/include/philo.h	/^	int				r_fork;$/;"	m	struct:s_philo	typeref:typename:int
+re	philo/src/Makefile	/^re: fclean all$/;"	t
+s_philo	philo/include/philo.h	/^typedef struct s_philo$/;"	s
+s_table	philo/include/philo.h	/^typedef struct s_table$/;"	s
+set_table	philo/src/main.c	/^void	set_table(t_table *table, int ac, char **av)$/;"	f	typeref:typename:void
+start_dinner	philo/src/actions.c	/^void	*start_dinner(void *ptr)$/;"	f	typeref:typename:void *
+start_monitor	philo/src/clean_exit.c	/^void	start_monitor(t_table *table)$/;"	f	typeref:typename:void
+start_mutexes	philo/src/main.c	/^void	start_mutexes(t_table *table)$/;"	f	typeref:typename:void
+start_time	philo/include/philo.h	/^	long long		start_time;$/;"	m	struct:s_table	typeref:typename:long long
+t_philo	philo/include/philo.h	/^}					t_philo;$/;"	t	typeref:struct:s_philo
+t_table	philo/include/philo.h	/^}					t_table;$/;"	t	typeref:struct:s_table
+table	philo/include/philo.h	/^	struct s_table	*table;$/;"	m	struct:s_philo	typeref:struct:s_table *
+thread	philo/include/philo.h	/^	pthread_t		thread;$/;"	m	struct:s_philo	typeref:typename:pthread_t
+time_to_die	philo/include/philo.h	/^	int				time_to_die;$/;"	m	struct:s_table	typeref:typename:int
+time_to_eat	philo/include/philo.h	/^	int				time_to_eat;$/;"	m	struct:s_table	typeref:typename:int
+time_to_eat	philo/src/actions.c	/^void	time_to_eat(t_philo *philo)$/;"	f	typeref:typename:void
+time_to_finish	philo/src/actions.c	/^int	time_to_finish(t_philo *philo, int finish_order)$/;"	f	typeref:typename:int
+time_to_sleep	philo/include/philo.h	/^	int				time_to_sleep;$/;"	m	struct:s_table	typeref:typename:int

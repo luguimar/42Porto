@@ -1,0 +1,106 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+$(NAME)	libft/Makefile	/^$(NAME): ${OBJS} ${HEADER}$/;"	t
+$(PROG)	Makefile	/^$(PROG): ${OBJS}$/;"	t
+%.o	libft/Makefile	/^%.o:%.c$/;"	t
+.c.o	Makefile	/^.c.o:$/;"	t
+BONUS	libft/Makefile	/^BONUS = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \\$/;"	m
+BONUS_OBJ	libft/Makefile	/^BONUS_OBJ = ${BONUS:.c=.o}$/;"	m
+CC	Makefile	/^CC = cc$/;"	m
+CC	libft/Makefile	/^CC = cc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra -Werror -g$/;"	m
+CFLAGS	libft/Makefile	/^CFLAGS = -Wall -Wextra -Werror -g$/;"	m
+HEADER	libft/Makefile	/^HEADER = libft.h$/;"	m
+INCLUDE	Makefile	/^INCLUDE = -I .$/;"	m
+LIBFT	Makefile	/^LIBFT = -L ${LIBFT_PATH} -lft$/;"	m
+LIBFT_H	libft/libft.h	/^# define LIBFT_H$/;"	d
+LIBFT_PATH	Makefile	/^LIBFT_PATH = libft$/;"	m
+MAKE	Makefile	/^MAKE = make -C$/;"	m
+NAME	libft/Makefile	/^NAME = libft.a$/;"	m
+OBJS	Makefile	/^OBJS = ${SRCS:.c=.o}$/;"	m
+OBJS	libft/Makefile	/^OBJS = ${SRC:.c=.o}$/;"	m
+PART1	libft/Makefile	/^PART1 = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \\$/;"	m
+PART2	libft/Makefile	/^PART2 = ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_putchar_fd.c \\$/;"	m
+PIPEX_H	pipex.h	/^# define PIPEX_H$/;"	d
+PROG	Makefile	/^PROG = pipex$/;"	m
+RM	Makefile	/^RM = rm -f$/;"	m
+RM	libft/Makefile	/^RM = rm -f$/;"	m
+SRC	libft/Makefile	/^SRC = ${PART1} ${PART2}$/;"	m
+SRCS	Makefile	/^SRCS = pipex.c utils.c process.c$/;"	m
+all	Makefile	/^all:	${PROG}$/;"	t
+all	libft/Makefile	/^all:    ${NAME}$/;"	t
+bonus	libft/Makefile	/^bonus:	${OBJS} ${BONUS_OBJ}$/;"	t
+check_envp	pipex.c	/^void	check_envp(char **envp)$/;"	f	typeref:typename:void
+child_process	process.c	/^void	child_process(int *fd, char **argv, char **envp)$/;"	f	typeref:typename:void
+clean	Makefile	/^clean:$/;"	t
+clean	libft/Makefile	/^clean:$/;"	t
+content	libft/libft.h	/^	void			*content;$/;"	m	struct:s_list	typeref:typename:void *
+exec_cmd	utils.c	/^void	exec_cmd(char *argv, char **envp)$/;"	f	typeref:typename:void
+execute_process	process.c	/^void	execute_process(char **argv, char **envp)$/;"	f	typeref:typename:void
+fclean	Makefile	/^fclean: clean$/;"	t
+fclean	libft/Makefile	/^fclean: clean$/;"	t
+find_path	utils.c	/^char	*find_path(char *cmd, char **envp, int count)$/;"	f	typeref:typename:char *
+free_split	utils.c	/^void	free_split(char **str)$/;"	f	typeref:typename:void
+ft_atoi	libft/ft_atoi.c	/^int	ft_atoi(const char *nptr)$/;"	f	typeref:typename:int
+ft_bzero	libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f	typeref:typename:void
+ft_calloc	libft/ft_calloc.c	/^void	*ft_calloc(size_t nmemb, size_t size)$/;"	f	typeref:typename:void *
+ft_count_words	libft/ft_split.c	/^static int	ft_count_words(const char *s, char c)$/;"	f	typeref:typename:int	file:
+ft_error	utils.c	/^void	ft_error(char *str)$/;"	f	typeref:typename:void
+ft_isalnum	libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f	typeref:typename:int
+ft_isalpha	libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f	typeref:typename:int
+ft_isascii	libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f	typeref:typename:int
+ft_isdigit	libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f	typeref:typename:int
+ft_isprint	libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f	typeref:typename:int
+ft_itoa	libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f	typeref:typename:char *
+ft_lstadd_back	libft/ft_lstadd_back_bonus.c	/^void	ft_lstadd_back(t_list **lst, t_list *new)$/;"	f	typeref:typename:void
+ft_lstadd_front	libft/ft_lstadd_front_bonus.c	/^void	ft_lstadd_front(t_list **lst, t_list *new)$/;"	f	typeref:typename:void
+ft_lstclear	libft/ft_lstclear_bonus.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f	typeref:typename:void
+ft_lstdelone	libft/ft_lstdelone_bonus.c	/^void	ft_lstdelone(t_list *lst, void (*del)(void *))$/;"	f	typeref:typename:void
+ft_lstiter	libft/ft_lstiter_bonus.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f	typeref:typename:void
+ft_lstlast	libft/ft_lstlast_bonus.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f	typeref:typename:t_list *
+ft_lstmap	libft/ft_lstmap_bonus.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f	typeref:typename:t_list *
+ft_lstnew	libft/ft_lstnew_bonus.c	/^t_list	*ft_lstnew(void *content)$/;"	f	typeref:typename:t_list *
+ft_lstsize	libft/ft_lstsize_bonus.c	/^int	ft_lstsize(t_list *lst)$/;"	f	typeref:typename:int
+ft_memchr	libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f	typeref:typename:void *
+ft_memcmp	libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f	typeref:typename:int
+ft_memcpy	libft/ft_memcpy.c	/^void	*ft_memcpy(void *dest, const void *src, size_t n)$/;"	f	typeref:typename:void *
+ft_memmove	libft/ft_memmove.c	/^void	*ft_memmove(void *dest, const void *src, size_t n)$/;"	f	typeref:typename:void *
+ft_memset	libft/ft_memset.c	/^void	*ft_memset(void *s, int c, size_t n)$/;"	f	typeref:typename:void *
+ft_putchar_fd	libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f	typeref:typename:void
+ft_putendl_fd	libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f	typeref:typename:void
+ft_putnbr_fd	libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f	typeref:typename:void
+ft_putstr_fd	libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f	typeref:typename:void
+ft_split	libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f	typeref:typename:char **
+ft_strchr	libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f	typeref:typename:char *
+ft_strdup	libft/ft_strdup.c	/^char	*ft_strdup(const char *s)$/;"	f	typeref:typename:char *
+ft_striteri	libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char*))$/;"	f	typeref:typename:void
+ft_strjoin	libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f	typeref:typename:char *
+ft_strlcat	libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f	typeref:typename:size_t
+ft_strlcpy	libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t size)$/;"	f	typeref:typename:size_t
+ft_strlen	libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f	typeref:typename:size_t
+ft_strmapi	libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f	typeref:typename:char *
+ft_strncmp	libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f	typeref:typename:int
+ft_strnstr	libft/ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *little, size_t len)$/;"	f	typeref:typename:char *
+ft_strrchr	libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f	typeref:typename:char *
+ft_strtrim	libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f	typeref:typename:char *
+ft_substr	libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f	typeref:typename:char *
+ft_tolower	libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f	typeref:typename:int
+ft_toupper	libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	typeref:typename:int
+main	pipex.c	/^int	main(int argc, char **argv, char **envp)$/;"	f	typeref:typename:int
+msg	utils.c	/^void	msg(char *msg, int check, int output)$/;"	f	typeref:typename:void
+next	libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
+parent_process	process.c	/^void	parent_process(int *fd, char **argv, char **envp)$/;"	f	typeref:typename:void
+qtd_num	libft/ft_itoa.c	/^int	qtd_num(long nb)$/;"	f	typeref:typename:int
+re	Makefile	/^re: fclean all$/;"	t
+re	libft/Makefile	/^re: fclean all$/;"	t
+s_list	libft/libft.h	/^typedef struct s_list$/;"	s
+str_done	libft/ft_itoa.c	/^char	*str_done(char *str, long nb, int i)$/;"	f	typeref:typename:char *
+t_list	libft/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
+tclean	libft/Makefile	/^tclean: clean$/;"	t
+teste	libft/Makefile	/^teste: all$/;"	t
+word_splitter	libft/ft_split.c	/^static char	*word_splitter(const char *s, char c)$/;"	f	typeref:typename:char *	file:

@@ -1,0 +1,102 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+$(NAME)	Makefile	/^$(NAME): $(OBJS)$/;"	t
+$(NAME)	libft/Makefile	/^$(NAME): $(OBJS)$/;"	t
+.c.o	libft/Makefile	/^.c.o:$/;"	t
+CC	Makefile	/^CC = cc$/;"	m
+CC	libft/Makefile	/^CC = cc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
+CFLAGS	libft/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
+LIBFT_H	libft/libft.h	/^# define LIBFT_H$/;"	d
+MAKE	Makefile	/^MAKE = make -C$/;"	m
+NAME	libft/Makefile	/^NAME = libft.a$/;"	m
+OBJS	Makefile	/^OBJS = $(SRCS:.c=.o)$/;"	m
+OBJS	libft/Makefile	/^OBJS = $(SRCS:.c=.o)$/;"	m
+PRINTF_PATH	Makefile	/^PRINTF_PATH = libft\/libft.a$/;"	m
+SRCS	libft/Makefile	/^SRCS = ft_memset.c \\$/;"	m
+all	Makefile	/^all:    $/;"	t
+all	libft/Makefile	/^all: $(NAME)$/;"	t
+aux_atoi	libft/ft_atoi.c	/^int	aux_atoi(const char *str, int i)$/;"	f	typeref:typename:int
+aux_find_set	libft/ft_strtrim.c	/^int	aux_find_set(char const *s1, char const *set)$/;"	f	typeref:typename:int
+aux_find_set_rev	libft/ft_strtrim.c	/^int	aux_find_set_rev(char const *s1, char const *set)$/;"	f	typeref:typename:int
+char_is_separator	libft/ft_split.c	/^static int	char_is_separator(char c, char sep)$/;"	f	typeref:typename:int	file:
+clean	Makefile	/^clean:$/;"	t
+clean	libft/Makefile	/^clean:$/;"	t
+content	libft/libft.h	/^	void			*content;$/;"	m	struct:s_list	typeref:typename:void *
+count_words	libft/ft_split.c	/^static int	count_words(char *str, char sep)$/;"	f	typeref:typename:int	file:
+fclean	Makefile	/^fclean: clean$/;"	t
+fclean	libft/Makefile	/^fclean: clean$/;"	t
+ft_atoi	libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f	typeref:typename:int
+ft_bzero	libft/ft_bzero.c	/^void	ft_bzero(void *dst, size_t n)$/;"	f	typeref:typename:void
+ft_calloc	libft/ft_calloc.c	/^void	*ft_calloc(size_t nitems, size_t size)$/;"	f	typeref:typename:void *
+ft_flag	libft/ft_printf.c	/^int	ft_flag(va_list arg, const char frmt)$/;"	f	typeref:typename:int
+ft_isalnum	libft/ft_isalnum.c	/^int	ft_isalnum(int str)$/;"	f	typeref:typename:int
+ft_isalpha	libft/ft_isalpha.c	/^int	ft_isalpha(int str)$/;"	f	typeref:typename:int
+ft_isascii	libft/ft_isascii.c	/^int	ft_isascii(int str)$/;"	f	typeref:typename:int
+ft_isdigit	libft/ft_isdigit.c	/^int	ft_isdigit(int str)$/;"	f	typeref:typename:int
+ft_isprint	libft/ft_isprint.c	/^int	ft_isprint(int str)$/;"	f	typeref:typename:int
+ft_itoa	libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f	typeref:typename:char *
+ft_lstadd_back	libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *new)$/;"	f	typeref:typename:void
+ft_lstadd_front	libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *new)$/;"	f	typeref:typename:void
+ft_lstclear	libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void*))$/;"	f	typeref:typename:void
+ft_lstdelone	libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list *lst, void (*del)(void*))$/;"	f	typeref:typename:void
+ft_lstiter	libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f	typeref:typename:void
+ft_lstlast	libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f	typeref:typename:t_list *
+ft_lstmap	libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f	typeref:typename:t_list *
+ft_lstnew	libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f	typeref:typename:t_list *
+ft_lstsize	libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f	typeref:typename:int
+ft_memchr	libft/ft_memchr.c	/^void	*ft_memchr(const void *str, int c, size_t n)$/;"	f	typeref:typename:void *
+ft_memcmp	libft/ft_memcmp.c	/^int	ft_memcmp(const void *str1, const void *str2, size_t n)$/;"	f	typeref:typename:int
+ft_memcpy	libft/ft_memcpy.c	/^void	*ft_memcpy(void *dest, const void *src, size_t n)$/;"	f	typeref:typename:void *
+ft_memmove	libft/ft_memmove.c	/^void	*ft_memmove(void *dst, const void *src, size_t n)$/;"	f	typeref:typename:void *
+ft_memset	libft/ft_memset.c	/^void	*ft_memset(void *str, int c, size_t n)$/;"	f	typeref:typename:void *
+ft_printf	libft/ft_printf.c	/^int	ft_printf(const char *frmt, ...)$/;"	f	typeref:typename:int
+ft_printf_hex	libft/ft_printf_hex.c	/^int	ft_printf_hex(unsigned long num)$/;"	f	typeref:typename:int
+ft_printf_hexi	libft/ft_printf_hex.c	/^int	ft_printf_hexi(unsigned long num)$/;"	f	typeref:typename:int
+ft_printf_nbr	libft/ft_printf_nbr.c	/^int	ft_printf_nbr(int num)$/;"	f	typeref:typename:int
+ft_printf_p	libft/ft_printf_ptr.c	/^int	ft_printf_p(unsigned long num)$/;"	f	typeref:typename:int
+ft_printf_str	libft/ft_printf_str.c	/^int	ft_printf_str(char *c)$/;"	f	typeref:typename:int
+ft_printf_uns	libft/ft_printf_uns.c	/^int	ft_printf_uns(long num)$/;"	f	typeref:typename:int
+ft_putchar	libft/ft_putchar.c	/^int	ft_putchar(char c)$/;"	f	typeref:typename:int
+ft_putchar_fd	libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f	typeref:typename:void
+ft_putchar_fd	libft/ft_putnbr_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f	typeref:typename:void
+ft_putendl_fd	libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f	typeref:typename:void
+ft_putnbr_fd	libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int nb, int fd)$/;"	f	typeref:typename:void
+ft_putstr_fd	libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f	typeref:typename:void
+ft_realloc	libft/ft_realloc.c	/^char	*ft_realloc(char *dest, size_t size)$/;"	f	typeref:typename:char *
+ft_rev_tab	libft/ft_itoa.c	/^void	ft_rev_tab(char *tab, int size)$/;"	f	typeref:typename:void
+ft_split	libft/ft_split.c	/^char	**ft_split(const char *s, char c)$/;"	f	typeref:typename:char **
+ft_strchr	libft/ft_strchr.c	/^char	*ft_strchr(const char *str, int c)$/;"	f	typeref:typename:char *
+ft_strdup	libft/ft_strdup.c	/^char	*ft_strdup(const char *src)$/;"	f	typeref:typename:char *
+ft_striteri	libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char*))$/;"	f	typeref:typename:void
+ft_strjoin	libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f	typeref:typename:char *
+ft_strlcat	libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f	typeref:typename:size_t
+ft_strlcpy	libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t size)$/;"	f	typeref:typename:size_t
+ft_strlen	libft/ft_strlen.c	/^size_t	ft_strlen(const char *str)$/;"	f	typeref:typename:size_t
+ft_strmapi	libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f	typeref:typename:char *
+ft_strncmp	libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f	typeref:typename:int
+ft_strnstr	libft/ft_strnstr.c	/^char	*ft_strnstr(const char *str, const char *to_find, size_t n)$/;"	f	typeref:typename:char *
+ft_strrchr	libft/ft_strrchr.c	/^char	*ft_strrchr(const char *str, int c)$/;"	f	typeref:typename:char *
+ft_strtrim	libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f	typeref:typename:char *
+ft_substr	libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f	typeref:typename:char *
+ft_tolower	libft/ft_tolower.c	/^int	ft_tolower(int ch)$/;"	f	typeref:typename:int
+ft_toupper	libft/ft_toupper.c	/^int	ft_toupper(int ch)$/;"	f	typeref:typename:int
+main	client.c	/^int	main(int argc, char **argv)$/;"	f	typeref:typename:int
+main	server.c	/^int	main(int argc, char **argv)$/;"	f	typeref:typename:int
+next	libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
+re	Makefile	/^re: fclean all$/;"	t
+re	libft/Makefile	/^re: fclean all$/;"	t
+res_printf	libft/ft_printf.c	/^int	res_printf(const char *frmt, va_list arg)$/;"	f	typeref:typename:int
+s_list	libft/libft.h	/^typedef struct s_list$/;"	s
+send	client.c	/^void	send(int pid, char c)$/;"	f	typeref:typename:void
+srv_handle	server.c	/^void	srv_handle(int sinal)$/;"	f	typeref:typename:void
+sz_int	libft/ft_itoa.c	/^int	sz_int(int n)$/;"	f	typeref:typename:int
+t_list	libft/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
+write_split	libft/ft_split.c	/^static void	*write_split(char **split, char *str, char sep)$/;"	f	typeref:typename:void *	file:
+write_word	libft/ft_split.c	/^static void	write_word(char *dest, char *from, char sep)$/;"	f	typeref:typename:void	file:
+zero	libft/ft_itoa.c	/^int	zero(int n, char *final)$/;"	f	typeref:typename:int

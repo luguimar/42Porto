@@ -1,0 +1,271 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+$(LIBFT)	Makefile	/^$(LIBFT):$/;"	t
+$(NAME)	Makefile	/^$(NAME): $(OBJS) $(LIBFT)$/;"	t
+$(NAME)	libft/Makefile	/^$(NAME): $(OBJS)$/;"	t
+BLACK	Makefile	/^BLACK 	= \\033[1;30m$/;"	m
+BLUE	Makefile	/^BLUE	= \\033[1;34m$/;"	m
+CC	Makefile	/^CC = cc$/;"	m
+CC	libft/Makefile	/^CC = cc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra -Werror -g$/;"	m
+CFLAGS	libft/Makefile	/^CFLAGS = -Wall -Wextra -Werror $/;"	m
+CMD_CANNOT_EXECUTE	minishell.h	/^# define CMD_CANNOT_EXECUTE /;"	d
+CMD_NOT_FOUND	minishell.h	/^# define CMD_NOT_FOUND /;"	d
+CYAN	Makefile	/^CYAN 	= \\033[1;36m$/;"	m
+DOUBLE_PIPE_ERR	minishell.h	/^# define DOUBLE_PIPE_ERR /;"	d
+EXIT_CTRL_C	minishell.h	/^# define EXIT_CTRL_C /;"	d
+FILES	Makefile	/^FILES = main builtins\/b_cd builtins\/b_echo builtins\/b_exit builtins\/b_export builtins\/b_pwd/;"	m
+GENERAL_ERROR	minishell.h	/^# define GENERAL_ERROR /;"	d
+GREEN	Makefile	/^GREEN 	= \\033[1;32m$/;"	m
+HEREDOC_FILE	minishell.h	/^# define HEREDOC_FILE /;"	d
+HERE_ERR	minishell.h	/^# define HERE_ERR /;"	d
+Heredoc	minishell.h	/^typedef struct Heredoc$/;"	s
+IN	minishell.h	/^# define IN /;"	d
+INVALID_ARGUMENT	minishell.h	/^# define INVALID_ARGUMENT /;"	d
+LDFLAGS	Makefile	/^LDFLAGS = -lreadline -lhistory$/;"	m
+LIBFT	Makefile	/^LIBFT = .\/libft\/libft.a$/;"	m
+LIBFT_H	libft/libft.h	/^# define LIBFT_H$/;"	d
+MINISHELL_H	minishell.h	/^# define MINISHELL_H$/;"	d
+NAME	Makefile	/^NAME = minishell$/;"	m
+NAME	libft/Makefile	/^NAME = libft.a $/;"	m
+OBJS	Makefile	/^OBJS = $(addsuffix .o, $(FILES))$/;"	m
+OBJS	libft/Makefile	/^OBJS = $(SRCS:.c=.o)$/;"	m
+OUT	minishell.h	/^# define OUT /;"	d
+PURPLE	Makefile	/^PURPLE 	= \\033[1;35m$/;"	m
+RED	Makefile	/^RED 	= \\033[1;31m$/;"	m
+RESET	Makefile	/^RESET	= \\033[0m$/;"	m
+RM	Makefile	/^RM = rm -f$/;"	m
+SINGLE_PIPE_ERR	minishell.h	/^# define SINGLE_PIPE_ERR /;"	d
+SRCS	libft/Makefile	/^SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c /;"	m
+SUCCESS	minishell.h	/^# define SUCCESS /;"	d
+SYNTAX_ERROR	minishell.h	/^# define SYNTAX_ERROR /;"	d
+SYNTAX_MSG	minishell.h	/^# define SYNTAX_MSG /;"	d
+Status	minishell.h	/^typedef struct Status$/;"	s
+TOO_MANY_ARGS_ERR	minishell.h	/^# define TOO_MANY_ARGS_ERR /;"	d
+TapeInfo	minishell.h	/^typedef struct TapeInfo$/;"	s
+WHITE	Makefile	/^WHITE 	= \\033[1;37m$/;"	m
+YELLOW	Makefile	/^YELLOW 	= \\033[1;33m$/;"	m
+add_char	lexer/lexer_utils2.c	/^char	*add_char(char c, char *content)$/;"	f	typeref:typename:char *
+add_exp	extra/expo.c	/^void	add_exp(t_exp **exp, t_exp *new)$/;"	f	typeref:typename:void
+all	Makefile	/^all: $(NAME)$/;"	t
+all	libft/Makefile	/^all: $(NAME)$/;"	t
+array_env	extra/enviro2.c	/^char	**array_env(t_status *status)$/;"	f	typeref:typename:char **
+b_cd	builtins/b_cd.c	/^void	b_cd(t_status *status, char **cmd)$/;"	f	typeref:typename:void
+b_echo	builtins/b_echo.c	/^void	b_echo(char **cmd)$/;"	f	typeref:typename:void
+b_exit	builtins/b_exit.c	/^void	b_exit(char **cmd, t_status *status)$/;"	f	typeref:typename:void
+b_export	builtins/b_export.c	/^void	b_export(t_status *status, char **cmd)$/;"	f	typeref:typename:void
+b_pwd	builtins/b_pwd.c	/^void	b_pwd(void)$/;"	f	typeref:typename:void
+b_unset	builtins/b_unset.c	/^void	b_unset(t_status *status, char **cmd)$/;"	f	typeref:typename:void
+check_next_char	lexer/lexer_utils.c	/^int	check_next_char(char *c)$/;"	f	typeref:typename:int
+check_pipe_err	lexer/lexer_utils2.c	/^int	check_pipe_err(t_list **token_lst)$/;"	f	typeref:typename:int
+check_redir_err	lexer/lexer_utils.c	/^int	check_redir_err(t_list	**token_lst)$/;"	f	typeref:typename:int
+check_single_pipe_err	lexer/lexer_utils2.c	/^static int	check_single_pipe_err(char *content)$/;"	f	typeref:typename:int	file:
+clean	Makefile	/^clean:$/;"	t
+clean	libft/Makefile	/^clean: $/;"	t
+cmd	minishell.h	/^	char	**cmd;$/;"	m	struct:Status	typeref:typename:char **
+cmd	minishell.h	/^	char	*cmd;$/;"	m	struct:TapeInfo	typeref:typename:char *
+command_length	parser/parser_utils.c	/^int	command_length(t_list *cmd_start, t_list *pipe_tkn)$/;"	f	typeref:typename:int
+commands	builtins/builtin.c	/^int	commands(char **cmd)$/;"	f	typeref:typename:int
+content	libft/libft.h	/^	void			*content;$/;"	m	struct:s_list	typeref:typename:void *
+count_redir	parser/parser_utils.c	/^int	count_redir(t_list *cmd_start, t_list *pipe_tkn)$/;"	f	typeref:typename:int
+create_env	extra/enviro.c	/^void	create_env(t_status *status, char **env)$/;"	f	typeref:typename:void
+create_exp	extra/expo.c	/^void	create_exp(t_status *status, char **exp)$/;"	f	typeref:typename:void
+create_heredoc_subprocess	parser/heredoc.c	/^void	create_heredoc_subprocess(char *delim, t_status *status)$/;"	f	typeref:typename:void
+create_pipe	parser/parser.c	/^static void	create_pipe(t_status *status, t_list *pipe_tkn)$/;"	f	typeref:typename:void	file:
+create_token	lexer/lexer_utils.c	/^t_list	*create_token(t_list **head, t_list *node, int *i, char *cmd)$/;"	f	typeref:typename:t_list *
+default_fd	minishell.h	/^	int		*default_fd;$/;"	m	struct:Status	typeref:typename:int *
+delim	minishell.h	/^	char		*delim;$/;"	m	struct:Heredoc	typeref:typename:char *
+env	minishell.h	/^	t_env	*env;$/;"	m	struct:Status	typeref:typename:t_env *
+env_back	extra/enviro.c	/^void	env_back(t_env **env, t_env *new)$/;"	f	typeref:typename:void
+envp	minishell.h	/^	char	**envp;$/;"	m	struct:Status	typeref:typename:char **
+exec_ctrl_bslash	signal/exec_signal.c	/^void	exec_ctrl_bslash(int signal)$/;"	f	typeref:typename:void
+exec_ctrl_c	signal/exec_signal.c	/^void	exec_ctrl_c(int signal)$/;"	f	typeref:typename:void
+exec_ctrl_c_heredoc	signal/signal_heredoc.c	/^static void	exec_ctrl_c_heredoc(int signal, t_heredoc *heredoc)$/;"	f	typeref:typename:void	file:
+execute	execute/executer.c	/^void	execute(t_status *status, char **cmd)$/;"	f	typeref:typename:void
+exit_args	builtins/b_exit.c	/^void	exit_args(char **cmd, t_status *status)$/;"	f	typeref:typename:void
+exp	minishell.h	/^	t_exp	*exp;$/;"	m	struct:Status	typeref:typename:t_exp *
+expand_var	parser/parser_utils2.c	/^static char	*expand_var(char *new_token, char *token, int *i, t_status *status)$/;"	f	typeref:typename:char *	file:
+export_err	utils/utils1.c	/^void	export_err(int error_code, char *error_msg, char *type, char *key)$/;"	f	typeref:typename:void
+export_single	builtins/b_export.c	/^void	export_single(char *cmd, t_status *status)$/;"	f	typeref:typename:void
+extra2	builtins/b_export.c	/^void	extra2(char *key, char *value, t_status *status)$/;"	f	typeref:typename:void
+fclean	Makefile	/^fclean: clean$/;"	t
+fclean	libft/Makefile	/^fclean: clean $/;"	t
+fd	minishell.h	/^	int			fd;$/;"	m	struct:Heredoc	typeref:typename:int
+find_exec_bin	execute/path.c	/^static char	*find_exec_bin(char **dir, char *cmd)$/;"	f	typeref:typename:char *	file:
+find_next_delimiter	parser/parser_utils1.c	/^int	find_next_delimiter(char *cmd)$/;"	f	typeref:typename:int
+free_all	builtins/b_exit.c	/^void	free_all(char **cmd, t_status *status)$/;"	f	typeref:typename:void
+free_env	extra/enviro.c	/^void	free_env(t_env *env)$/;"	f	typeref:typename:void
+free_env2	utils/utils.c	/^void	free_env2(t_env *tmp)$/;"	f	typeref:typename:void
+free_exp	extra/expo.c	/^void	free_exp(t_exp *exp)$/;"	f	typeref:typename:void
+free_exp2	extra/expo.c	/^void	free_exp2(t_exp *tmp)$/;"	f	typeref:typename:void
+free_heap	parser/parser_utils1.c	/^void	free_heap(t_status *status, char *delim, int fd)$/;"	f	typeref:typename:void
+ft_atoi	libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f	typeref:typename:int
+ft_atol	utils/utils.c	/^long long	ft_atol(const char *str)$/;"	f	typeref:typename:long long
+ft_bzero	libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f	typeref:typename:void
+ft_calloc	libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f	typeref:typename:void *
+ft_check	libft/ft_strtrim.c	/^static int	ft_check(char c, const char *s)$/;"	f	typeref:typename:int	file:
+ft_cntwrd	libft/ft_split.c	/^static int	ft_cntwrd(char const *s, char c)$/;"	f	typeref:typename:int	file:
+ft_digit	libft/ft_itoa.c	/^static int	ft_digit(long int i)$/;"	f	typeref:typename:int	file:
+ft_isalnum	libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f	typeref:typename:int
+ft_isalpha	libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f	typeref:typename:int
+ft_isascii	libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f	typeref:typename:int
+ft_isdigit	libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f	typeref:typename:int
+ft_isprint	libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f	typeref:typename:int
+ft_itoa	libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f	typeref:typename:char *
+ft_lstadd_back	libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *new)$/;"	f	typeref:typename:void
+ft_lstadd_front	libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *new)$/;"	f	typeref:typename:void
+ft_lstclear	libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void*))$/;"	f	typeref:typename:void
+ft_lstdelone	libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list *lst, void (*del)(void*))$/;"	f	typeref:typename:void
+ft_lstiter	libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f	typeref:typename:void
+ft_lstlast	libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f	typeref:typename:t_list *
+ft_lstmap	libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f	typeref:typename:t_list *
+ft_lstnew	libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f	typeref:typename:t_list *
+ft_lstsize	libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f	typeref:typename:int
+ft_memchr	libft/ft_memchr.c	/^void	*ft_memchr(const void *str, int c, size_t n)$/;"	f	typeref:typename:void *
+ft_memcmp	libft/ft_memcmp.c	/^int	ft_memcmp(const void *str1, const void *str2, size_t n)$/;"	f	typeref:typename:int
+ft_memcpy	libft/ft_memcpy.c	/^void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n)$/;"	f	typeref:typename:void *
+ft_memmove	libft/ft_memmove.c	/^void	*ft_memmove(void *dest, const void *src, size_t n)$/;"	f	typeref:typename:void *
+ft_memset	libft/ft_memset.c	/^void	*ft_memset(void	*str, int c, size_t n)$/;"	f	typeref:typename:void *
+ft_putchar_fd	libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f	typeref:typename:void
+ft_putendl_fd	libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f	typeref:typename:void
+ft_putnbr_fd	libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f	typeref:typename:void
+ft_putstr_fd	libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f	typeref:typename:void
+ft_split	libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f	typeref:typename:char **
+ft_strchr	libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f	typeref:typename:char *
+ft_strcmp	builtins/b_cd.c	/^int	ft_strcmp(char *s1, char *s2)$/;"	f	typeref:typename:int
+ft_strcpy	libft/ft_strdup.c	/^char	*ft_strcpy(char *dest, const char *src)$/;"	f	typeref:typename:char *
+ft_strdup	libft/ft_strdup.c	/^char	*ft_strdup(const char *s)$/;"	f	typeref:typename:char *
+ft_striteri	libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f	typeref:typename:void
+ft_strjoin	libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f	typeref:typename:char *
+ft_strlcat	libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dest, const char *src, size_t size)$/;"	f	typeref:typename:size_t
+ft_strlcpy	libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t size)$/;"	f	typeref:typename:size_t
+ft_strlen	libft/ft_strlen.c	/^size_t	ft_strlen(const char *c)$/;"	f	typeref:typename:size_t
+ft_strmapi	libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f	typeref:typename:char *
+ft_strncmp	libft/ft_strncmp.c	/^int	ft_strncmp(char *s1, char *s2, unsigned int n)$/;"	f	typeref:typename:int
+ft_strncpy	libft/ft_split.c	/^char	*ft_strncpy(char *dst, const char *src, size_t n)$/;"	f	typeref:typename:char *
+ft_strndup	libft/ft_split.c	/^static char	*ft_strndup(const char *s, size_t n)$/;"	f	typeref:typename:char *	file:
+ft_strnstr	libft/ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *little, size_t len)$/;"	f	typeref:typename:char *
+ft_strrchr	libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f	typeref:typename:char *
+ft_strtrim	libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f	typeref:typename:char *
+ft_substr	libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f	typeref:typename:char *
+ft_tolower	libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f	typeref:typename:int
+ft_toupper	libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	typeref:typename:int
+g_exit_status	main.c	/^int	g_exit_status;$/;"	v	typeref:typename:int
+get_cmd	parser/parser.c	/^static char	**get_cmd(t_list *cmd_start, t_list *pipe_tkn)$/;"	f	typeref:typename:char **	file:
+get_env	extra/enviro2.c	/^char	*get_env(char *name, t_status *status)$/;"	f	typeref:typename:char *
+get_exp	extra/expo2.c	/^char	*get_exp(char *name, t_status *status)$/;"	f	typeref:typename:char *
+get_file_full_path	execute/path.c	/^static char	*get_file_full_path(char *cmd, char *dir)$/;"	f	typeref:typename:char *	file:
+get_heredoc_input	parser/heredoc.c	/^static void	get_heredoc_input(char *delim, int fd)$/;"	f	typeref:typename:void	file:
+get_last_env	extra/enviro.c	/^t_env	*get_last_env(t_env *env)$/;"	f	typeref:typename:t_env *
+get_leng	libft/ft_strtrim.c	/^int	get_leng(char const *chr)$/;"	f	typeref:typename:int
+get_tokens	lexer/lexer.c	/^static void	get_tokens(t_info *info)$/;"	f	typeref:typename:void	file:
+get_var	parser/parser_utils1.c	/^char	*get_var(int size, char *src, t_status *status)$/;"	f	typeref:typename:char *
+go_old_path	builtins/b_cd.c	/^int	go_old_path(char **path, t_status *status)$/;"	f	typeref:typename:int
+handle_cd	builtins/b_cd.c	/^int	handle_cd(char *path, t_status *status)$/;"	f	typeref:typename:int
+handle_ctrl_c	signal/signal.c	/^void	handle_ctrl_c(int sig)$/;"	f	typeref:typename:void
+handle_ctrl_d	signal/signal.c	/^int	handle_ctrl_d(char *cmd)$/;"	f	typeref:typename:int
+handle_double_quote	parser/parser_utils2.c	/^static char	*handle_double_quote(char *new_token, char cur_char, int *quote)$/;"	f	typeref:typename:char *	file:
+handle_heredoc	parser/redirect.c	/^static int	handle_heredoc(t_list	*heredoc, t_status *status)$/;"	f	typeref:typename:int	file:
+handle_single_quote	parser/parser_utils2.c	/^static char	*handle_single_quote(char *new_token, char cur_char, int *quote)$/;"	f	typeref:typename:char *	file:
+handle_special	lexer/lexer_utils2.c	/^t_list	*handle_special(t_list **head, t_list *node, int *i, char *cmd)$/;"	f	typeref:typename:t_list *
+has_pipe	builtins/b_exit.c	/^int	has_pipe(t_list *token_lst)$/;"	f	typeref:typename:int
+head	minishell.h	/^	t_list	**head;$/;"	m	struct:TapeInfo	typeref:typename:t_list **
+i	minishell.h	/^	int		*i;$/;"	m	struct:TapeInfo	typeref:typename:int *
+init	main.c	/^static void	init(t_status *status)$/;"	f	typeref:typename:void	file:
+init_heredoc	parser/heredoc.c	/^static void	init_heredoc(t_heredoc *here, t_status *status, int fd, char *delim)$/;"	f	typeref:typename:void	file:
+init_status_new_cmd	main.c	/^static void	init_status_new_cmd(t_status *status, t_list **token_lst)$/;"	f	typeref:typename:void	file:
+inside_word	minishell.h	/^	int		inside_word;$/;"	m	struct:TapeInfo	typeref:typename:int
+interpret_new_command	main.c	/^static int	interpret_new_command(t_status *status)$/;"	f	typeref:typename:int	file:
+is_all_digits	utils/utils1.c	/^int	is_all_digits(char *str)$/;"	f	typeref:typename:int
+is_directory	execute/path_utils.c	/^int	is_directory(char *cmd)$/;"	f	typeref:typename:int
+is_dollar	lexer/lexer_utils1.c	/^int	is_dollar(char c)$/;"	f	typeref:typename:int
+is_double_quote	lexer/lexer_utils1.c	/^int	is_double_quote(char c)$/;"	f	typeref:typename:int
+is_executable_file	execute/path_utils.c	/^int	is_executable_file(char *cmd)$/;"	f	typeref:typename:int
+is_number	utils/utils.c	/^int	is_number(char *str)$/;"	f	typeref:typename:int
+is_pipe	lexer/lexer_utils2.c	/^int	is_pipe(char *content)$/;"	f	typeref:typename:int
+is_redir	parser/parser_utils1.c	/^int	is_redir(t_list *cmd)$/;"	f	typeref:typename:int
+is_single_quote	lexer/lexer_utils1.c	/^int	is_single_quote(char c)$/;"	f	typeref:typename:int
+is_special_char	lexer/lexer_utils1.c	/^int	is_special_char(char c)$/;"	f	typeref:typename:int
+is_valid_relative_path	execute/path.c	/^static int	is_valid_relative_path(char *cmd)$/;"	f	typeref:typename:int	file:
+is_whitespace	lexer/lexer_utils1.c	/^int	is_whitespace(char c)$/;"	f	typeref:typename:int
+join_three	utils/utils1.c	/^char	*join_three(char *one, char *two, char *three)$/;"	f	typeref:typename:char *
+join_var_expansion_with_token	parser/parser_utils1.c	/^char	*join_var_expansion_with_token(char *new_token, char *var)$/;"	f	typeref:typename:char *
+last_pid	minishell.h	/^	int		last_pid;$/;"	m	struct:Status	typeref:typename:int
+lexer	lexer/lexer.c	/^t_list	**lexer(char *cmd)$/;"	f	typeref:typename:t_list **
+lst_clear	lexer/lexer_utils.c	/^void	lst_clear(t_list **lst)$/;"	f	typeref:typename:void
+main	main.c	/^int	main(int argc, char **argv, char **envp)$/;"	f	typeref:typename:int
+matrix_free	parser/parser_utils.c	/^void	matrix_free(char **matrix)$/;"	f	typeref:typename:void
+missing_quotes	utils/utils1.c	/^bool	missing_quotes(const char *str)$/;"	f	typeref:typename:bool
+new__exp	extra/expo.c	/^t_exp	*new__exp(char *vexp_name, char *vexp_value)$/;"	f	typeref:typename:t_exp *
+new_env	extra/enviro.c	/^t_env	*new_env(char *v_name, char *v_value)$/;"	f	typeref:typename:t_env *
+next	libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
+next	minishell.h	/^	struct s_env	*next;$/;"	m	struct:s_env	typeref:struct:s_env *
+next	minishell.h	/^	struct s_exp	*next;$/;"	m	struct:s_exp	typeref:struct:s_exp *
+node	minishell.h	/^	t_list	*node;$/;"	m	struct:TapeInfo	typeref:typename:t_list *
+old_pipe_in	minishell.h	/^	int		old_pipe_in;$/;"	m	struct:Status	typeref:typename:int
+parse_command	parser/parser.c	/^static void	parse_command(t_list *cmd_start, t_list *pipe_tkn, t_status *status)$/;"	f	typeref:typename:void	file:
+parse_tokens	parser/parser.c	/^static void	parse_tokens(t_status *status)$/;"	f	typeref:typename:void	file:
+parser_main	parser/parser.c	/^void	parser_main(t_status *status)$/;"	f	typeref:typename:void
+print_env	extra/enviro2.c	/^void	print_env(t_status *status)$/;"	f	typeref:typename:void
+print_error	utils/utils.c	/^void	print_error(int error_code, char *error_msg, char *file)$/;"	f	typeref:typename:void
+print_exp	extra/expo2.c	/^void	print_exp(t_status *status)$/;"	f	typeref:typename:void
+print_linked_list	lexer/lexer_utils.c	/^void	print_linked_list(t_list	*head)$/;"	f	typeref:typename:void
+print_syntax_err	utils/utils.c	/^void	print_syntax_err(struct s_list *token)$/;"	f	typeref:typename:void
+print_words	builtins/b_echo.c	/^void	print_words(char **word, int i, int flag)$/;"	f	typeref:typename:void
+process_count	minishell.h	/^	int		process_count;$/;"	m	struct:Status	typeref:typename:int
+process_tokens	parser/parser_utils2.c	/^char	*process_tokens(char *token, int expand, t_status *status)$/;"	f	typeref:typename:char *
+quote	minishell.h	/^	int		quote;$/;"	m	struct:TapeInfo	typeref:typename:int
+re	Makefile	/^re: fclean all$/;"	t
+re	libft/Makefile	/^re: fclean all$/;"	t
+redirect	parser/redirect.c	/^int	redirect(t_list *cmd_start, t_list *pipe_tkn, t_status *status)$/;"	f	typeref:typename:int
+redirect2	parser/redirect.c	/^int	redirect2(t_list *cur, t_status *status)$/;"	f	typeref:typename:int
+redirect_input	parser/redirect.c	/^static int	redirect_input(t_list *redir, t_status *status)$/;"	f	typeref:typename:int	file:
+redirect_output	parser/redirect.c	/^static int	redirect_output(t_list	*redir, int append, t_status *status)$/;"	f	typeref:typename:int	file:
+rename_export	builtins/b_export.c	/^void	rename_export(t_status *status, char *key)$/;"	f	typeref:typename:void
+restore_default_fd	parser/parser_utils.c	/^void	restore_default_fd(int default_fd[2])$/;"	f	typeref:typename:void
+restore_fd_heredoc	parser/heredoc.c	/^static void	restore_fd_heredoc(t_status *status, int old_fd[2])$/;"	f	typeref:typename:void	file:
+s_env	minishell.h	/^typedef struct s_env {$/;"	s
+s_exp	minishell.h	/^typedef struct s_exp {$/;"	s
+s_list	libft/libft.h	/^typedef struct s_list$/;"	s
+save_default_fd	parser/parser_utils.c	/^void	save_default_fd(int default_fd[2])$/;"	f	typeref:typename:void
+save_fd_heredoc	parser/heredoc.c	/^static void	save_fd_heredoc(t_status *status, int old_fd[2])$/;"	f	typeref:typename:void	file:
+search_env	extra/enviro2.c	/^t_env	*search_env(char *name, t_status *status)$/;"	f	typeref:typename:t_env *
+search_exp	extra/expo2.c	/^t_exp	*search_exp(char *name, t_status *status)$/;"	f	typeref:typename:t_exp *
+search_for_file	execute/path.c	/^static char	*search_for_file(char *cmd, t_status *status)$/;"	f	typeref:typename:char *	file:
+set_env	extra/enviro2.c	/^int	set_env(char *key, char *newvalue, t_status *status)$/;"	f	typeref:typename:int
+set_exp	extra/expo2.c	/^int	set_exp(char *name, char *new_value, t_status *status)$/;"	f	typeref:typename:int
+sig_handling	signal/signal.c	/^void	sig_handling(void)$/;"	f	typeref:typename:void
+signals_exec	signal/exec_signal.c	/^void	signals_exec(void)$/;"	f	typeref:typename:void
+signals_heredoc	signal/signal_heredoc.c	/^void	signals_heredoc(t_heredoc *heredoc)$/;"	f	typeref:typename:void
+state_double_quote	lexer/lexer.c	/^static t_list	*state_double_quote(t_info *info)$/;"	f	typeref:typename:t_list *	file:
+state_no_quote	lexer/lexer.c	/^static t_list	*state_no_quote(t_info *info)$/;"	f	typeref:typename:t_list *	file:
+state_no_quote_inside_word	lexer/lexer_utils3.c	/^t_list	*state_no_quote_inside_word(t_info *info)$/;"	f	typeref:typename:t_list *
+state_single_quote	lexer/lexer.c	/^static t_list	*state_single_quote(t_info *info)$/;"	f	typeref:typename:t_list *	file:
+status	minishell.h	/^	t_status	*status;$/;"	m	struct:Heredoc	typeref:typename:t_status *
+strip_tokens	parser/parser_utils2.c	/^char	**strip_tokens(char **cmd, t_status *status)$/;"	f	typeref:typename:char **
+t_env	minishell.h	/^}	t_env;$/;"	t	typeref:struct:s_env
+t_exp	minishell.h	/^}	t_exp;$/;"	t	typeref:struct:s_exp
+t_heredoc	minishell.h	/^}	t_heredoc;$/;"	t	typeref:struct:Heredoc
+t_info	minishell.h	/^}	t_info;$/;"	t	typeref:struct:TapeInfo
+t_list	libft/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
+t_status	minishell.h	/^}	t_status;$/;"	t	typeref:struct:Status
+throw_execve_error	execute/executer.c	/^void	throw_execve_error(char **cmd, t_status *status)$/;"	f	typeref:typename:void
+token_lst	minishell.h	/^	t_list	**token_lst;$/;"	m	struct:Status	typeref:typename:t_list **
+unset_env	builtins/b_unset.c	/^void	unset_env(t_status *status, char *key)$/;"	f	typeref:typename:void
+unset_exp	builtins/b_unset.c	/^void	unset_exp(t_status *status, char *key)$/;"	f	typeref:typename:void
+update_oldpwd	builtins/b_cd.c	/^void	update_oldpwd(t_status *status)$/;"	f	typeref:typename:void
+v_name	minishell.h	/^	char			*v_name;$/;"	m	struct:s_env	typeref:typename:char *
+v_value	minishell.h	/^	char			*v_value;$/;"	m	struct:s_env	typeref:typename:char *
+valgrind	Makefile	/^valgrind: re$/;"	t
+valid_export	builtins/b_export.c	/^int	valid_export(char *key, char *type)$/;"	f	typeref:typename:int
+valid_unset	builtins/b_unset.c	/^int	valid_unset(char *key, char *type)$/;"	f	typeref:typename:int
+validate_cmd	execute/path.c	/^int	validate_cmd(char **cmd, t_status *status)$/;"	f	typeref:typename:int
+vexp_name	minishell.h	/^	char			*vexp_name;$/;"	m	struct:s_exp	typeref:typename:char *
+vexp_value	minishell.h	/^	char			*vexp_value;$/;"	m	struct:s_exp	typeref:typename:char *
+wait_for_children	main.c	/^static int	wait_for_children(t_status *status)$/;"	f	typeref:typename:int	file:
+x_commands	builtins/builtin.c	/^void	x_commands(char **cmd, t_status *status)$/;"	f	typeref:typename:void

@@ -1,0 +1,127 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+$(NAME)	ex00/Makefile	/^$(NAME): $(OBJS)$/;"	t
+$(NAME)	ex01/Makefile	/^$(NAME): $(OBJS)$/;"	t
+$(NAME)	ex02/Makefile	/^$(NAME): $(OBJS)$/;"	t
+$(NAME)	ex03/Makefile	/^$(NAME): $(OBJS)$/;"	t
+$(NAME)	ex04/Makefile	/^$(NAME): $(OBJS)$/;"	t
+$(NAME)	ex05/Makefile	/^$(NAME): $(OBJS)$/;"	t
+CXX	ex00/Makefile	/^CXX = c++$/;"	m
+CXX	ex01/Makefile	/^CXX = c++$/;"	m
+CXX	ex02/Makefile	/^CXX = c++$/;"	m
+CXX	ex03/Makefile	/^CXX = c++$/;"	m
+CXX	ex04/Makefile	/^CXX = c++$/;"	m
+CXX	ex05/Makefile	/^CXX = c++$/;"	m
+FILES	ex00/Makefile	/^FILES = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp$/;"	m
+FILES	ex01/Makefile	/^FILES = main.cpp Zombie.cpp zombieHorde.cpp$/;"	m
+FILES	ex02/Makefile	/^FILES = main.cpp$/;"	m
+FILES	ex03/Makefile	/^FILES = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp$/;"	m
+FILES	ex04/Makefile	/^FILES = main.cpp$/;"	m
+FILES	ex05/Makefile	/^FILES = main.cpp Harl.cpp$/;"	m
+HARL_HPP	ex05/Harl.hpp	/^#define HARL_HPP$/;"	d
+HUMANA_HPP	ex03/HumanA.hpp	/^#define HUMANA_HPP$/;"	d
+HUMANB_HPP	ex03/HumanB.hpp	/^#define HUMANB_HPP$/;"	d
+Harl	ex05/Harl.cpp	/^Harl::Harl(){$/;"	f	class:Harl
+Harl	ex05/Harl.hpp	/^class Harl{$/;"	c
+HumanA	ex03/HumanA.cpp	/^HumanA::HumanA(Weapon& type) : _weapon(&type)$/;"	f	class:HumanA
+HumanA	ex03/HumanA.cpp	/^HumanA::HumanA(std::string name, Weapon& type ) : _name(name), _weapon(&type)$/;"	f	class:HumanA
+HumanA	ex03/HumanA.hpp	/^class HumanA{$/;"	c
+HumanB	ex03/HumanB.cpp	/^HumanB::HumanB(std::string name) : _name(name)$/;"	f	class:HumanB
+HumanB	ex03/HumanB.cpp	/^HumanB::HumanB(void)$/;"	f	class:HumanB
+HumanB	ex03/HumanB.hpp	/^class HumanB{$/;"	c
+NAME	ex00/Makefile	/^NAME = zombie $/;"	m
+NAME	ex01/Makefile	/^NAME = zombie $/;"	m
+NAME	ex02/Makefile	/^NAME = brain $/;"	m
+NAME	ex03/Makefile	/^NAME = weapon $/;"	m
+NAME	ex04/Makefile	/^NAME = sed $/;"	m
+NAME	ex05/Makefile	/^NAME = Harl$/;"	m
+OBJS	ex00/Makefile	/^OBJS = $(FILES:.cpp=.o)$/;"	m
+OBJS	ex01/Makefile	/^OBJS = $(FILES:.cpp=.o)$/;"	m
+OBJS	ex02/Makefile	/^OBJS = $(FILES:.cpp=.o)$/;"	m
+OBJS	ex03/Makefile	/^OBJS = $(FILES:.cpp=.o)$/;"	m
+OBJS	ex04/Makefile	/^OBJS = $(FILES:.cpp=.o)$/;"	m
+OBJS	ex05/Makefile	/^OBJS = $(FILES:.cpp=.o)$/;"	m
+WEAPON_HPP	ex03/Weapon.hpp	/^#define WEAPON_HPP$/;"	d
+Weapon	ex03/Weapon.cpp	/^Weapon::Weapon(std::string name) : _type(name)$/;"	f	class:Weapon
+Weapon	ex03/Weapon.cpp	/^Weapon::Weapon(void)$/;"	f	class:Weapon
+Weapon	ex03/Weapon.hpp	/^class Weapon{$/;"	c
+ZOMBIE_HPP	ex00/Zombie.hpp	/^#define ZOMBIE_HPP$/;"	d
+ZOMBIE_HPP	ex01/Zombie.hpp	/^#define ZOMBIE_HPP$/;"	d
+Zombie	ex00/Zombie.cpp	/^Zombie::Zombie(std::string name) : _name(name) $/;"	f	class:Zombie
+Zombie	ex00/Zombie.hpp	/^class Zombie{$/;"	c
+Zombie	ex01/Zombie.cpp	/^Zombie::Zombie(std::string name) : _name(name) $/;"	f	class:Zombie
+Zombie	ex01/Zombie.cpp	/^Zombie::Zombie(void) $/;"	f	class:Zombie
+Zombie	ex01/Zombie.hpp	/^class Zombie{$/;"	c
+_levels	ex05/Harl.hpp	/^        std::string     _levels[4];$/;"	m	class:Harl	typeref:typename:std::string[4]
+_name	ex00/Zombie.hpp	/^        std::string     _name;$/;"	m	class:Zombie	typeref:typename:std::string
+_name	ex01/Zombie.hpp	/^        std::string     _name;$/;"	m	class:Zombie	typeref:typename:std::string
+_name	ex03/HumanA.hpp	/^        std::string _name;$/;"	m	class:HumanA	typeref:typename:std::string
+_name	ex03/HumanB.hpp	/^        std::string _name;$/;"	m	class:HumanB	typeref:typename:std::string
+_ptr	ex05/Harl.hpp	/^        void            (Harl::*_ptr[4])(void);$/;"	m	class:Harl	typeref:typename:void (Harl::* [4])(void)
+_type	ex03/Weapon.hpp	/^        std::string     _type;$/;"	m	class:Weapon	typeref:typename:std::string
+_weapon	ex03/HumanA.hpp	/^        Weapon*     _weapon;$/;"	m	class:HumanA	typeref:typename:Weapon *
+_weapon	ex03/HumanB.hpp	/^        Weapon*     _weapon;$/;"	m	class:HumanB	typeref:typename:Weapon *
+all	ex00/Makefile	/^all : $(NAME)$/;"	t
+all	ex01/Makefile	/^all : $(NAME)$/;"	t
+all	ex02/Makefile	/^all : $(NAME)$/;"	t
+all	ex03/Makefile	/^all : $(NAME)$/;"	t
+all	ex04/Makefile	/^all : $(NAME)$/;"	t
+all	ex05/Makefile	/^all : $(NAME)$/;"	t
+announce	ex00/Zombie.cpp	/^void Zombie::announce(void)$/;"	f	class:Zombie	typeref:typename:void
+announce	ex01/Zombie.cpp	/^void Zombie::announce(void)$/;"	f	class:Zombie	typeref:typename:void
+attack	ex03/HumanA.cpp	/^void HumanA::attack(void)$/;"	f	class:HumanA	typeref:typename:void
+attack	ex03/HumanB.cpp	/^void HumanB::attack(void)$/;"	f	class:HumanB	typeref:typename:void
+clean	ex00/Makefile	/^clean:$/;"	t
+clean	ex01/Makefile	/^clean:$/;"	t
+clean	ex02/Makefile	/^clean:$/;"	t
+clean	ex03/Makefile	/^clean:$/;"	t
+clean	ex04/Makefile	/^clean:$/;"	t
+clean	ex05/Makefile	/^clean:$/;"	t
+complain	ex05/Harl.cpp	/^void    Harl::complain( std::string level )$/;"	f	class:Harl	typeref:typename:void
+debug	ex05/Harl.cpp	/^void    Harl::debug(void)$/;"	f	class:Harl	typeref:typename:void
+error	ex05/Harl.cpp	/^void    Harl::error(void)$/;"	f	class:Harl	typeref:typename:void
+fclean	ex00/Makefile	/^fclean: clean$/;"	t
+fclean	ex01/Makefile	/^fclean: clean$/;"	t
+fclean	ex02/Makefile	/^fclean: clean$/;"	t
+fclean	ex03/Makefile	/^fclean: clean$/;"	t
+fclean	ex04/Makefile	/^fclean: clean$/;"	t
+fclean	ex05/Makefile	/^fclean: clean$/;"	t
+findReplace	ex04/main.cpp	/^std::string findReplace(std::string line, std::string find, std::string replace)$/;"	f	typeref:typename:std::string
+getType	ex03/Weapon.cpp	/^std::string const& Weapon::getType(void) const$/;"	f	class:Weapon	typeref:typename:std::string const &
+info	ex05/Harl.cpp	/^void    Harl::info(void)$/;"	f	class:Harl	typeref:typename:void
+main	ex00/main.cpp	/^int main(int argc, char **argv)$/;"	f	typeref:typename:int
+main	ex01/main.cpp	/^int main(int argc, char **argv)$/;"	f	typeref:typename:int
+main	ex02/main.cpp	/^int main(int argc, char **argv)$/;"	f	typeref:typename:int
+main	ex03/main.cpp	/^int main()$/;"	f	typeref:typename:int
+main	ex04/main.cpp	/^int main(int argc, char **argv)$/;"	f	typeref:typename:int
+main	ex05/main.cpp	/^int main(int argc, char **argv)$/;"	f	typeref:typename:int
+newZombie	ex00/newZombie.cpp	/^Zombie* newZombie(std::string name)$/;"	f	typeref:typename:Zombie *
+randomChump	ex00/randomChump.cpp	/^void randomChump(std::string name)$/;"	f	typeref:typename:void
+re	ex00/Makefile	/^re: fclean all/;"	t
+re	ex01/Makefile	/^re: fclean all/;"	t
+re	ex02/Makefile	/^re: fclean all/;"	t
+re	ex03/Makefile	/^re: fclean all/;"	t
+re	ex04/Makefile	/^re: fclean all/;"	t
+re	ex05/Makefile	/^re: fclean all/;"	t
+run	ex00/Makefile	/^run: all clean$/;"	t
+run	ex01/Makefile	/^run: all clean$/;"	t
+run	ex02/Makefile	/^run: all clean$/;"	t
+run	ex03/Makefile	/^run: all clean$/;"	t
+run	ex04/Makefile	/^run: all clean$/;"	t
+run	ex05/Makefile	/^run: all clean$/;"	t
+setName	ex01/Zombie.cpp	/^void Zombie::setName(std::string name)$/;"	f	class:Zombie	typeref:typename:void
+setType	ex03/Weapon.cpp	/^void Weapon::setType(std::string value)$/;"	f	class:Weapon	typeref:typename:void
+setWeapon	ex03/HumanB.cpp	/^void HumanB::setWeapon(Weapon& tipo)$/;"	f	class:HumanB	typeref:typename:void
+warning	ex05/Harl.cpp	/^void    Harl::warning(void)$/;"	f	class:Harl	typeref:typename:void
+zombieHorde	ex01/zombieHorde.cpp	/^Zombie* zombieHorde(int n,std::string name)$/;"	f	typeref:typename:Zombie *
+~Harl	ex05/Harl.cpp	/^Harl::~Harl( void )$/;"	f	class:Harl
+~HumanA	ex03/HumanA.cpp	/^HumanA::~HumanA(void)$/;"	f	class:HumanA
+~HumanB	ex03/HumanB.cpp	/^HumanB::~HumanB(void)$/;"	f	class:HumanB
+~Weapon	ex03/Weapon.cpp	/^Weapon::~Weapon(void)$/;"	f	class:Weapon
+~Zombie	ex00/Zombie.cpp	/^Zombie::~Zombie(void) $/;"	f	class:Zombie
+~Zombie	ex01/Zombie.cpp	/^Zombie::~Zombie(void) $/;"	f	class:Zombie

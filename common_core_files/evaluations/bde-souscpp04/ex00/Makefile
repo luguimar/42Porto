@@ -1,0 +1,33 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: bde-sous <bde-sous@student.42porto.com>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/10/16 20:47:33 by bde-sous          #+#    #+#              #
+#    Updated: 2023/11/20 21:42:13 by bde-sous         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+CXX = c++
+FLAGS = -Wall -Wextra -Werror -fsanitize=address -std=c++98
+FILES = Animal.cpp main.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp
+OBJS = $(FILES:.cpp=.o)
+NAME = animal 
+
+all : $(NAME)
+
+$(NAME): $(OBJS)
+	$(CXX) $(FLAGS) $(FILES) -o $(NAME)
+
+clean:
+	rm -f $(OBJS)
+
+fclean: clean
+	rm -f $(NAME)
+
+run: all clean
+	./$(NAME)
+
+re: fclean all

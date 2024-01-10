@@ -1,0 +1,155 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+$(NAME)	ex00/Makefile	/^$(NAME): $(BIN)$/;"	t
+$(NAME)	ex01/Makefile	/^$(NAME): $(BIN)$/;"	t
+$(NAME)	ex02/Makefile	/^$(NAME): $(BIN)$/;"	t
+$(NAME)	ex03/Makefile	/^$(NAME): $(BIN)$/;"	t
+%.o	ex00/Makefile	/^%.o: %.cpp$/;"	t
+%.o	ex01/Makefile	/^%.o: %.cpp$/;"	t
+%.o	ex02/Makefile	/^%.o: %.cpp$/;"	t
+%.o	ex03/Makefile	/^%.o: %.cpp$/;"	t
+BIN	ex00/Makefile	/^BIN = $(SRC:.cpp=.o)$/;"	m
+BIN	ex01/Makefile	/^BIN = $(SRC:.cpp=.o)$/;"	m
+BIN	ex02/Makefile	/^BIN = $(SRC:.cpp=.o)$/;"	m
+BIN	ex03/Makefile	/^BIN = $(SRC:.cpp=.o)$/;"	m
+CLAP_TRAP_HPP	ex00/ClapTrap.hpp	/^# define CLAP_TRAP_HPP$/;"	d
+CLAP_TRAP_HPP	ex01/ClapTrap.hpp	/^# define CLAP_TRAP_HPP$/;"	d
+CLAP_TRAP_HPP	ex02/ClapTrap.hpp	/^# define CLAP_TRAP_HPP$/;"	d
+CLAP_TRAP_HPP	ex03/ClapTrap.hpp	/^# define CLAP_TRAP_HPP$/;"	d
+CXX	ex00/Makefile	/^CXX = c++$/;"	m
+CXX	ex01/Makefile	/^CXX = c++$/;"	m
+CXX	ex02/Makefile	/^CXX = c++$/;"	m
+CXX	ex03/Makefile	/^CXX = c++$/;"	m
+ClapTrap	ex00/ClapTrap.cpp	/^ClapTrap::ClapTrap() : _name("Default"), _hitPoints(10), _energyPoints(10), _attackDamage(0)$/;"	f	class:ClapTrap
+ClapTrap	ex00/ClapTrap.cpp	/^ClapTrap::ClapTrap(const ClapTrap& src)$/;"	f	class:ClapTrap
+ClapTrap	ex00/ClapTrap.cpp	/^ClapTrap::ClapTrap(const std::string& name) : _name(name), _hitPoints(10), _energyPoints(10), _a/;"	f	class:ClapTrap
+ClapTrap	ex00/ClapTrap.hpp	/^class ClapTrap$/;"	c
+ClapTrap	ex01/ClapTrap.cpp	/^ClapTrap::ClapTrap() : _name("Default"), _hitPoints(10), _energyPoints(10), _attackDamage(0)$/;"	f	class:ClapTrap
+ClapTrap	ex01/ClapTrap.cpp	/^ClapTrap::ClapTrap(const ClapTrap& src)$/;"	f	class:ClapTrap
+ClapTrap	ex01/ClapTrap.cpp	/^ClapTrap::ClapTrap(const std::string& name) : _name(name), _hitPoints(10), _energyPoints(10), _a/;"	f	class:ClapTrap
+ClapTrap	ex01/ClapTrap.hpp	/^class ClapTrap$/;"	c
+ClapTrap	ex02/ClapTrap.cpp	/^ClapTrap::ClapTrap() : _name("Default"), _hitPoints(10), _energyPoints(10), _attackDamage(0)$/;"	f	class:ClapTrap
+ClapTrap	ex02/ClapTrap.cpp	/^ClapTrap::ClapTrap(const ClapTrap& src)$/;"	f	class:ClapTrap
+ClapTrap	ex02/ClapTrap.cpp	/^ClapTrap::ClapTrap(const std::string& name) : _name(name), _hitPoints(10), _energyPoints(10), _a/;"	f	class:ClapTrap
+ClapTrap	ex02/ClapTrap.hpp	/^class ClapTrap$/;"	c
+ClapTrap	ex03/ClapTrap.cpp	/^ClapTrap::ClapTrap() : _name("Default"), _hitPoints(10), _energyPoints(10), _attackDamage(0)$/;"	f	class:ClapTrap
+ClapTrap	ex03/ClapTrap.cpp	/^ClapTrap::ClapTrap(const ClapTrap& src)$/;"	f	class:ClapTrap
+ClapTrap	ex03/ClapTrap.cpp	/^ClapTrap::ClapTrap(const std::string& name) : _name(name), _hitPoints(10), _energyPoints(10), _a/;"	f	class:ClapTrap
+ClapTrap	ex03/ClapTrap.hpp	/^class ClapTrap$/;"	c
+DIAMOND_TRAP_HPP	ex03/DiamondTrap.hpp	/^# define DIAMOND_TRAP_HPP$/;"	d
+DiamondTrap	ex03/DiamondTrap.cpp	/^DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name), ScavTrap(name), FragTrap(nam/;"	f	class:DiamondTrap
+DiamondTrap	ex03/DiamondTrap.hpp	/^class DiamondTrap : public ScavTrap, public FragTrap$/;"	c
+FRAG_TRAP_HPP	ex02/FragTrap.hpp	/^# define FRAG_TRAP_HPP$/;"	d
+FRAG_TRAP_HPP	ex03/FragTrap.hpp	/^# define FRAG_TRAP_HPP$/;"	d
+FragTrap	ex02/FragTrap.cpp	/^FragTrap::FragTrap() : ClapTrap()$/;"	f	class:FragTrap
+FragTrap	ex02/FragTrap.cpp	/^FragTrap::FragTrap(const FragTrap& src) : ClapTrap(src)$/;"	f	class:FragTrap
+FragTrap	ex02/FragTrap.cpp	/^FragTrap::FragTrap(const std::string& name) : ClapTrap(name)$/;"	f	class:FragTrap
+FragTrap	ex02/FragTrap.hpp	/^class FragTrap : public ClapTrap$/;"	c
+FragTrap	ex03/FragTrap.cpp	/^FragTrap::FragTrap() : ClapTrap()$/;"	f	class:FragTrap
+FragTrap	ex03/FragTrap.cpp	/^FragTrap::FragTrap(const FragTrap& src) : ClapTrap(src)$/;"	f	class:FragTrap
+FragTrap	ex03/FragTrap.cpp	/^FragTrap::FragTrap(const std::string& name) : ClapTrap(name)$/;"	f	class:FragTrap
+FragTrap	ex03/FragTrap.hpp	/^class FragTrap : virtual public ClapTrap$/;"	c
+NAME	ex00/Makefile	/^NAME = claptrap$/;"	m
+NAME	ex01/Makefile	/^NAME = scavtrap$/;"	m
+NAME	ex02/Makefile	/^NAME = fragtrap$/;"	m
+NAME	ex03/Makefile	/^NAME = diamondtrap$/;"	m
+RM	ex00/Makefile	/^RM = rm -rf$/;"	m
+RM	ex01/Makefile	/^RM = rm -rf$/;"	m
+RM	ex02/Makefile	/^RM = rm -rf$/;"	m
+RM	ex03/Makefile	/^RM = rm -rf$/;"	m
+SCAV_TRAP_HPP	ex01/ScavTrap.hpp	/^# define SCAV_TRAP_HPP$/;"	d
+SCAV_TRAP_HPP	ex02/ScavTrap.hpp	/^# define SCAV_TRAP_HPP$/;"	d
+SCAV_TRAP_HPP	ex03/ScavTrap.hpp	/^# define SCAV_TRAP_HPP$/;"	d
+SRC	ex00/Makefile	/^SRC = ClapTrap.cpp main.cpp$/;"	m
+SRC	ex01/Makefile	/^SRC = ClapTrap.cpp ScavTrap.cpp main.cpp$/;"	m
+SRC	ex02/Makefile	/^SRC = ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp$/;"	m
+SRC	ex03/Makefile	/^SRC = ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp main.cpp$/;"	m
+ScavTrap	ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap() : ClapTrap()$/;"	f	class:ScavTrap
+ScavTrap	ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap(const ScavTrap& src) : ClapTrap(src)$/;"	f	class:ScavTrap
+ScavTrap	ex01/ScavTrap.cpp	/^ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)$/;"	f	class:ScavTrap
+ScavTrap	ex01/ScavTrap.hpp	/^class ScavTrap : public ClapTrap$/;"	c
+ScavTrap	ex02/ScavTrap.cpp	/^ScavTrap::ScavTrap() : ClapTrap()$/;"	f	class:ScavTrap
+ScavTrap	ex02/ScavTrap.cpp	/^ScavTrap::ScavTrap(const ScavTrap& src) : ClapTrap(src)$/;"	f	class:ScavTrap
+ScavTrap	ex02/ScavTrap.cpp	/^ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)$/;"	f	class:ScavTrap
+ScavTrap	ex02/ScavTrap.hpp	/^class ScavTrap : public ClapTrap$/;"	c
+ScavTrap	ex03/ScavTrap.cpp	/^ScavTrap::ScavTrap() : ClapTrap()$/;"	f	class:ScavTrap
+ScavTrap	ex03/ScavTrap.cpp	/^ScavTrap::ScavTrap(const ScavTrap& src) : ClapTrap(src)$/;"	f	class:ScavTrap
+ScavTrap	ex03/ScavTrap.cpp	/^ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)$/;"	f	class:ScavTrap
+ScavTrap	ex03/ScavTrap.hpp	/^class ScavTrap : virtual public ClapTrap$/;"	c
+_attackDamage	ex00/ClapTrap.hpp	/^		unsigned int _attackDamage;$/;"	m	class:ClapTrap	typeref:typename:unsigned int
+_attackDamage	ex01/ClapTrap.hpp	/^		unsigned int _attackDamage;$/;"	m	class:ClapTrap	typeref:typename:unsigned int
+_attackDamage	ex02/ClapTrap.hpp	/^		unsigned int _attackDamage;$/;"	m	class:ClapTrap	typeref:typename:unsigned int
+_attackDamage	ex03/ClapTrap.hpp	/^		unsigned int _attackDamage;$/;"	m	class:ClapTrap	typeref:typename:unsigned int
+_energyPoints	ex00/ClapTrap.hpp	/^		unsigned int _energyPoints;$/;"	m	class:ClapTrap	typeref:typename:unsigned int
+_energyPoints	ex01/ClapTrap.hpp	/^		unsigned int _energyPoints;$/;"	m	class:ClapTrap	typeref:typename:unsigned int
+_energyPoints	ex02/ClapTrap.hpp	/^		unsigned int _energyPoints;$/;"	m	class:ClapTrap	typeref:typename:unsigned int
+_energyPoints	ex03/ClapTrap.hpp	/^		unsigned int _energyPoints;$/;"	m	class:ClapTrap	typeref:typename:unsigned int
+_hitPoints	ex00/ClapTrap.hpp	/^		unsigned int _hitPoints;$/;"	m	class:ClapTrap	typeref:typename:unsigned int
+_hitPoints	ex01/ClapTrap.hpp	/^		unsigned int _hitPoints;$/;"	m	class:ClapTrap	typeref:typename:unsigned int
+_hitPoints	ex02/ClapTrap.hpp	/^		unsigned int _hitPoints;$/;"	m	class:ClapTrap	typeref:typename:unsigned int
+_hitPoints	ex03/ClapTrap.hpp	/^		unsigned int _hitPoints;$/;"	m	class:ClapTrap	typeref:typename:unsigned int
+_name	ex00/ClapTrap.hpp	/^		std::string _name;$/;"	m	class:ClapTrap	typeref:typename:std::string
+_name	ex01/ClapTrap.hpp	/^		std::string _name;$/;"	m	class:ClapTrap	typeref:typename:std::string
+_name	ex02/ClapTrap.hpp	/^		std::string _name;$/;"	m	class:ClapTrap	typeref:typename:std::string
+_name	ex03/ClapTrap.hpp	/^		std::string _name;$/;"	m	class:ClapTrap	typeref:typename:std::string
+_name	ex03/DiamondTrap.hpp	/^		std::string _name;$/;"	m	class:DiamondTrap	typeref:typename:std::string
+all	ex00/Makefile	/^all: $(NAME)$/;"	t
+all	ex01/Makefile	/^all: $(NAME)$/;"	t
+all	ex02/Makefile	/^all: $(NAME)$/;"	t
+all	ex03/Makefile	/^all: $(NAME)$/;"	t
+attack	ex00/ClapTrap.cpp	/^void ClapTrap::attack(const std::string& target)$/;"	f	class:ClapTrap	typeref:typename:void
+attack	ex01/ClapTrap.cpp	/^void ClapTrap::attack(const std::string& target)$/;"	f	class:ClapTrap	typeref:typename:void
+attack	ex01/ScavTrap.cpp	/^void ScavTrap::attack(const std::string& target)$/;"	f	class:ScavTrap	typeref:typename:void
+attack	ex02/ClapTrap.cpp	/^void ClapTrap::attack(const std::string& target)$/;"	f	class:ClapTrap	typeref:typename:void
+attack	ex02/ScavTrap.cpp	/^void ScavTrap::attack(const std::string& target)$/;"	f	class:ScavTrap	typeref:typename:void
+attack	ex03/ClapTrap.cpp	/^void ClapTrap::attack(const std::string& target)$/;"	f	class:ClapTrap	typeref:typename:void
+attack	ex03/ScavTrap.cpp	/^void ScavTrap::attack(const std::string& target)$/;"	f	class:ScavTrap	typeref:typename:void
+beRepaired	ex00/ClapTrap.cpp	/^void ClapTrap::beRepaired(unsigned int amount)$/;"	f	class:ClapTrap	typeref:typename:void
+beRepaired	ex01/ClapTrap.cpp	/^void ClapTrap::beRepaired(unsigned int amount)$/;"	f	class:ClapTrap	typeref:typename:void
+beRepaired	ex02/ClapTrap.cpp	/^void ClapTrap::beRepaired(unsigned int amount)$/;"	f	class:ClapTrap	typeref:typename:void
+beRepaired	ex03/ClapTrap.cpp	/^void ClapTrap::beRepaired(unsigned int amount)$/;"	f	class:ClapTrap	typeref:typename:void
+clean	ex00/Makefile	/^clean:$/;"	t
+clean	ex01/Makefile	/^clean:$/;"	t
+clean	ex02/Makefile	/^clean:$/;"	t
+clean	ex03/Makefile	/^clean:$/;"	t
+fclean	ex00/Makefile	/^fclean: clean$/;"	t
+fclean	ex01/Makefile	/^fclean: clean$/;"	t
+fclean	ex02/Makefile	/^fclean: clean$/;"	t
+fclean	ex03/Makefile	/^fclean: clean$/;"	t
+guardGate	ex01/ScavTrap.cpp	/^void ScavTrap::guardGate()$/;"	f	class:ScavTrap	typeref:typename:void
+guardGate	ex02/ScavTrap.cpp	/^void ScavTrap::guardGate()$/;"	f	class:ScavTrap	typeref:typename:void
+guardGate	ex03/ScavTrap.cpp	/^void ScavTrap::guardGate()$/;"	f	class:ScavTrap	typeref:typename:void
+highFivesGuys	ex02/FragTrap.cpp	/^void FragTrap::highFivesGuys()$/;"	f	class:FragTrap	typeref:typename:void
+highFivesGuys	ex03/FragTrap.cpp	/^void FragTrap::highFivesGuys()$/;"	f	class:FragTrap	typeref:typename:void
+main	ex00/main.cpp	/^int main()$/;"	f	typeref:typename:int
+main	ex01/main.cpp	/^int main()$/;"	f	typeref:typename:int
+main	ex02/main.cpp	/^int main()$/;"	f	typeref:typename:int
+main	ex03/main.cpp	/^int main()$/;"	f	typeref:typename:int
+operator =	ex00/ClapTrap.cpp	/^ClapTrap& ClapTrap::operator=(const ClapTrap& src)$/;"	f	class:ClapTrap	typeref:typename:ClapTrap &
+operator =	ex01/ClapTrap.cpp	/^ClapTrap& ClapTrap::operator=(const ClapTrap& src)$/;"	f	class:ClapTrap	typeref:typename:ClapTrap &
+operator =	ex02/ClapTrap.cpp	/^ClapTrap& ClapTrap::operator=(const ClapTrap& src)$/;"	f	class:ClapTrap	typeref:typename:ClapTrap &
+operator =	ex03/ClapTrap.cpp	/^ClapTrap& ClapTrap::operator=(const ClapTrap& src)$/;"	f	class:ClapTrap	typeref:typename:ClapTrap &
+re	ex00/Makefile	/^re: fclean all$/;"	t
+re	ex01/Makefile	/^re: fclean all$/;"	t
+re	ex02/Makefile	/^re: fclean all$/;"	t
+re	ex03/Makefile	/^re: fclean all$/;"	t
+takeDamage	ex00/ClapTrap.cpp	/^void ClapTrap::takeDamage(unsigned int amount)$/;"	f	class:ClapTrap	typeref:typename:void
+takeDamage	ex01/ClapTrap.cpp	/^void ClapTrap::takeDamage(unsigned int amount)$/;"	f	class:ClapTrap	typeref:typename:void
+takeDamage	ex02/ClapTrap.cpp	/^void ClapTrap::takeDamage(unsigned int amount)$/;"	f	class:ClapTrap	typeref:typename:void
+takeDamage	ex03/ClapTrap.cpp	/^void ClapTrap::takeDamage(unsigned int amount)$/;"	f	class:ClapTrap	typeref:typename:void
+whoAmI	ex03/DiamondTrap.cpp	/^void DiamondTrap::whoAmI()$/;"	f	class:DiamondTrap	typeref:typename:void
+~ClapTrap	ex00/ClapTrap.cpp	/^ClapTrap::~ClapTrap()$/;"	f	class:ClapTrap
+~ClapTrap	ex01/ClapTrap.cpp	/^ClapTrap::~ClapTrap()$/;"	f	class:ClapTrap
+~ClapTrap	ex02/ClapTrap.cpp	/^ClapTrap::~ClapTrap()$/;"	f	class:ClapTrap
+~ClapTrap	ex03/ClapTrap.cpp	/^ClapTrap::~ClapTrap()$/;"	f	class:ClapTrap
+~DiamondTrap	ex03/DiamondTrap.cpp	/^DiamondTrap::~DiamondTrap()$/;"	f	class:DiamondTrap
+~FragTrap	ex02/FragTrap.cpp	/^FragTrap::~FragTrap()$/;"	f	class:FragTrap
+~FragTrap	ex03/FragTrap.cpp	/^FragTrap::~FragTrap()$/;"	f	class:FragTrap
+~ScavTrap	ex01/ScavTrap.cpp	/^ScavTrap::~ScavTrap()$/;"	f	class:ScavTrap
+~ScavTrap	ex02/ScavTrap.cpp	/^ScavTrap::~ScavTrap()$/;"	f	class:ScavTrap
+~ScavTrap	ex03/ScavTrap.cpp	/^ScavTrap::~ScavTrap()$/;"	f	class:ScavTrap
