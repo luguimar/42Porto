@@ -1,0 +1,229 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+$(NAME)	ex00/Makefile	/^$(NAME): $(OBJ)$/;"	t
+$(NAME)	ex01/Makefile	/^$(NAME): $(OBJ)$/;"	t
+$(NAME)	ex02/Makefile	/^$(NAME): $(OBJ)$/;"	t
+$(NAME)	ex03/Makefile	/^$(NAME): $(OBJ)$/;"	t
+AANIMAL_HPP	ex02/AAnimal.hpp	/^#define AANIMAL_HPP$/;"	d
+AAnimal	ex02/AAnimal.hpp	/^class	AAnimal {$/;"	c
+AAnimal	ex02/Animal.cpp	/^AAnimal::AAnimal() {$/;"	f	class:AAnimal
+AAnimal	ex02/Animal.cpp	/^AAnimal::AAnimal(const AAnimal &src){$/;"	f	class:AAnimal
+AMATERIA_HPP	ex03/AMateria.hpp	/^#define	AMATERIA_HPP$/;"	d
+AMateria	ex03/AMateria.cpp	/^AMateria::AMateria(){$/;"	f	class:AMateria
+AMateria	ex03/AMateria.cpp	/^AMateria::AMateria(const AMateria &src){$/;"	f	class:AMateria
+AMateria	ex03/AMateria.cpp	/^AMateria::AMateria(std::string const &type){$/;"	f	class:AMateria
+AMateria	ex03/AMateria.hpp	/^class AMateria {$/;"	c
+ANIMAL_HPP	ex00/Animal.hpp	/^#define ANIMAL_HPP$/;"	d
+ANIMAL_HPP	ex01/Animal.hpp	/^#define ANIMAL_HPP$/;"	d
+Animal	ex00/Animal.cpp	/^Animal::Animal() {$/;"	f	class:Animal
+Animal	ex00/Animal.cpp	/^Animal::Animal(const Animal &src){$/;"	f	class:Animal
+Animal	ex00/Animal.hpp	/^class	Animal {$/;"	c
+Animal	ex01/Animal.cpp	/^Animal::Animal() {$/;"	f	class:Animal
+Animal	ex01/Animal.cpp	/^Animal::Animal(const Animal &src){$/;"	f	class:Animal
+Animal	ex01/Animal.hpp	/^class	Animal {$/;"	c
+BRAIN_HPP	ex01/Brain.hpp	/^#define	BRAIN_HPP$/;"	d
+BRAIN_HPP	ex02/Brain.hpp	/^#define	BRAIN_HPP$/;"	d
+Brain	ex01/Brain.cpp	/^Brain::Brain(){$/;"	f	class:Brain
+Brain	ex01/Brain.cpp	/^Brain::Brain(const Brain &src){$/;"	f	class:Brain
+Brain	ex01/Brain.hpp	/^class Brain {$/;"	c
+Brain	ex02/Brain.cpp	/^Brain::Brain(){$/;"	f	class:Brain
+Brain	ex02/Brain.cpp	/^Brain::Brain(const Brain &src){$/;"	f	class:Brain
+Brain	ex02/Brain.hpp	/^class Brain {$/;"	c
+CAT_HPP	ex00/Cat.hpp	/^#define CAT_HPP$/;"	d
+CAT_HPP	ex01/Cat.hpp	/^#define CAT_HPP$/;"	d
+CAT_HPP	ex02/Cat.hpp	/^#define CAT_HPP$/;"	d
+CHARACTER_HPP	ex03/Character.hpp	/^#define CHARACTER_HPP$/;"	d
+CURE_HPP	ex03/Cure.hpp	/^#define	CURE_HPP$/;"	d
+CXX	ex00/Makefile	/^CXX = c++$/;"	m
+CXX	ex01/Makefile	/^CXX = c++$/;"	m
+CXX	ex02/Makefile	/^CXX = c++$/;"	m
+CXX	ex03/Makefile	/^CXX = c++$/;"	m
+CXXFLAGS	ex00/Makefile	/^CXXFLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
+CXXFLAGS	ex01/Makefile	/^CXXFLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
+CXXFLAGS	ex02/Makefile	/^CXXFLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
+CXXFLAGS	ex03/Makefile	/^CXXFLAGS = -Wall -Werror -Wextra -std=c++98$/;"	m
+Cat	ex00/Cat.cpp	/^Cat::Cat() {$/;"	f	class:Cat
+Cat	ex00/Cat.cpp	/^Cat::Cat(const Cat &src) : Animal(src) {$/;"	f	class:Cat
+Cat	ex00/Cat.hpp	/^class	Cat : public Animal {$/;"	c
+Cat	ex01/Cat.cpp	/^Cat::Cat() : Animal() {$/;"	f	class:Cat
+Cat	ex01/Cat.cpp	/^Cat::Cat(const Cat &src) : Animal(src){$/;"	f	class:Cat
+Cat	ex01/Cat.hpp	/^class	Cat : public Animal {$/;"	c
+Cat	ex02/Cat.cpp	/^Cat::Cat() : AAnimal() {$/;"	f	class:Cat
+Cat	ex02/Cat.cpp	/^Cat::Cat(const Cat &src) : AAnimal(src) {$/;"	f	class:Cat
+Cat	ex02/Cat.hpp	/^class	Cat : public AAnimal {$/;"	c
+Character	ex03/Character.cpp	/^Character::Character() {$/;"	f	class:Character
+Character	ex03/Character.cpp	/^Character::Character(const Character &src) {$/;"	f	class:Character
+Character	ex03/Character.cpp	/^Character::Character(std::string name) {$/;"	f	class:Character
+Character	ex03/Character.hpp	/^class Character : public ICharacter {$/;"	c
+Cure	ex03/Cure.cpp	/^Cure::Cure() {$/;"	f	class:Cure
+Cure	ex03/Cure.cpp	/^Cure::Cure(const Cure &src) : AMateria(src){$/;"	f	class:Cure
+Cure	ex03/Cure.cpp	/^Cure::Cure(std::string const &type) : AMateria(type) {$/;"	f	class:Cure
+Cure	ex03/Cure.hpp	/^class Cure : public AMateria {$/;"	c
+DOG_HPP	ex00/Dog.hpp	/^#define DOG_HPP$/;"	d
+DOG_HPP	ex01/Dog.hpp	/^#define DOG_HPP$/;"	d
+DOG_HPP	ex02/Dog.hpp	/^#define DOG_HPP$/;"	d
+Dog	ex00/Dog.cpp	/^Dog::Dog() {$/;"	f	class:Dog
+Dog	ex00/Dog.cpp	/^Dog::Dog(const Dog &src) : Animal(src) {$/;"	f	class:Dog
+Dog	ex00/Dog.hpp	/^class	Dog : public Animal {$/;"	c
+Dog	ex01/Dog.cpp	/^Dog::Dog() : Animal(){$/;"	f	class:Dog
+Dog	ex01/Dog.cpp	/^Dog::Dog(const Dog &src) : Animal(src) {$/;"	f	class:Dog
+Dog	ex01/Dog.hpp	/^class	Dog : public Animal {$/;"	c
+Dog	ex02/Dog.cpp	/^Dog::Dog() : AAnimal() {$/;"	f	class:Dog
+Dog	ex02/Dog.cpp	/^Dog::Dog(const Dog &src) : AAnimal(src) {$/;"	f	class:Dog
+Dog	ex02/Dog.hpp	/^class	Dog : public AAnimal {$/;"	c
+ICE_HPP	ex03/Ice.hpp	/^#define	ICE_HPP$/;"	d
+ICHARACTER_HPP	ex03/ICharacter.hpp	/^#define ICHARACTER_HPP$/;"	d
+ICharacter	ex03/ICharacter.hpp	/^class ICharacter {$/;"	c
+IMATERIASOURCE_HPP	ex03/IMateriaSource.hpp	/^#define IMATERIASOURCE_HPP$/;"	d
+IMateriaSource	ex03/IMateriaSource.hpp	/^class IMateriaSource {$/;"	c
+Ice	ex03/Ice.cpp	/^Ice::Ice() {$/;"	f	class:Ice
+Ice	ex03/Ice.cpp	/^Ice::Ice(const Ice &src) : AMateria(src){$/;"	f	class:Ice
+Ice	ex03/Ice.cpp	/^Ice::Ice(std::string const &type) : AMateria(type) {$/;"	f	class:Ice
+Ice	ex03/Ice.hpp	/^class Ice : public AMateria {$/;"	c
+MATERIASOURCE_HPP	ex03/MateriaSource.hpp	/^#define MATERIASOURCE_HPP$/;"	d
+MateriaSource	ex03/MateriaSource.cpp	/^MateriaSource::MateriaSource(){$/;"	f	class:MateriaSource
+MateriaSource	ex03/MateriaSource.cpp	/^MateriaSource::MateriaSource(const MateriaSource &src){$/;"	f	class:MateriaSource
+MateriaSource	ex03/MateriaSource.hpp	/^class MateriaSource : public IMateriaSource {$/;"	c
+NAME	ex00/Makefile	/^NAME = poly$/;"	m
+NAME	ex01/Makefile	/^NAME = brain$/;"	m
+NAME	ex02/Makefile	/^NAME = aanimal$/;"	m
+NAME	ex03/Makefile	/^NAME = interface$/;"	m
+OBJ	ex00/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
+OBJ	ex01/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
+OBJ	ex02/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
+OBJ	ex03/Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
+SRC	ex00/Makefile	/^SRC = Dog.cpp Cat.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp main.cpp$/;"	m
+SRC	ex01/Makefile	/^SRC = Dog.cpp Cat.cpp Animal.cpp \\$/;"	m
+SRC	ex02/Makefile	/^SRC = Dog.cpp Cat.cpp Animal.cpp \\$/;"	m
+SRC	ex03/Makefile	/^SRC = AMateria.cpp Cure.cpp Ice.cpp Character.cpp MateriaSource.cpp \\$/;"	m
+WRONGANIMAL_HPP	ex00/WrongAnimal.hpp	/^#define WRONGANIMAL_HPP$/;"	d
+WRONGCAT_HPP	ex00/WrongCat.hpp	/^#define WRONGCAT_HPP$/;"	d
+WrongAnimal	ex00/WrongAnimal.cpp	/^WrongAnimal::WrongAnimal(const WrongAnimal& src) {$/;"	f	class:WrongAnimal
+WrongAnimal	ex00/WrongAnimal.cpp	/^WrongAnimal::WrongAnimal(std::string type) {$/;"	f	class:WrongAnimal
+WrongAnimal	ex00/WrongAnimal.cpp	/^WrongAnimal::WrongAnimal(void) {$/;"	f	class:WrongAnimal
+WrongAnimal	ex00/WrongAnimal.hpp	/^class WrongAnimal {$/;"	c
+WrongCat	ex00/WrongCat.cpp	/^WrongCat::WrongCat() {$/;"	f	class:WrongCat
+WrongCat	ex00/WrongCat.hpp	/^class WrongCat : public WrongAnimal {$/;"	c
+all	ex00/Makefile	/^all: $(NAME)$/;"	t
+all	ex01/Makefile	/^all: $(NAME)$/;"	t
+all	ex02/Makefile	/^all: $(NAME)$/;"	t
+all	ex03/Makefile	/^all: $(NAME)$/;"	t
+brain	ex01/Cat.hpp	/^	Brain	*brain;$/;"	m	class:Cat	typeref:typename:Brain *
+brain	ex01/Dog.hpp	/^	Brain	*brain;$/;"	m	class:Dog	typeref:typename:Brain *
+brain	ex02/Cat.hpp	/^	Brain	*brain;$/;"	m	class:Cat	typeref:typename:Brain *
+brain	ex02/Dog.hpp	/^	Brain	*brain;$/;"	m	class:Dog	typeref:typename:Brain *
+clean	ex00/Makefile	/^clean:$/;"	t
+clean	ex01/Makefile	/^clean:$/;"	t
+clean	ex02/Makefile	/^clean:$/;"	t
+clean	ex03/Makefile	/^clean:$/;"	t
+clone	ex03/Cure.cpp	/^Cure* Cure::clone() const {$/;"	f	class:Cure	typeref:typename:Cure *
+clone	ex03/Ice.cpp	/^Ice* Ice::clone() const {$/;"	f	class:Ice	typeref:typename:Ice *
+createMateria	ex03/MateriaSource.cpp	/^AMateria*	MateriaSource::createMateria(std::string const &type) {$/;"	f	class:MateriaSource	typeref:typename:AMateria *
+equip	ex03/Character.cpp	/^void	Character::equip(AMateria *m) {$/;"	f	class:Character	typeref:typename:void
+fclean	ex00/Makefile	/^fclean: clean$/;"	t
+fclean	ex01/Makefile	/^fclean: clean$/;"	t
+fclean	ex02/Makefile	/^fclean: clean$/;"	t
+fclean	ex03/Makefile	/^fclean: clean$/;"	t
+freeInventory	ex03/Character.cpp	/^void	Character::freeInventory(void) {$/;"	f	class:Character	typeref:typename:void
+getBrain	ex01/Cat.cpp	/^Brain*	Cat::getBrain(void) const{$/;"	f	class:Cat	typeref:typename:Brain *
+getBrain	ex01/Dog.cpp	/^Brain*	Dog::getBrain(void) const{$/;"	f	class:Dog	typeref:typename:Brain *
+getBrain	ex02/Cat.cpp	/^Brain*	Cat::getBrain(void) const{$/;"	f	class:Cat	typeref:typename:Brain *
+getBrain	ex02/Dog.cpp	/^Brain*	Dog::getBrain(void) const{$/;"	f	class:Dog	typeref:typename:Brain *
+getIdea	ex01/Brain.cpp	/^std::string	Brain::getIdea(unsigned int n){$/;"	f	class:Brain	typeref:typename:std::string
+getIdea	ex02/Brain.cpp	/^std::string	Brain::getIdea(unsigned int n){$/;"	f	class:Brain	typeref:typename:std::string
+getInventory	ex03/Character.cpp	/^AMateria*	Character::getInventory(int	i) const {$/;"	f	class:Character	typeref:typename:AMateria *
+getName	ex03/Character.cpp	/^std::string const &Character::getName() const {$/;"	f	class:Character	typeref:typename:std::string const &
+getSkill	ex03/MateriaSource.cpp	/^AMateria*	MateriaSource::getSkill(int i) const {$/;"	f	class:MateriaSource	typeref:typename:AMateria *
+getType	ex00/Animal.cpp	/^std::string	Animal::getType(void) const{$/;"	f	class:Animal	typeref:typename:std::string
+getType	ex00/Cat.cpp	/^std::string	Cat::getType(void) const{$/;"	f	class:Cat	typeref:typename:std::string
+getType	ex00/Dog.cpp	/^std::string	Dog::getType(void) const{$/;"	f	class:Dog	typeref:typename:std::string
+getType	ex00/WrongAnimal.cpp	/^std::string    WrongAnimal::getType(void) const {$/;"	f	class:WrongAnimal	typeref:typename:std::string
+getType	ex01/Animal.cpp	/^std::string	Animal::getType(void) const{$/;"	f	class:Animal	typeref:typename:std::string
+getType	ex01/Cat.cpp	/^std::string	Cat::getType(void) const{$/;"	f	class:Cat	typeref:typename:std::string
+getType	ex01/Dog.cpp	/^std::string	Dog::getType(void) const{$/;"	f	class:Dog	typeref:typename:std::string
+getType	ex02/Animal.cpp	/^std::string	AAnimal::getType(void) const{$/;"	f	class:AAnimal	typeref:typename:std::string
+getType	ex02/Cat.cpp	/^std::string	Cat::getType(void) const{$/;"	f	class:Cat	typeref:typename:std::string
+getType	ex02/Dog.cpp	/^std::string	Dog::getType(void) const{$/;"	f	class:Dog	typeref:typename:std::string
+getType	ex03/AMateria.cpp	/^std::string const & AMateria::getType() const {$/;"	f	class:AMateria	typeref:typename:std::string const &
+getType	ex03/Cure.cpp	/^std::string const & Cure::getType() const {$/;"	f	class:Cure	typeref:typename:std::string const &
+getType	ex03/Ice.cpp	/^std::string const & Ice::getType() const {$/;"	f	class:Ice	typeref:typename:std::string const &
+ideas	ex01/Brain.hpp	/^	std::string	ideas[100];$/;"	m	class:Brain	typeref:typename:std::string[100]
+ideas	ex02/Brain.hpp	/^	std::string	ideas[100];$/;"	m	class:Brain	typeref:typename:std::string[100]
+initInventory	ex03/Character.cpp	/^void	Character::initInventory(void) {$/;"	f	class:Character	typeref:typename:void
+inventory	ex03/Character.hpp	/^	AMateria	*inventory[4];$/;"	m	class:Character	typeref:typename:AMateria * [4]
+learnMateria	ex03/MateriaSource.cpp	/^void	MateriaSource::learnMateria(AMateria *m) {$/;"	f	class:MateriaSource	typeref:typename:void
+main	ex00/main.cpp	/^int	main(void)$/;"	f	typeref:typename:int
+main	ex01/main.cpp	/^int	main(void)$/;"	f	typeref:typename:int
+main	ex02/main.cpp	/^int	main(void)$/;"	f	typeref:typename:int
+main	ex03/main.cpp	/^int	main(void) $/;"	f	typeref:typename:int
+makeSound	ex00/Animal.cpp	/^void	Animal::makeSound(void) const{$/;"	f	class:Animal	typeref:typename:void
+makeSound	ex00/Cat.cpp	/^void	Cat::makeSound(void) const{$/;"	f	class:Cat	typeref:typename:void
+makeSound	ex00/Dog.cpp	/^void	Dog::makeSound(void) const{$/;"	f	class:Dog	typeref:typename:void
+makeSound	ex00/WrongAnimal.cpp	/^void WrongAnimal::makeSound(void) const {$/;"	f	class:WrongAnimal	typeref:typename:void
+makeSound	ex00/WrongCat.cpp	/^void    WrongCat::makeSound(void) const {$/;"	f	class:WrongCat	typeref:typename:void
+makeSound	ex01/Animal.cpp	/^void	Animal::makeSound(void) const{$/;"	f	class:Animal	typeref:typename:void
+makeSound	ex01/Cat.cpp	/^void	Cat::makeSound(void) const{$/;"	f	class:Cat	typeref:typename:void
+makeSound	ex01/Dog.cpp	/^void	Dog::makeSound(void) const{$/;"	f	class:Dog	typeref:typename:void
+makeSound	ex02/Animal.cpp	/^void	AAnimal::makeSound(void) const{$/;"	f	class:AAnimal	typeref:typename:void
+makeSound	ex02/Cat.cpp	/^void	Cat::makeSound(void) const{$/;"	f	class:Cat	typeref:typename:void
+makeSound	ex02/Dog.cpp	/^void	Dog::makeSound(void) const{$/;"	f	class:Dog	typeref:typename:void
+name	ex03/Character.hpp	/^	std::string	name;$/;"	m	class:Character	typeref:typename:std::string
+operator =	ex00/Animal.cpp	/^Animal&	Animal::operator=(const Animal &rhs){$/;"	f	class:Animal	typeref:typename:Animal &
+operator =	ex00/Cat.cpp	/^Cat&	Cat::operator=(const Cat &rhs){$/;"	f	class:Cat	typeref:typename:Cat &
+operator =	ex00/Dog.cpp	/^Dog&	Dog::operator=(const Dog &rhs){$/;"	f	class:Dog	typeref:typename:Dog &
+operator =	ex00/WrongAnimal.cpp	/^WrongAnimal& WrongAnimal::operator=(const WrongAnimal& rhs) {$/;"	f	class:WrongAnimal	typeref:typename:WrongAnimal &
+operator =	ex01/Animal.cpp	/^Animal&	Animal::operator=(const Animal &rhs){$/;"	f	class:Animal	typeref:typename:Animal &
+operator =	ex01/Brain.cpp	/^Brain&	Brain::operator=(Brain const &rhs){$/;"	f	class:Brain	typeref:typename:Brain &
+operator =	ex01/Cat.cpp	/^Cat&	Cat::operator=(const Cat &rhs){$/;"	f	class:Cat	typeref:typename:Cat &
+operator =	ex01/Dog.cpp	/^Dog&	Dog::operator=(const Dog &rhs){$/;"	f	class:Dog	typeref:typename:Dog &
+operator =	ex02/Animal.cpp	/^AAnimal&	AAnimal::operator=(const AAnimal &rhs){$/;"	f	class:AAnimal	typeref:typename:AAnimal &
+operator =	ex02/Brain.cpp	/^Brain&	Brain::operator=(Brain const &rhs){$/;"	f	class:Brain	typeref:typename:Brain &
+operator =	ex02/Cat.cpp	/^Cat&	Cat::operator=(const Cat &rhs){$/;"	f	class:Cat	typeref:typename:Cat &
+operator =	ex02/Dog.cpp	/^Dog&	Dog::operator=(const Dog &rhs){$/;"	f	class:Dog	typeref:typename:Dog &
+operator =	ex03/AMateria.cpp	/^AMateria& AMateria::operator=(AMateria const &rhs){$/;"	f	class:AMateria	typeref:typename:AMateria &
+operator =	ex03/Character.cpp	/^Character& Character::operator=(const Character &rhs) {$/;"	f	class:Character	typeref:typename:Character &
+operator =	ex03/Cure.cpp	/^Cure& Cure::operator=(Cure const &rhs) {$/;"	f	class:Cure	typeref:typename:Cure &
+operator =	ex03/Ice.cpp	/^Ice& Ice::operator=(Ice const &rhs) {$/;"	f	class:Ice	typeref:typename:Ice &
+operator =	ex03/MateriaSource.cpp	/^MateriaSource&	MateriaSource::operator=(const MateriaSource &rhs){$/;"	f	class:MateriaSource	typeref:typename:MateriaSource &
+re	ex00/Makefile	/^re: fclean all$/;"	t
+re	ex01/Makefile	/^re: fclean all$/;"	t
+re	ex02/Makefile	/^re: fclean all$/;"	t
+re	ex03/Makefile	/^re: fclean all$/;"	t
+setIdea	ex01/Brain.cpp	/^void		Brain::setIdea(std::string str, unsigned int n){$/;"	f	class:Brain	typeref:typename:void
+setIdea	ex02/Brain.cpp	/^void		Brain::setIdea(std::string str, unsigned int n){$/;"	f	class:Brain	typeref:typename:void
+skills	ex03/MateriaSource.hpp	/^	AMateria	*skills[4];$/;"	m	class:MateriaSource	typeref:typename:AMateria * [4]
+type	ex00/Animal.hpp	/^	std::string	type;$/;"	m	class:Animal	typeref:typename:std::string
+type	ex00/WrongAnimal.hpp	/^    std::string type;$/;"	m	class:WrongAnimal	typeref:typename:std::string
+type	ex01/Animal.hpp	/^	std::string	type;$/;"	m	class:Animal	typeref:typename:std::string
+type	ex02/AAnimal.hpp	/^	std::string	type;$/;"	m	class:AAnimal	typeref:typename:std::string
+type	ex03/AMateria.hpp	/^	std::string	type;$/;"	m	class:AMateria	typeref:typename:std::string
+unequip	ex03/Character.cpp	/^void	Character::unequip(int idx) {$/;"	f	class:Character	typeref:typename:void
+use	ex03/AMateria.cpp	/^void AMateria::use(ICharacter& target) {$/;"	f	class:AMateria	typeref:typename:void
+use	ex03/Character.cpp	/^void	Character::use(int idx, ICharacter& target) {$/;"	f	class:Character	typeref:typename:void
+use	ex03/Cure.cpp	/^void Cure::use(ICharacter &target) {$/;"	f	class:Cure	typeref:typename:void
+use	ex03/Ice.cpp	/^void Ice::use(ICharacter& target) {$/;"	f	class:Ice	typeref:typename:void
+~AAnimal	ex02/Animal.cpp	/^AAnimal::~AAnimal(){$/;"	f	class:AAnimal
+~AMateria	ex03/AMateria.cpp	/^AMateria::~AMateria(){$/;"	f	class:AMateria
+~Animal	ex00/Animal.cpp	/^Animal::~Animal(){$/;"	f	class:Animal
+~Animal	ex01/Animal.cpp	/^Animal::~Animal(){$/;"	f	class:Animal
+~Brain	ex01/Brain.cpp	/^Brain::~Brain(){$/;"	f	class:Brain
+~Brain	ex02/Brain.cpp	/^Brain::~Brain(){$/;"	f	class:Brain
+~Cat	ex00/Cat.cpp	/^Cat::~Cat(){$/;"	f	class:Cat
+~Cat	ex01/Cat.cpp	/^Cat::~Cat(){$/;"	f	class:Cat
+~Cat	ex02/Cat.cpp	/^Cat::~Cat(){$/;"	f	class:Cat
+~Character	ex03/Character.cpp	/^Character::~Character() {$/;"	f	class:Character
+~Cure	ex03/Cure.cpp	/^Cure::~Cure() {$/;"	f	class:Cure
+~Dog	ex00/Dog.cpp	/^Dog::~Dog(){$/;"	f	class:Dog
+~Dog	ex01/Dog.cpp	/^Dog::~Dog(){$/;"	f	class:Dog
+~Dog	ex02/Dog.cpp	/^Dog::~Dog(){$/;"	f	class:Dog
+~ICharacter	ex03/ICharacter.hpp	/^	virtual ~ICharacter() {} ;$/;"	f	class:ICharacter
+~IMateriaSource	ex03/IMateriaSource.hpp	/^	virtual ~IMateriaSource() {};$/;"	f	class:IMateriaSource
+~Ice	ex03/Ice.cpp	/^Ice::~Ice() {$/;"	f	class:Ice
+~MateriaSource	ex03/MateriaSource.cpp	/^MateriaSource::~MateriaSource(){$/;"	f	class:MateriaSource
+~WrongAnimal	ex00/WrongAnimal.cpp	/^WrongAnimal::~WrongAnimal(void) {$/;"	f	class:WrongAnimal
+~WrongCat	ex00/WrongCat.cpp	/^WrongCat::~WrongCat() {$/;"	f	class:WrongCat
