@@ -1,0 +1,222 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/luguimar/Documents/42Porto_repository/common_core_files/evaluations/jode-jes_pipex/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+$(NAME)	Libft/Makefile	/^$(NAME): ${OBJS} ${HEADER}$/;"	t
+$(NAME)	get_next_line/Makefile	/^$(NAME): ${OBJS} ${HEADER}$/;"	t
+${NAME}	Makefile	/^${NAME}: ${RULE} ${OBJS} ${HEADER}$/;"	t
+${RULE_BONUS}	Makefile	/^${RULE_BONUS}: ${OBJS_BONUS} ${HEADER_BONUS}$/;"	t
+${RULE}	Makefile	/^${RULE}:$/;"	t
+%.o	Makefile	/^%.o: %.c $/;"	t
+../Libft_obj/%.o	Libft/Makefile	/^..\/Libft_obj\/%.o:%.c$/;"	t
+../get_next_line_obj/%.o	get_next_line/Makefile	/^..\/get_next_line_obj\/%.o:%.c$/;"	t
+AR	Makefile	/^AR = ar rcs$/;"	m
+BLACK	Libft/libft.h	/^#  define BLACK /;"	d
+BLUE	Libft/Makefile	/^BLUE = \\033[0;94m$/;"	m
+BLUE	Libft/libft.h	/^#  define BLUE /;"	d
+BLUE	Makefile	/^BLUE = \\033[0;94m$/;"	m
+BLUE	get_next_line/Makefile	/^BLUE = \\033[0;94m$/;"	m
+BOLDBLACK	Libft/libft.h	/^#  define BOLDBLACK /;"	d
+BOLDBLUE	Libft/libft.h	/^#  define BOLDBLUE /;"	d
+BOLDCYAN	Libft/libft.h	/^#  define BOLDCYAN /;"	d
+BOLDGREEN	Libft/libft.h	/^#  define BOLDGREEN /;"	d
+BOLDMAGENTA	Libft/libft.h	/^#  define BOLDMAGENTA /;"	d
+BOLDRED	Libft/libft.h	/^#  define BOLDRED /;"	d
+BOLDWHITE	Libft/libft.h	/^#  define BOLDWHITE /;"	d
+BOLDYELLOW	Libft/libft.h	/^#  define BOLDYELLOW /;"	d
+BONUS	Libft/Makefile	/^BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstadd_back.c ft_lstsize.c ft_lstlast.c ft_lstdelone.c /;"	m
+BUFFER_SIZE	get_next_line/get_next_line_bonus.h	/^#  define BUFFER_SIZE /;"	d
+CC	Libft/Makefile	/^CC = cc$/;"	m
+CC	Makefile	/^CC = cc$/;"	m
+CC	get_next_line/Makefile	/^CC = cc$/;"	m
+CFLAGS	Libft/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -Wextra -Werror -O3 -g #-fsanitize=address$/;"	m
+CFLAGS	get_next_line/Makefile	/^CFLAGS = -Wall -Wextra -Werror$/;"	m
+CYAN	Libft/Makefile	/^CYAN = \\033[0;96m$/;"	m
+CYAN	Libft/libft.h	/^#  define CYAN /;"	d
+CYAN	Makefile	/^CYAN = \\033[0;96m$/;"	m
+CYAN	get_next_line/Makefile	/^CYAN = \\033[0;96m$/;"	m
+DEF_COLOR	Libft/Makefile	/^DEF_COLOR = \\033[0;39m$/;"	m
+DEF_COLOR	Makefile	/^DEF_COLOR = \\033[0;39m$/;"	m
+DEF_COLOR	get_next_line/Makefile	/^DEF_COLOR = \\033[0;39m$/;"	m
+FT_PRINTF	Libft/Makefile	/^FT_PRINTF = ft_intlen.c ft_itoapositive.c ft_printf.c ft_puthex_fd.c print_chr.c \\$/;"	m
+GET_NEXT_LINE	Makefile	/^GET_NEXT_LINE = -L get_next_line_obj -lgnl$/;"	m
+GET_NEXT_LINE_BONUS_H	get_next_line/get_next_line_bonus.h	/^# define GET_NEXT_LINE_BONUS_H$/;"	d
+GRAY	Libft/Makefile	/^GRAY = \\033[0;90m$/;"	m
+GRAY	Makefile	/^GRAY = \\033[0;90m$/;"	m
+GRAY	get_next_line/Makefile	/^GRAY = \\033[0;90m$/;"	m
+GREEN	Libft/Makefile	/^GREEN = \\033[0;92m$/;"	m
+GREEN	Libft/libft.h	/^#  define GREEN /;"	d
+GREEN	Makefile	/^GREEN = \\033[0;92m$/;"	m
+GREEN	get_next_line/Makefile	/^GREEN = \\033[0;92m$/;"	m
+HEADER	Libft/Makefile	/^HEADER = libft.h$/;"	m
+HEADER	Makefile	/^HEADER = pipex.h$/;"	m
+HEADER	get_next_line/Makefile	/^HEADER = get_next_line_bonus.h$/;"	m
+HEADER_BONUS	Makefile	/^HEADER_BONUS = pipex_bonus.h$/;"	m
+HEXBASE	Libft/libft.h	/^#  define HEXBASE /;"	d
+INCLUDE	Libft/Makefile	/^INCLUDE = -I .$/;"	m
+INCLUDE	Makefile	/^INCLUDE = -I .$/;"	m
+INCLUDE	get_next_line/Makefile	/^INCLUDE = -I .$/;"	m
+LIBFT	Makefile	/^LIBFT = -L Libft_obj -lft$/;"	m
+LIBFT_H	Libft/libft.h	/^# define LIBFT_H$/;"	d
+MAGENTA	Libft/Makefile	/^MAGENTA = \\033[0;95m$/;"	m
+MAGENTA	Libft/libft.h	/^#  define MAGENTA /;"	d
+MAGENTA	Makefile	/^MAGENTA = \\033[0;95m$/;"	m
+MAGENTA	get_next_line/Makefile	/^MAGENTA = \\033[0;95m$/;"	m
+MAX_FILES	get_next_line/get_next_line_bonus.h	/^#  define MAX_FILES /;"	d
+NAME	Libft/Makefile	/^NAME = libft.a$/;"	m
+NAME	Makefile	/^NAME = pipex$/;"	m
+NAME	get_next_line/Makefile	/^NAME = libgnl.a$/;"	m
+NEW_INTRODUCTIONS_INTO_LIBFT	Libft/Makefile	/^NEW_INTRODUCTIONS_INTO_LIBFT = ft_strclen.c ft_intlen.c ft_puthex_fd.c ft_itoapositive.c ft_free/;"	m
+OBJS	Libft/Makefile	/^OBJS = ${addprefix ..\/Libft_obj\/, ${SRC:.c=.o}}$/;"	m
+OBJS	Makefile	/^OBJS = ${SRC_FILES:.c=.o}$/;"	m
+OBJS	get_next_line/Makefile	/^OBJS = ${addprefix ..\/get_next_line_obj\/, ${SRC:.c=.o}}$/;"	m
+OBJS_BONUS	Libft/Makefile	/^OBJS_BONUS = ${addprefix ..\/Libft_obj\/, ${SRC_BONUS:.c=.o}}$/;"	m
+OBJS_BONUS	Makefile	/^OBJS_BONUS = ${SRC_BONUS_FILES:.c=.o}$/;"	m
+PART1	Libft/Makefile	/^PART1 = ft_tolower.c ft_toupper.c ft_isprint.c ft_isascii.c ft_isalnum.c \\$/;"	m
+PART2	Libft/Makefile	/^PART2 = ft_itoa.c ft_strjoin.c ft_split.c ft_striteri.c ft_strmapi.c \\$/;"	m
+PIPEX_BONUS_H	pipex_bonus.h	/^# define PIPEX_BONUS_H$/;"	d
+PIPEX_H	pipex.h	/^# define PIPEX_H$/;"	d
+RED	Libft/Makefile	/^RED = \\033[0;91m$/;"	m
+RED	Libft/libft.h	/^#  define RED /;"	d
+RED	Makefile	/^RED = \\033[0;91m$/;"	m
+RED	get_next_line/Makefile	/^RED = \\033[0;91m$/;"	m
+RESET	Libft/libft.h	/^#  define RESET /;"	d
+RM	Libft/Makefile	/^RM = rm -f$/;"	m
+RM	Makefile	/^RM = rm -f$/;"	m
+RM	get_next_line/Makefile	/^RM = rm -f$/;"	m
+RULE	Makefile	/^RULE = .all$/;"	m
+RULE_BONUS	Makefile	/^RULE_BONUS = .bonus$/;"	m
+SRC	Libft/Makefile	/^SRC = ${PART1} ${PART2} ${FT_PRINTF} ${NEW_INTRODUCTIONS_INTO_LIBFT}$/;"	m
+SRC	get_next_line/Makefile	/^SRC = get_next_line_bonus.c get_next_line_utils_bonus.c $/;"	m
+SRC_BONUS	Libft/Makefile	/^SRC_BONUS = ${BONUS}$/;"	m
+SRC_BONUS_FILES	Makefile	/^SRC_BONUS_FILES = pipex_bonus.c pipex_utils_bonus.c$/;"	m
+SRC_FILES	Makefile	/^SRC_FILES = pipex.c$/;"	m
+WHITE	Libft/Makefile	/^WHITE = \\033[0;97m$/;"	m
+WHITE	Libft/libft.h	/^#  define WHITE /;"	d
+WHITE	Makefile	/^WHITE = \\033[0;97m$/;"	m
+WHITE	get_next_line/Makefile	/^WHITE = \\033[0;97m$/;"	m
+YELLOW	Libft/Makefile	/^YELLOW = \\033[0;93m$/;"	m
+YELLOW	Libft/libft.h	/^#  define YELLOW /;"	d
+YELLOW	Makefile	/^YELLOW = \\033[0;93m$/;"	m
+YELLOW	get_next_line/Makefile	/^YELLOW = \\033[0;93m$/;"	m
+all	Libft/Makefile	/^all: ${NAME}$/;"	t
+all	Makefile	/^all: ${NAME}$/;"	t
+all	get_next_line/Makefile	/^all: ${NAME}$/;"	t
+bonus	Libft/Makefile	/^bonus: ${OBJS} ${OBJS_BONUS} ${HEADER}$/;"	t
+bonus	Makefile	/^bonus: ${RULE_BONUS}$/;"	t
+check	pipex.c	/^void	check(int result, char *msg)$/;"	f	typeref:typename:void
+check	pipex_bonus.c	/^void	check(int result, char *msg)$/;"	f	typeref:typename:void
+check_conversion	Libft/ft_printf.c	/^static int	check_conversion(const char param, va_list ap, int *flags)$/;"	f	typeref:typename:int	file:
+check_flags	Libft/ft_printf.c	/^static int	*check_flags(const char *param, va_list ap, int *flags, int *k)$/;"	f	typeref:typename:int *	file:
+clean	Libft/Makefile	/^clean:$/;"	t
+clean	Makefile	/^clean:$/;"	t
+clean	get_next_line/Makefile	/^clean:$/;"	t
+content	Libft/libft.h	/^	void			*content;$/;"	m	struct:s_list	typeref:typename:void *
+del_int	Libft/ft_lstmap.c	/^void	del_int(void *n)$/;"	f	typeref:typename:void
+exec_cmd	pipex.c	/^void	exec_cmd(char *cmd, char **envp)$/;"	f	typeref:typename:void
+exec_cmd	pipex_bonus.c	/^void	exec_cmd(char *cmd, char **envp)$/;"	f	typeref:typename:void
+fclean	Libft/Makefile	/^fclean: clean$/;"	t
+fclean	Makefile	/^fclean: clean$/;"	t
+fclean	get_next_line/Makefile	/^fclean: clean$/;"	t
+first_nibble	Libft/print_pointer.c	/^static int	first_nibble(unsigned long long addr)$/;"	f	typeref:typename:int	file:
+flags_nbr	Libft/ft_printf.c	/^static int	flags_nbr(const char *param, int *flags)$/;"	f	typeref:typename:int	file:
+ft_atoi	Libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f	typeref:typename:int
+ft_build_newstring	Libft/ft_strtrim.c	/^char	*ft_build_newstring(char *newstring, char const *s1, size_t i, size_t j)$/;"	f	typeref:typename:char *
+ft_bzero	Libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f	typeref:typename:void
+ft_calloc	Libft/ft_calloc.c	/^void	*ft_calloc(size_t nmemb, size_t size)$/;"	f	typeref:typename:void *
+ft_count_letters	Libft/ft_split.c	/^size_t	ft_count_letters(char const *s, char c, size_t word)$/;"	f	typeref:typename:size_t
+ft_count_words	Libft/ft_split.c	/^size_t	ft_count_words(char const *s, char c)$/;"	f	typeref:typename:size_t
+ft_free_array	Libft/ft_free_array.c	/^void	ft_free_array(char **array)$/;"	f	typeref:typename:void
+ft_free_array_size	Libft/ft_free_array_size.c	/^void	ft_free_array_size(void **array, int size)$/;"	f	typeref:typename:void
+ft_get_line	get_next_line/get_next_line_bonus.c	/^char	*ft_get_line(char *stash)$/;"	f	typeref:typename:char *
+ft_gnl_strchr	get_next_line/get_next_line_utils_bonus.c	/^char	*ft_gnl_strchr(char *stash, int target)$/;"	f	typeref:typename:char *
+ft_gnl_strjoin	get_next_line/get_next_line_utils_bonus.c	/^char	*ft_gnl_strjoin(char *stash, char const *buf)$/;"	f	typeref:typename:char *
+ft_gnl_strlen	get_next_line/get_next_line_utils_bonus.c	/^size_t	ft_gnl_strlen(const char *str)$/;"	f	typeref:typename:size_t
+ft_here_doc	pipex_utils_bonus.c	/^void	ft_here_doc(char *eof)$/;"	f	typeref:typename:void
+ft_intlen	Libft/ft_intlen.c	/^int	ft_intlen(long long n, int base)$/;"	f	typeref:typename:int
+ft_is_set	Libft/ft_strtrim.c	/^int	ft_is_set(char c, char const *set)$/;"	f	typeref:typename:int
+ft_isalnum	Libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f	typeref:typename:int
+ft_isalpha	Libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f	typeref:typename:int
+ft_isascii	Libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f	typeref:typename:int
+ft_isdigit	Libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f	typeref:typename:int
+ft_isprint	Libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f	typeref:typename:int
+ft_itoa	Libft/ft_itoa.c	/^char	*ft_itoa(int n)$/;"	f	typeref:typename:char *
+ft_itoapositive	Libft/ft_itoapositive.c	/^char	*ft_itoapositive(long long n)$/;"	f	typeref:typename:char *
+ft_lstadd_back	Libft/ft_lstadd_back.c	/^void	ft_lstadd_back(t_list **lst, t_list *new_node)$/;"	f	typeref:typename:void
+ft_lstadd_front	Libft/ft_lstadd_front.c	/^void	ft_lstadd_front(t_list **lst, t_list *new_node)$/;"	f	typeref:typename:void
+ft_lstclear	Libft/ft_lstclear.c	/^void	ft_lstclear(t_list **lst, void (*del)(void *))$/;"	f	typeref:typename:void
+ft_lstdelone	Libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list *lst, void (*del)(void *))$/;"	f	typeref:typename:void
+ft_lstiter	Libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(void *))$/;"	f	typeref:typename:void
+ft_lstlast	Libft/ft_lstlast.c	/^t_list	*ft_lstlast(t_list *lst)$/;"	f	typeref:typename:t_list *
+ft_lstmap	Libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))$/;"	f	typeref:typename:t_list *
+ft_lstnew	Libft/ft_lstnew.c	/^t_list	*ft_lstnew(void *content)$/;"	f	typeref:typename:t_list *
+ft_lstsize	Libft/ft_lstsize.c	/^int	ft_lstsize(t_list *lst)$/;"	f	typeref:typename:int
+ft_memchr	Libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f	typeref:typename:void *
+ft_memcmp	Libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f	typeref:typename:int
+ft_memcpy	Libft/ft_memcpy.c	/^void	*ft_memcpy(void *dest, const void *src, size_t size)$/;"	f	typeref:typename:void *
+ft_memmove	Libft/ft_memmove.c	/^void	*ft_memmove(void *dest, const void *src, size_t n)$/;"	f	typeref:typename:void *
+ft_memset	Libft/ft_memset.c	/^void	*ft_memset(void *s, int c, size_t n)$/;"	f	typeref:typename:void *
+ft_new_line	get_next_line/get_next_line_bonus.c	/^char	*ft_new_line(char *stash)$/;"	f	typeref:typename:char *
+ft_printf	Libft/ft_printf.c	/^int	ft_printf(const char *param, ...)$/;"	f	typeref:typename:int
+ft_putchar_fd	Libft/ft_putchar_fd.c	/^void	ft_putchar_fd(char c, int fd)$/;"	f	typeref:typename:void
+ft_putendl_fd	Libft/ft_putendl_fd.c	/^void	ft_putendl_fd(char *s, int fd)$/;"	f	typeref:typename:void
+ft_puthex_fd	Libft/ft_puthex_fd.c	/^void	ft_puthex_fd(unsigned int num, const char c, int fd)$/;"	f	typeref:typename:void
+ft_putnbr_fd	Libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int n, int fd)$/;"	f	typeref:typename:void
+ft_putstr_fd	Libft/ft_putstr_fd.c	/^void	ft_putstr_fd(char *s, int fd)$/;"	f	typeref:typename:void
+ft_read_line	get_next_line/get_next_line_bonus.c	/^char	*ft_read_line(int fd, char *stash)$/;"	f	typeref:typename:char *
+ft_split	Libft/ft_split.c	/^char	**ft_split(char const *s, char c)$/;"	f	typeref:typename:char **
+ft_strchr	Libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f	typeref:typename:char *
+ft_strclen	Libft/ft_strclen.c	/^size_t	ft_strclen(const char *s, char c)$/;"	f	typeref:typename:size_t
+ft_strdup	Libft/ft_strdup.c	/^char	*ft_strdup(const char *s)$/;"	f	typeref:typename:char *
+ft_striteri	Libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f	typeref:typename:void
+ft_strjoin	Libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f	typeref:typename:char *
+ft_strlcat	Libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dest, const char *src, size_t destsize)$/;"	f	typeref:typename:size_t
+ft_strlcpy	Libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t size)$/;"	f	typeref:typename:size_t
+ft_strlen	Libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f	typeref:typename:size_t
+ft_strmapi	Libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f	typeref:typename:char *
+ft_strncmp	Libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f	typeref:typename:int
+ft_strnstr	Libft/ft_strnstr.c	/^char	*ft_strnstr(const char *big, const char *little, size_t len)$/;"	f	typeref:typename:char *
+ft_strrchr	Libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f	typeref:typename:char *
+ft_strtrim	Libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s1, char const *set)$/;"	f	typeref:typename:char *
+ft_substr	Libft/ft_substr.c	/^char	*ft_substr(char const *s, unsigned int start, size_t len)$/;"	f	typeref:typename:char *
+ft_tolower	Libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f	typeref:typename:int
+ft_toupper	Libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f	typeref:typename:int
+ft_write_words	Libft/ft_split.c	/^char	**ft_write_words(char **new_array, size_t n_of_words, const char *s,$/;"	f	typeref:typename:char **
+get_next_line	get_next_line/get_next_line_bonus.c	/^char	*get_next_line(int fd)$/;"	f	typeref:typename:char *
+get_path	pipex.c	/^char	*get_path(char *cmd, char **envp)$/;"	f	typeref:typename:char *
+get_path	pipex_bonus.c	/^char	*get_path(char *cmd, char **envp)$/;"	f	typeref:typename:char *
+git	Makefile	/^git :$/;"	t
+main	pipex.c	/^int	main(int ac, char **av, char **envp)$/;"	f	typeref:typename:int
+main	pipex_bonus.c	/^int	main(int ac, char **av, char **envp)$/;"	f	typeref:typename:int
+multiply_by_two	Libft/ft_lstmap.c	/^void	*multiply_by_two(void *n)$/;"	f	typeref:typename:void *
+next	Libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list *
+print_chr	Libft/print_chr.c	/^int	print_chr(char c, int *flags)$/;"	f	typeref:typename:int
+print_hex	Libft/print_hex.c	/^int	print_hex(unsigned int nbr, int *flags, const char c)$/;"	f	typeref:typename:int
+print_nbr	Libft/print_nbr.c	/^int	print_nbr(int n, int *flags)$/;"	f	typeref:typename:int
+print_nbr_left	Libft/print_hex.c	/^static int	print_nbr_left(unsigned int nbr, int *flags, const char c)$/;"	f	typeref:typename:int	file:
+print_nbr_left	Libft/print_nbr.c	/^static int	print_nbr_left(char *nbr, int *flags, int neg)$/;"	f	typeref:typename:int	file:
+print_nbr_left	Libft/print_unsigned.c	/^static int	print_nbr_left(char *nbr, int *flags)$/;"	f	typeref:typename:int	file:
+print_nbr_right	Libft/print_hex.c	/^static int	print_nbr_right(unsigned int nbr, int *flags, const char c)$/;"	f	typeref:typename:int	file:
+print_nbr_right	Libft/print_nbr.c	/^static int	print_nbr_right(char *nbr, int *flags, int neg)$/;"	f	typeref:typename:int	file:
+print_nbr_right	Libft/print_unsigned.c	/^static int	print_nbr_right(char *nbr, int *flags)$/;"	f	typeref:typename:int	file:
+print_pointer	Libft/print_pointer.c	/^int	print_pointer(unsigned long long addr, int *flags)$/;"	f	typeref:typename:int
+print_str	Libft/print_str.c	/^int	print_str(char *s, int *flags)$/;"	f	typeref:typename:int
+print_unsigned	Libft/print_unsigned.c	/^int	print_unsigned(unsigned int n, int *flags)$/;"	f	typeref:typename:int
+re	Libft/Makefile	/^re: fclean all$/;"	t
+re	Makefile	/^re: fclean all$/;"	t
+re	get_next_line/Makefile	/^re: fclean all$/;"	t
+redirect	pipex.c	/^void	redirect(char *file, char *cmd, char **envp)$/;"	f	typeref:typename:void
+redirect	pipex_bonus.c	/^void	redirect(char *file, char *cmd, char **envp)$/;"	f	typeref:typename:void
+s_list	Libft/libft.h	/^typedef struct s_list$/;"	s
+str_left	Libft/print_str.c	/^static int	str_left(char *s, int *flags)$/;"	f	typeref:typename:int	file:
+str_right	Libft/print_str.c	/^static int	str_right(char *s, int *flags)$/;"	f	typeref:typename:int	file:
+t_list	Libft/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
+tests	Makefile	/^tests:$/;"	t
