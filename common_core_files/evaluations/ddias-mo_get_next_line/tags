@@ -1,0 +1,35 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/luguimar/Documents/42Porto_repository/common_core_files/evaluations/ddias-mo_get_next_line/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+BUFFER_SIZE	get_next_line.h	/^#  define BUFFER_SIZE /;"	d
+BUFFER_SIZE	get_next_line_bonus.h	/^#  define BUFFER_SIZE /;"	d
+GET_NEXT_LINE_BONUS_H	get_next_line_bonus.h	/^# define GET_NEXT_LINE_BONUS_H$/;"	d
+GET_NEXT_LINE_H	get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
+ft_calloc	get_next_line_utils.c	/^void	*ft_calloc(size_t nmemb, size_t size)$/;"	f	typeref:typename:void *
+ft_calloc	get_next_line_utils_bonus.c	/^void	*ft_calloc(size_t nmemb, size_t size)$/;"	f	typeref:typename:void *
+ft_strchr	get_next_line_utils.c	/^char	*ft_strchr(const char *str, int c)$/;"	f	typeref:typename:char *
+ft_strchr	get_next_line_utils_bonus.c	/^char	*ft_strchr(const char *s, int c)$/;"	f	typeref:typename:char *
+ft_strdup	get_next_line_utils.c	/^char	*ft_strdup(const char *s)$/;"	f	typeref:typename:char *
+ft_strdup	get_next_line_utils_bonus.c	/^char	*ft_strdup(const char *s)$/;"	f	typeref:typename:char *
+ft_strjoin	get_next_line_utils.c	/^char	*ft_strjoin(char *s1, char *s2)$/;"	f	typeref:typename:char *
+ft_strjoin	get_next_line_utils_bonus.c	/^char	*ft_strjoin(char *s1, char *s2)$/;"	f	typeref:typename:char *
+ft_strlen	get_next_line_utils.c	/^int	ft_strlen(const char *str)$/;"	f	typeref:typename:int
+ft_strlen	get_next_line_utils_bonus.c	/^int	ft_strlen(const char *str)$/;"	f	typeref:typename:int
+get_line	get_next_line.c	/^char	*get_line(char *line)$/;"	f	typeref:typename:char *
+get_line	get_next_line_bonus.c	/^char	*get_line(char *line)$/;"	f	typeref:typename:char *
+get_next_line	get_next_line.c	/^char	*get_next_line(int fd)$/;"	f	typeref:typename:char *
+get_next_line	get_next_line_bonus.c	/^char	*get_next_line(int fd)$/;"	f	typeref:typename:char *
+main	get_next_line.c	/^int main(void)$/;"	f	typeref:typename:int
+main	get_next_line_bonus.c	/^ int main() {$/;"	f	typeref:typename:int
+new_line	get_next_line.c	/^char	*new_line(char *line)$/;"	f	typeref:typename:char *
+new_line	get_next_line_bonus.c	/^char	*new_line(char *line)$/;"	f	typeref:typename:char *
+read_update	get_next_line.c	/^char	*read_update(int fd, char *line)$/;"	f	typeref:typename:char *
+read_update	get_next_line_bonus.c	/^char	*read_update(int fd, char *line)$/;"	f	typeref:typename:char *
